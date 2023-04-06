@@ -1537,9 +1537,9 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <p id="section-1.1-1">The following changes have been made to the guidelines published in
    <span>[<a href="#RFC8407" class="cite xref">RFC8407</a>]</span>:<a href="#section-1.1-1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-1.1-2.1">item1<a href="#section-1.1-2.1" class="pilcrow">¶</a>
+<li class="normal" id="section-1.1-2.1">Implement errata 5693, 5800, and 6899.<a href="#section-1.1-2.1" class="pilcrow">¶</a>
 </li>
-          <li class="normal" id="section-1.1-2.2">item2<a href="#section-1.1-2.2" class="pilcrow">¶</a>
+          <li class="normal" id="section-1.1-2.2">Add guidelines for IANA-maintained modules.<a href="#section-1.1-2.2" class="pilcrow">¶</a>
 </li>
         </ul>
 </section>
@@ -1731,7 +1731,7 @@ appear in all capitals, as shown here.<a href="#section-2.4-1" class="pilcrow">�
    component.
 
    The "&lt;CODE BEGINS&gt;" tag SHOULD be followed by a string identifying
-   the file name specified in Section 5.2 of {{RFC7950}}.  The name string
+   the file name specified in Section 5.2 of [RFC7950].  The name string
    form that includes the revision date SHOULD be used.  The revision
    date MUST match the date used in the most recent revision of the
    module.
@@ -1766,8 +1766,8 @@ appear in all capitals, as shown here.<a href="#section-2.4-1" class="pilcrow">�
           </h4>
 <div class="alignLeft art-text artwork" id="section-3.2.1-1">
 <pre>
-  Example modules are not code components.  The &lt;CODE BEGINS&gt;
-  convention MUST NOT be used for example modules.
+Example modules are not code components.  The &lt;CODE BEGINS&gt;
+convention MUST NOT be used for example modules.
 </pre><a href="#section-3.2.1-1" class="pilcrow">¶</a>
 </div>
 <p id="section-3.2.1-2">An example module <span class="bcp14">SHOULD</span> be named using the term "example", followed
@@ -1825,9 +1825,9 @@ appear in all capitals, as shown here.<a href="#section-2.4-1" class="pilcrow">�
 <p id="section-3.5-4">Example:<a href="#section-3.5-4" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-3.5-5">
 <pre>
- The YANG data model in this document conforms to the Network
- Management Datastore Architecture defined in
- RFC 8342.
+  The YANG data model in this document conforms to the Network
+  Management Datastore Architecture defined in
+  RFC 8342.
 </pre><a href="#section-3.5-5" class="pilcrow">¶</a>
 </div>
 <p id="section-3.5-6">Consistent indentation <span class="bcp14">SHOULD</span> be used for all examples, including
@@ -1841,7 +1841,7 @@ appear in all capitals, as shown here.<a href="#section-2.4-1" class="pilcrow">�
    &lt;myleaf xmlns="tag:example.com,2017:example-two"&gt;\
      this is a long value so the line needs to wrap to stay\
      within 72 characters\
-    &lt;/myleaf&gt;
+   &lt;/myleaf&gt;
 </pre><a href="#section-3.5-7" class="pilcrow">¶</a>
 </div>
 </section>
@@ -1914,59 +1914,59 @@ appear in all capitals, as shown here.<a href="#section-2.4-1" class="pilcrow">�
 <div class="breakable sourcecode" id="section-3.7.1-1">
 <pre>&lt;CODE BEGINS&gt;
 
-   X.  Security Considerations
+X.  Security Considerations
 
-   The YANG module specified in this document defines a schema for data
-   that is designed to be accessed via network management protocols such
-   as NETCONF [RFC6241] or RESTCONF [RFC8040].  The lowest NETCONF layer
-   is the secure transport layer, and the mandatory-to-implement secure
-   transport is Secure Shell (SSH) [RFC6242].  The lowest RESTCONF layer
-   is HTTPS, and the mandatory-to-implement secure transport is TLS
-   [RFC8446].
+The YANG module specified in this document defines a schema for data
+that is designed to be accessed via network management protocols such
+as NETCONF [RFC6241] or RESTCONF [RFC8040].  The lowest NETCONF layer
+is the secure transport layer, and the mandatory-to-implement secure
+transport is Secure Shell (SSH) [RFC6242].  The lowest RESTCONF layer
+is HTTPS, and the mandatory-to-implement secure transport is TLS
+[RFC8446].
 
-   The Network Configuration Access Control Model (NACM) [RFC8341]
-   provides the means to restrict access for particular NETCONF or
-   RESTCONF users to a preconfigured subset of all available NETCONF or
-   RESTCONF protocol operations and content.
+The Network Configuration Access Control Model (NACM) [RFC8341]
+provides the means to restrict access for particular NETCONF or
+RESTCONF users to a preconfigured subset of all available NETCONF or
+RESTCONF protocol operations and content.
 
-    -- if you have any writable data nodes (those are all the
-    -- "config true" nodes, and remember, that is the default)
-    -- describe their specific sensitivity or vulnerability.
+ -- if you have any writable data nodes (those are all the
+ -- "config true" nodes, and remember, that is the default)
+ -- describe their specific sensitivity or vulnerability.
 
-   There are a number of data nodes defined in this YANG module that are
-   writable/creatable/deletable (i.e., config true, which is the
-   default).  These data nodes may be considered sensitive or vulnerable
-   in some network environments.  Write operations (e.g., edit-config)
-   and delete operations to these data nodes without proper protection
-   or authentication can have a negative effect on network operations.
-   These are the subtrees and data nodes and their sensitivity/
-   vulnerability:
-
-   &lt;list subtrees and data nodes and state why they are sensitive&gt;
-
-    -- for all YANG modules you must evaluate whether any readable data
-    -- nodes (those are all the "config false" nodes, but also all other
-    -- nodes, because they can also be read via operations like get or
-    -- get-config) are sensitive or vulnerable (for instance, if they
-    -- might reveal customer information or violate personal privacy
-    -- laws such as those of the European Union if exposed to
-    -- unauthorized parties)
-
-   Some of the readable data nodes in this YANG module may be considered
-   sensitive or vulnerable in some network environments.  It is thus
-   important to control read access (e.g., via get, get-config, or
-   notification) to these data nodes.  These are the subtrees and data
-   nodes and their sensitivity/vulnerability:
+There are a number of data nodes defined in this YANG module that are
+writable/creatable/deletable (i.e., config true, which is the
+default).  These data nodes may be considered sensitive or vulnerable
+in some network environments.  Write operations (e.g., edit-config)
+and delete operations to these data nodes without proper protection
+or authentication can have a negative effect on network operations.
+These are the subtrees and data nodes and their sensitivity/
+vulnerability:
 
    &lt;list subtrees and data nodes and state why they are sensitive&gt;
 
-    -- if your YANG module has defined any RPC operations
-    -- describe their specific sensitivity or vulnerability.
+  -- for all YANG modules you must evaluate whether any readable data
+  -- nodes (those are all the "config false" nodes, but also all other
+  -- nodes, because they can also be read via operations like get or
+  -- get-config) are sensitive or vulnerable (for instance, if they
+  -- might reveal customer information or violate personal privacy
+  -- laws such as those of the European Union if exposed to
+  -- unauthorized parties)
 
-   Some of the RPC operations in this YANG module may be considered
-   sensitive or vulnerable in some network environments.  It is thus
-   important to control access to these operations.  These are the
-   operations and their sensitivity/vulnerability:
+ Some of the readable data nodes in this YANG module may be considered
+ sensitive or vulnerable in some network environments.  It is thus
+ important to control read access (e.g., via get, get-config, or
+ notification) to these data nodes.  These are the subtrees and data
+ nodes and their sensitivity/vulnerability:
+
+   &lt;list subtrees and data nodes and state why they are sensitive&gt;
+
+   -- if your YANG module has defined any RPC operations
+   -- describe their specific sensitivity or vulnerability.
+
+Some of the RPC operations in this YANG module may be considered
+sensitive or vulnerable in some network environments.  It is thus
+important to control access to these operations.  These are the
+operations and their sensitivity/vulnerability:
 
    &lt;list RPC operations and state why they are sensitive&gt;
 
@@ -2174,30 +2174,30 @@ can be extracted correctly.
    below, the identifier "foo" is used in all three modules:<a href="#section-4.2-1" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.2-2">
 <pre>
-       module example-foo {
-         namespace "tag:example.com,2017:example-foo";
-         prefix f;
+    module example-foo {
+      namespace "tag:example.com,2017:example-foo";
+      prefix f;
 
-         container foo;
-       }
+      container foo;
+    }
 
-       module example-bar {
-         namespace "tag:example.com,2017:example-bar";
-         prefix b;
+    module example-bar {
+      namespace "tag:example.com,2017:example-bar";
+      prefix b;
 
-         typedef foo { type uint32; }
-       }
+      typedef foo { type uint32; }
+    }
 
-       module example-one {
-         namespace "tag:example.com,2017:example-one";
-         prefix one;
-         import example-foo { prefix f; }
-         import example-bar { prefix b; }
+    module example-one {
+      namespace "tag:example.com,2017:example-one";
+      prefix one;
+      import example-foo { prefix f; }
+      import example-bar { prefix b; }
 
-         augment "/f:foo" {
-            leaf foo { type b:foo; }
-         }
-       }
+      augment "/f:foo" {
+         leaf foo { type b:foo; }
+      }
+    }
 </pre><a href="#section-4.2-2" class="pilcrow">¶</a>
 </div>
 <p id="section-4.2-3">YANG defines the following rules for prefix usage:<a href="#section-4.2-3" class="pilcrow">¶</a></p>
@@ -2421,7 +2421,7 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
    function that should not be used:<a href="#section-4.6.2-6" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.6.2-7">
 <pre>
-      /*[local-name()='foo']
+   /*[local-name()='foo']
 </pre><a href="#section-4.6.2-7" class="pilcrow">¶</a>
 </div>
 <p id="section-4.6.2-8">The "derived-from-or-self" function <span class="bcp14">SHOULD</span> be used instead of an
@@ -2430,11 +2430,11 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
 <p id="section-4.6.2-9">Example:<a href="#section-4.6.2-9" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.6.2-10">
 <pre>
-      // do not use
-      when "md-name-format = 'name-format-null'";
+   // do not use
+   when "md-name-format = 'name-format-null'";
 
-      // this is preferred
-      when "derived-from-or-self(md-name-format, 'name-format-null')";
+   // this is preferred
+   when "derived-from-or-self(md-name-format, 'name-format-null')";
 </pre><a href="#section-4.6.2-10" class="pilcrow">¶</a>
 </div>
 </section>
@@ -2497,14 +2497,14 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
 <p id="section-4.6.4-6">Example:<a href="#section-4.6.4-6" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.6.4-7">
 <pre>
-      augment "/rt:active-route/rt:input/rt:destination-address" {
-         when "rt:address-family='v4ur:ipv4-unicast'" {
-           description
-             "This augment is valid only for IPv4 unicast.";
-         }
-         // nodes defined here within the augment-stmt
-         // cannot be referenced in the when-stmt
+   augment "/rt:active-route/rt:input/rt:destination-address" {
+      when "rt:address-family='v4ur:ipv4-unicast'" {
+        description
+          "This augment is valid only for IPv4 unicast.";
       }
+      // nodes defined here within the augment-stmt
+      // cannot be referenced in the when-stmt
+   }
 </pre><a href="#section-4.6.4-7" class="pilcrow">¶</a>
 </div>
 </section>
@@ -2526,11 +2526,11 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
    match the wildcard expansion.<a href="#section-4.6.5-2" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.6.5-3">
 <pre>
-      when /foo/services/*/active {
-        description
-          "No services directly defined in this module.
-           Matches objects that have augmented the services container.";
-      }
+   when /foo/services/*/active {
+     description
+       "No services directly defined in this module.
+        Matches objects that have augmented the services container.";
+   }
 </pre><a href="#section-4.6.5-3" class="pilcrow">¶</a>
 </div>
 </section>
@@ -2549,38 +2549,38 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
    to "one" or "three":<a href="#section-4.6.6-2" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.6.6-3">
 <pre>
-        leaf foo1 {
-          type enumeration {
-             enum one;
-             enum two;
-             enum three;
-          }
-        }
+     leaf foo1 {
+       type enumeration {
+          enum one;
+          enum two;
+          enum three;
+       }
+     }
 
-        leaf foo2 {
-          // INCORRECT
-          must "/f:foo1 != 'two'";
-          type string;
-        }
-        leaf foo2 {
-          // CORRECT
-          must "/f:foo1 = 'one' or /f:foo1 = 'three'";
-          type string;
-        }
+     leaf foo2 {
+       // INCORRECT
+       must "/f:foo1 != 'two'";
+       type string;
+     }
+     leaf foo2 {
+       // CORRECT
+       must "/f:foo1 = 'one' or /f:foo1 = 'three'";
+       type string;
+     }
 </pre><a href="#section-4.6.6-3" class="pilcrow">¶</a>
 </div>
 <p id="section-4.6.6-4">In the next revision of the module, leaf "foo1" is extended with a
    new enum named "four":<a href="#section-4.6.6-4" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.6.6-5">
 <pre>
-        leaf foo1 {
-          type enumeration {
-             enum one;
-             enum two;
-             enum three;
-             enum four;
-          }
-        }
+     leaf foo1 {
+       type enumeration {
+          enum one;
+          enum two;
+          enum three;
+          enum four;
+       }
+     }
 </pre><a href="#section-4.6.6-5" class="pilcrow">¶</a>
 </div>
 <p id="section-4.6.6-6">Now the first XPath expression will allow the enum "four" to be
@@ -2612,10 +2612,10 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
    within an import statement.<a href="#section-4.7-6" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.7-7">
 <pre>
-        import ietf-yang-types {
-           prefix yang;
-           reference "RFC 6991: Common YANG Data Types";
-        }
+     import ietf-yang-types {
+        prefix yang;
+        reference "RFC 6991: Common YANG Data Types";
+     }
 </pre><a href="#section-4.7-7" class="pilcrow">¶</a>
 </div>
 <p id="section-4.7-8">If submodules are used, then the document containing the main module
@@ -2626,14 +2626,14 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
    not specify placeholder objects like the "reserved" example below:<a href="#section-4.7-9" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.7-10">
 <pre>
-       leaf reserved {
-         type string;
-         description
-           "This object has no purpose at this time, but a future
-            revision of this module might define a purpose
-            for this object.";
-         }
-       }
+   leaf reserved {
+     type string;
+      description
+        "This object has no purpose at this time, but a future
+         revision of this module might define a purpose
+         for this object.";
+      }
+    }
 </pre><a href="#section-4.7-10" class="pilcrow">¶</a>
 </div>
 </section>
@@ -2675,13 +2675,13 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
    YANG module:<a href="#section-4.8-7" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.8-8">
 <pre>
-      revision "2012-02-22" {
-        description
-          "Initial version";
-        reference
-          "RFC 8341: Network Configuration
-                     Access Control Model";
-      }
+   revision "2012-02-22" {
+     description
+       "Initial version";
+     reference
+       "RFC 8341: Network Configuration
+                  Access Control Model";
+   }
 </pre><a href="#section-4.8-8" class="pilcrow">¶</a>
 </div>
 <p id="section-4.8-9">For an unpublished module, a complete history of each unpublished
@@ -2696,23 +2696,23 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
    unpublished update to a published YANG module:<a href="#section-4.8-10" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.8-11">
 <pre>
-      revision "2017-12-11" {
-        description
-          "Added support for YANG 1.1 actions and notifications tied to
-           data nodes.  Clarify how NACM extensions can be used by other
-           data models.";
-        reference
-          "RFC 8407: Network Configuration Protocol (NETCONF)
-                     Access Control Model";
-      }
+   revision "2017-12-11" {
+     description
+       "Added support for YANG 1.1 actions and notifications tied to
+        data nodes.  Clarify how NACM extensions can be used by other
+        data models.";
+     reference
+       "RFC 8407: Network Configuration Protocol (NETCONF)
+                  Access Control Model";
+   }
 
-      revision "2012-02-22" {
-        description
-          "Initial version";
-        reference
-          "RFC 8341: Network Configuration
-                     Access Control Model";
-      }
+   revision "2012-02-22" {
+     description
+       "Initial version";
+     reference
+       "RFC 8341: Network Configuration
+                  Access Control Model";
+   }
 </pre><a href="#section-4.8-11" class="pilcrow">¶</a>
 </div>
 </section>
@@ -2725,64 +2725,66 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
 <p id="section-4.9-1">It is <span class="bcp14">RECOMMENDED</span> that only valid YANG modules be included in
    documents, whether or not the modules are published yet.  This
    allows:<a href="#section-4.9-1" class="pilcrow">¶</a></p>
-<p id="section-4.9-2">o  the module to compile correctly instead of generating disruptive
-      fatal errors.<a href="#section-4.9-2" class="pilcrow">¶</a></p>
-<p id="section-4.9-3">o  early implementors to use the modules without picking a random
-      value for the XML namespace.<a href="#section-4.9-3" class="pilcrow">¶</a></p>
-<p id="section-4.9-4">o  early interoperability testing since independent implementations
-      will use the same XML namespace value.<a href="#section-4.9-4" class="pilcrow">¶</a></p>
-<p id="section-4.9-5">Until a URI is assigned by the IANA, a proposed namespace URI <span class="bcp14">MUST</span> be
+<ul class="normal">
+<li class="normal" id="section-4.9-2.1">the module to compile correctly instead of generating disruptive fatal errors.<a href="#section-4.9-2.1" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-4.9-2.2">early implementors to use the modules without picking a random value for the XML namespace.<a href="#section-4.9-2.2" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-4.9-2.3">early interoperability testing since independent implementations will use the same XML namespace value.<a href="#section-4.9-2.3" class="pilcrow">¶</a>
+</li>
+        </ul>
+<p id="section-4.9-3">Until a URI is assigned by the IANA, a proposed namespace URI <span class="bcp14">MUST</span> be
    provided for the namespace statement in a YANG module.  A value
    <span class="bcp14">SHOULD</span> be selected that is not likely to collide with other YANG
    namespaces.  Standard module names, prefixes, and URI strings already
-   listed in the "YANG Module Names" registry <span class="bcp14">MUST NOT</span> be used.<a href="#section-4.9-5" class="pilcrow">¶</a></p>
-<p id="section-4.9-6">A standard namespace statement value <span class="bcp14">SHOULD</span> have the following form:<a href="#section-4.9-6" class="pilcrow">¶</a></p>
+   listed in the "YANG Module Names" registry <span class="bcp14">MUST NOT</span> be used.<a href="#section-4.9-3" class="pilcrow">¶</a></p>
+<p id="section-4.9-4">A standard namespace statement value <span class="bcp14">SHOULD</span> have the following form:<a href="#section-4.9-4" class="pilcrow">¶</a></p>
+<div class="alignLeft art-text artwork" id="section-4.9-5">
+<pre>
+   &lt;URN prefix string&gt;:&lt;module-name&gt;
+</pre><a href="#section-4.9-5" class="pilcrow">¶</a>
+</div>
+<p id="section-4.9-6">The following URN prefix string <span class="bcp14">SHOULD</span> be used for published and
+   unpublished YANG modules:<a href="#section-4.9-6" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-4.9-7">
 <pre>
-       &lt;URN prefix string&gt;:&lt;module-name&gt;
+    urn:ietf:params:xml:ns:yang:
 </pre><a href="#section-4.9-7" class="pilcrow">¶</a>
 </div>
-<p id="section-4.9-8">The following URN prefix string <span class="bcp14">SHOULD</span> be used for published and
-   unpublished YANG modules:<a href="#section-4.9-8" class="pilcrow">¶</a></p>
+<p id="section-4.9-8">The following example URNs would be valid namespace statement values
+   for Standards Track modules:<a href="#section-4.9-8" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-4.9-9">
 <pre>
-       urn:ietf:params:xml:ns:yang:
+    urn:ietf:params:xml:ns:yang:ietf-netconf-partial-lock
+
+    urn:ietf:params:xml:ns:yang:ietf-netconf-state
+
+    urn:ietf:params:xml:ns:yang:ietf-netconf
 </pre><a href="#section-4.9-9" class="pilcrow">¶</a>
 </div>
-<p id="section-4.9-10">The following example URNs would be valid namespace statement values
-   for Standards Track modules:<a href="#section-4.9-10" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="section-4.9-11">
-<pre>
-       urn:ietf:params:xml:ns:yang:ietf-netconf-partial-lock
-
-       urn:ietf:params:xml:ns:yang:ietf-netconf-state
-
-       urn:ietf:params:xml:ns:yang:ietf-netconf
-</pre><a href="#section-4.9-11" class="pilcrow">¶</a>
-</div>
-<p id="section-4.9-12">Note that a different URN prefix string <span class="bcp14">SHOULD</span> be used for modules
+<p id="section-4.9-10">Note that a different URN prefix string <span class="bcp14">SHOULD</span> be used for modules
    that are not Standards Track.  The string <span class="bcp14">SHOULD</span> be selected
-   according to the guidelines in <span>[<a href="#RFC7950" class="cite xref">RFC7950</a>]</span>.<a href="#section-4.9-12" class="pilcrow">¶</a></p>
-<p id="section-4.9-13">The following URIs exemplify what might be used by modules that are
+   according to the guidelines in <span>[<a href="#RFC7950" class="cite xref">RFC7950</a>]</span>.<a href="#section-4.9-10" class="pilcrow">¶</a></p>
+<p id="section-4.9-11">The following URIs exemplify what might be used by modules that are
    not Standards Track.  Note that the domain "example.com" <span class="bcp14">SHOULD</span> be
    used by example modules in IETF I-Ds.  These URIs are not intended to
    be dereferenced.  They are used for module namespace identification
-   only.<a href="#section-4.9-13" class="pilcrow">¶</a></p>
-<p id="section-4.9-14">Example URIs using URLs per <span>[<a href="#RFC3986" class="cite xref">RFC3986</a>]</span>:<a href="#section-4.9-14" class="pilcrow">¶</a></p>
+   only.<a href="#section-4.9-11" class="pilcrow">¶</a></p>
+<p id="section-4.9-12">Example URIs using URLs per <span>[<a href="#RFC3986" class="cite xref">RFC3986</a>]</span>:<a href="#section-4.9-12" class="pilcrow">¶</a></p>
+<div class="alignLeft art-text artwork" id="section-4.9-13">
+<pre>
+    https://example.com/ns/example-interfaces
+
+    https://example.com/ns/example-system
+</pre><a href="#section-4.9-13" class="pilcrow">¶</a>
+</div>
+<p id="section-4.9-14">Example URIs using tags per <span>[<a href="#RFC4151" class="cite xref">RFC4151</a>]</span>:<a href="#section-4.9-14" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-4.9-15">
 <pre>
-       https://example.com/ns/example-interfaces
+    tag:example.com,2017:example-interfaces
 
-       https://example.com/ns/example-system
+    tag:example.com,2017:example-system
 </pre><a href="#section-4.9-15" class="pilcrow">¶</a>
-</div>
-<p id="section-4.9-16">Example URIs using tags per <span>[<a href="#RFC4151" class="cite xref">RFC4151</a>]</span>:<a href="#section-4.9-16" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="section-4.9-17">
-<pre>
-       tag:example.com,2017:example-interfaces
-
-       tag:example.com,2017:example-system
-</pre><a href="#section-4.9-17" class="pilcrow">¶</a>
 </div>
 </section>
 </div>
@@ -2839,12 +2841,12 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
    type <span class="bcp14">SHOULD</span> be used.<a href="#section-4.11.1-1" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.11.1-2">
 <pre>
-       leaf foo {
-         type enumeration {
-           enum one;
-           enum two;
-         }
-       }
+    leaf foo {
+      type enumeration {
+        enum one;
+        enum two;
+      }
+    }
 </pre><a href="#section-4.11.1-2" class="pilcrow">¶</a>
 </div>
 <p id="section-4.11.1-3">If extensibility of enumerated values is required, then the
@@ -2852,22 +2854,23 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
    other built-in type.<a href="#section-4.11.1-3" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.11.1-4">
 <pre>
-       identity foo-type {
-         description "Base for the extensible type";
-       }
+    identity foo-type {
+      description "Base for the extensible type";
+    }
 
-       identity one {
-         base f:foo-type;
-       }
-       identity two {
-         base f:foo-type;
-       }
+    identity one {
+      base f:foo-type;
+    }
 
-       leaf foo {
-         type identityref {
-           base f:foo-type;
-         }
-       }
+    identity two {
+      base f:foo-type;
+    }
+
+    leaf foo {
+      type identityref {
+        base f:foo-type;
+      }
+    }
 </pre><a href="#section-4.11.1-4" class="pilcrow">¶</a>
 </div>
 <p id="section-4.11.1-5">Note that any module can declare an identity with base "foo-type"
@@ -2891,12 +2894,12 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
    the "pattern" statement:<a href="#section-4.11.2-2" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.11.2-3">
 <pre>
-       typedef ipv4-address-no-zone {
-         type inet:ipv4-address {
-           pattern '[0-9\.]*';
-         }
-         ...
-       }
+    typedef ipv4-address-no-zone {
+      type inet:ipv4-address {
+        pattern '[0-9\.]*';
+      }
+      ...
+    }
 </pre><a href="#section-4.11.2-3" class="pilcrow">¶</a>
 </div>
 <p id="section-4.11.2-4">For string data types, if the length of the string is required to be
@@ -2906,14 +2909,14 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
    the "length" statement:<a href="#section-4.11.2-5" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.11.2-6">
 <pre>
-       typedef yang-identifier {
-         type string {
-           length "1..max";
-           pattern '[a-zA-Z_][a-zA-Z0-9\-_.]*';
-           pattern '.|..|[^xX].*|.[^mM].*|..[^lL].*';
-         }
-         ...
-       }
+    typedef yang-identifier {
+      type string {
+       length "1..max";
+        pattern '[a-zA-Z_][a-zA-Z0-9\-_.]*';
+        pattern '.|..|[^xX].*|.[^mM].*|..[^lL].*';
+      }
+      ...
+   }
 </pre><a href="#section-4.11.2-6" class="pilcrow">¶</a>
 </div>
 <p id="section-4.11.2-7">For numeric data types, if the values allowed by the intended
@@ -2923,12 +2926,12 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
    the "range" statement:<a href="#section-4.11.2-8" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.11.2-9">
 <pre>
-       typedef dscp {
-         type uint8 {
-            range "0..63";
-         }
-         ...
-       }
+    typedef dscp {
+      type uint8 {
+         range "0..63";
+      }
+      ...
+    }
 </pre><a href="#section-4.11.2-9" class="pilcrow">¶</a>
 </div>
 </section>
@@ -2943,30 +2946,30 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
    (within each "enum" or "bit" statement) <span class="bcp14">SHOULD</span> be present.<a href="#section-4.11.3-1" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.11.3-2">
 <pre>
-       leaf foo {
-         // INCORRECT
-         type enumeration {
-           enum one;
-           enum two;
-         }
-         description
-           "The foo enum...
-            one: The first enum
-            two: The second enum";
-       }
-       leaf foo {
-         // CORRECT
-         type enumeration {
-           enum one {
-             description "The first enum";
-           }
-           enum two {
-             description "The second enum";
-           }
-         }
-         description
-           "The foo enum...  ";
-       }
+    leaf foo {
+      // INCORRECT
+      type enumeration {
+        enum one;
+        enum two;
+      }
+      description
+        "The foo enum...
+         one: The first enum
+         two: The second enum";
+    }
+    leaf foo {
+      // CORRECT
+      type enumeration {
+        enum one {
+          description "The first enum";
+        }
+        enum two {
+          description "The second enum";
+        }
+      }
+      description
+        "The foo enum...  ";
+    }
 </pre><a href="#section-4.11.3-2" class="pilcrow">¶</a>
 </div>
 </section>
@@ -2982,53 +2985,55 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
    <span class="bcp14">SHOULD</span> be ordered from most restrictive to least restrictive types.<a href="#section-4.11.4-1" class="pilcrow">¶</a></p>
 <p id="section-4.11.4-2">In the following example, the "enumeration" type will never be
    matched because the preceding "string" type will match everything.<a href="#section-4.11.4-2" class="pilcrow">¶</a></p>
-<div class="lang-yang sourcecode" id="section-4.11.4-3">
+<p id="section-4.11.4-3">Incorrect:<a href="#section-4.11.4-3" class="pilcrow">¶</a></p>
+<div class="lang-yang sourcecode" id="section-4.11.4-4">
 <pre>
-   Incorrect:
-
-      type union {
-        type string;
-        type enumeration {
-          enum up;
-          enum down;
-        }
-      }
-
-   Correct:
-
-      type union {
-        type enumeration {
-          enum up;
-          enum down;
-        }
-        type string;
-      }
-</pre><a href="#section-4.11.4-3" class="pilcrow">¶</a>
+   type union {
+     type string;
+     type enumeration {
+       enum up;
+       enum down;
+     }
+   }
+</pre><a href="#section-4.11.4-4" class="pilcrow">¶</a>
 </div>
-<p id="section-4.11.4-4">It is possible for different member types to match, depending on the
-   input encoding format.  In XML, all values are passed as string
-   nodes; but in JSON, there are different value types for numbers,
-   booleans, and strings.<a href="#section-4.11.4-4" class="pilcrow">¶</a></p>
-<p id="section-4.11.4-5">In the following example, a JSON numeric value will always be matched
-   by the "int32" type, but in XML the string value representing a
-   number will be matched by the "string" type.  The second version will
-   match the "int32" member type no matter how the input is encoded.<a href="#section-4.11.4-5" class="pilcrow">¶</a></p>
+<p id="section-4.11.4-5">Correct:<a href="#section-4.11.4-5" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.11.4-6">
 <pre>
-   Incorrect:
-
-      type union {
-        type string;
-        type int32;
-      }
-
-   Correct:
-
-      type union {
-        type int32;
-        type string;
-      }
+   type union {
+     type enumeration {
+       enum up;
+       enum down;
+     }
+     type string;
+   }
 </pre><a href="#section-4.11.4-6" class="pilcrow">¶</a>
+</div>
+<p id="section-4.11.4-7">It is possible for different member types to match, depending on the
+   input encoding format.  In XML, all values are passed as string
+   nodes; but in JSON, there are different value types for numbers,
+   booleans, and strings.<a href="#section-4.11.4-7" class="pilcrow">¶</a></p>
+<p id="section-4.11.4-8">In the following example, a JSON numeric value will always be matched
+   by the "int32" type, but in XML the string value representing a
+   number will be matched by the "string" type.  The second version will
+   match the "int32" member type no matter how the input is encoded.<a href="#section-4.11.4-8" class="pilcrow">¶</a></p>
+<p id="section-4.11.4-9">Incorrect:<a href="#section-4.11.4-9" class="pilcrow">¶</a></p>
+<div class="lang-yang sourcecode" id="section-4.11.4-10">
+<pre>
+   type union {
+     type string;
+     type int32;
+   }
+</pre><a href="#section-4.11.4-10" class="pilcrow">¶</a>
+</div>
+<p id="section-4.11.4-11">Correct:<a href="#section-4.11.4-11" class="pilcrow">¶</a></p>
+<div class="lang-yang sourcecode" id="section-4.11.4-12">
+<pre>
+   type union {
+     type int32;
+     type string;
+   }
+</pre><a href="#section-4.11.4-12" class="pilcrow">¶</a>
 </div>
 </section>
 </div>
@@ -3065,18 +3070,18 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
 <p id="section-4.11.5-6">Incorrect:<a href="#section-4.11.5-6" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.11.5-7">
 <pre>
-      leaf flag1 {
-        type empty;
-      }
+   leaf flag1 {
+     type empty;
+   }
 </pre><a href="#section-4.11.5-7" class="pilcrow">¶</a>
 </div>
 <p id="section-4.11.5-8">Correct:<a href="#section-4.11.5-8" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.11.5-9">
 <pre>
-      leaf flag2 {
-        type boolean;
-        default false;
-      }
+   leaf flag2 {
+     type boolean;
+     default false;
+   }
 </pre><a href="#section-4.11.5-9" class="pilcrow">¶</a>
 </div>
 </section>
@@ -3220,23 +3225,23 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
 <p id="section-4.14.1-2">Example using container wrappers:<a href="#section-4.14.1-2" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.14.1-3">
 <pre>
-       container top {
-          container foos {
-             list foo { ... }
-          }
-          container bars {
-             list bar { ... }
-          }
+    container top {
+       container foos {
+          list foo { ... }
        }
+       container bars {
+          list bar { ... }
+       }
+    }
 </pre><a href="#section-4.14.1-3" class="pilcrow">¶</a>
 </div>
 <p id="section-4.14.1-4">Example without container wrappers:<a href="#section-4.14.1-4" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-4.14.1-5">
 <pre>
-       container top {
-          list foo { ... }
-          list bar { ... }
-       }
+    container top {
+       list foo { ... }
+       list bar { ... }
+    }
 </pre><a href="#section-4.14.1-5" class="pilcrow">¶</a>
 </div>
 <p id="section-4.14.1-6">Use of non-presence containers to organize data is a subjective
@@ -3300,14 +3305,14 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
    values for the resource instance.  For example:<a href="#section-4.16-3" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.16-4">
 <pre>
-     notification interface-up {
-       description "Sent when an interface is activated.";
-       leaf name {
-         type leafref {
-           path "/if:interfaces/if:interface/if:name";
-         }
-       }
-     }
+    notification interface-up {
+      description "Sent when an interface is activated.";
+      leaf name {
+        type leafref {
+          path "/if:interfaces/if:interface/if:name";
+        }
+      }
+    }
 </pre><a href="#section-4.16-4" class="pilcrow">¶</a>
 </div>
 <p id="section-4.16-5">Note that there are no formal YANG statements to identify any data
@@ -3353,14 +3358,14 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
 <p id="section-4.17-6">For example, feature2 requires implementation of feature1:<a href="#section-4.17-6" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-4.17-7">
 <pre>
-      feature feature1 {
-        description "Some protocol feature";
-      }
+   feature feature1 {
+     description "Some protocol feature";
+   }
 
-      feature feature2 {
-        if-feature "feature1";
-        description "Another protocol feature";
-      }
+   feature feature2 {
+     if-feature "feature1";
+     description "Another protocol feature";
+   }
 </pre><a href="#section-4.17-7" class="pilcrow">¶</a>
 </div>
 </section>
@@ -3433,15 +3438,15 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
    entries of the type "ethernetCsmacd".<a href="#section-4.19.1-2" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-4.19.1-3">
 <pre>
-        augment "/if:interfaces/if:interface" {
-            when "if:type = 'ianaift:ethernetCsmacd'";
+     augment "/if:interfaces/if:interface" {
+         when "if:type = 'ianaift:ethernetCsmacd'";
 
-            container ethernet {
-                leaf duplex {
-                    ...
-                }
-            }
-        }
+         container ethernet {
+             leaf duplex {
+                 ...
+             }
+         }
+     }
 </pre><a href="#section-4.19.1-3" class="pilcrow">¶</a>
 </div>
 </section>
@@ -3477,28 +3482,28 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
    not add a mandatory data node.<a href="#section-4.19.2-6" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-4.19.2-7">
 <pre>
-     module example-module {
+  module example-module {
 
-       yang-version 1.1;
-       namespace "tag:example.com,2017:example-module";
-       prefix mymod;
+    yang-version 1.1;
+    namespace "tag:example.com,2017:example-module";
+    prefix mymod;
 
-       import iana-if-type { prefix iana; }
-       import ietf-interfaces { prefix if; }
+    import iana-if-type { prefix iana; }
+    import ietf-interfaces { prefix if; }
 
-       identity some-new-iftype {
-          base iana:iana-interface-type;
+    identity some-new-iftype {
+       base iana:iana-interface-type;
+    }
+
+    augment "/if:interfaces/if:interface" {
+      when "if:type = 'mymod:some-new-iftype'";
+
+       leaf mandatory-leaf {
+          type string;
+          mandatory true;
        }
-
-       augment "/if:interfaces/if:interface" {
-          when "if:type = 'mymod:some-new-iftype'";
-
-          leaf mandatory-leaf {
-             type string;
-             mandatory true;
-          }
-       }
-     }
+    }
+  }
 </pre><a href="#section-4.19.2-7" class="pilcrow">¶</a>
 </div>
 <p id="section-4.19.2-8">Note that this practice is safe only for creating data resources.  It
@@ -3543,30 +3548,33 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
 <p id="section-4.20-6">Example documenting platform resource limits:<a href="#section-4.20-6" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-4.20-7">
 <pre>
-     Wrong: (max-elements in the list itself)
-
-        container backups {
-          list backup {
-             ...
-             max-elements  10;
-             ...
-          }
-        }
+ Wrong: (max-elements in the list itself)
 </pre><a href="#section-4.20-7" class="pilcrow">¶</a>
 </div>
 <div class="alignLeft art-text artwork" id="section-4.20-8">
 <pre>
- Correct: (max-elements in a deviation)
+     container backups {
+       list backup {
+          ...
+          max-elements  10;
+          ...
+       }
+     }
 </pre><a href="#section-4.20-8" class="pilcrow">¶</a>
 </div>
 <div class="alignLeft art-text artwork" id="section-4.20-9">
 <pre>
-        deviation /bk:backups/bk:backup {
-          deviate add {
-             max-elements  10;
-          }
-        }
+ Correct: (max-elements in a deviation)
 </pre><a href="#section-4.20-9" class="pilcrow">¶</a>
+</div>
+<div class="alignLeft art-text artwork" id="section-4.20-10">
+<pre>
+     deviation /bk:backups/bk:backup {
+       deviate add {
+          max-elements  10;
+       }
+     }
+</pre><a href="#section-4.20-10" class="pilcrow">¶</a>
 </div>
 </section>
 </div>
@@ -3658,49 +3666,49 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
 <p id="section-4.22.1-3">Not preferred:<a href="#section-4.22.1-3" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-4.22.1-4">
 <pre>
-      list foo {
-         key name;
-         leaf name {
-           type string;
-         }
-         ...
+   list foo {
+      key name;
+      leaf name {
+        type string;
       }
+      ...
+   }
 
-      list foo-addon {
-         key name;
-         config false;
-         leaf name {
-           type string;
-         }
-         ...
+   list foo-addon {
+      key name;
+      config false;
+      leaf name {
+        type string;
       }
+      ...
+   }
 </pre><a href="#section-4.22.1-4" class="pilcrow">¶</a>
 </div>
 <p id="section-4.22.1-5">Preferred:<a href="#section-4.22.1-5" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-4.22.1-6">
 <pre>
-      list foo {
-         key name;
-         leaf name {
-           type string;
-         }
-         ...
+   list foo {
+      key name;
+      leaf name {
+        type string;
       }
+      ...
+   }
 
-      list foo-addon {
-         key name;
-         config false;
-         leaf name {
-           type leafref {
-             path "/foo/name";
-             require-instance false;
-           }
-         }
-         leaf addon {
-           type string;
-           mandatory true;
-         }
+   list foo-addon {
+      key name;
+      config false;
+      leaf name {
+        type leafref {
+          path "/foo/name";
+          require-instance false;
+        }
       }
+      leaf addon {
+        type string;
+        mandatory true;
+      }
+   }
 </pre><a href="#section-4.22.1-6" class="pilcrow">¶</a>
 </div>
 </section>
@@ -3738,11 +3746,11 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
    retrieved together with minimal message overhead.<a href="#section-4.23.1-1" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-4.23.1-2">
 <pre>
-      container foo {
-        ...
-        // contains "config true" and "config false" nodes that have
-        // no corresponding "config true" object (e.g., counters)
-      }
+   container foo {
+     ...
+     // contains "config true" and "config false" nodes that have
+     // no corresponding "config true" object (e.g., counters)
+   }
 </pre><a href="#section-4.23.1-2" class="pilcrow">¶</a>
 </div>
 </section>
@@ -3802,37 +3810,42 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
    configuration datastore objects.<a href="#section-4.23.3-3" class="pilcrow">¶</a></p>
 <p id="section-4.23.3-4">The remaining are options that <span class="bcp14">MAY</span> be followed during the time that
    NMDA mechanisms are being defined.<a href="#section-4.23.3-4" class="pilcrow">¶</a></p>
-<p id="section-4.23.3-5">(a)  Modules that require immediate support for the NMDA features
-        <span class="bcp14">SHOULD</span> be structured for NMDA.  A temporary non-NMDA version of
-        this type of module <span class="bcp14">MAY</span> exist, as either an existing model or a
-        model created by hand or with suitable tools that mirror the
-        current modeling strategies.  Both the NMDA and the non-NMDA
-        modules <span class="bcp14">SHOULD</span> be published in the same document, with NMDA
-        modules in the document main body and the non-NMDA modules in a
-        non-normative appendix.  The use of the non-NMDA module will
-        allow temporary bridging of the time period until NMDA
-        implementations are available.<a href="#section-4.23.3-5" class="pilcrow">¶</a></p>
-<p id="section-4.23.3-6">(b)  For published models, the model should be republished with an
-        NMDA-compatible structure, deprecating non-NMDA constructs.  For
-        example, the "ietf-interfaces" model in <span>[<a href="#RFC7223" class="cite xref">RFC7223</a>]</span> has been
-        restructured as an NMDA-compatible model in <span>[<a href="#RFC8343" class="cite xref">RFC8343</a>]</span>.  The
-        "/interfaces-state" hierarchy has been marked "status
-        deprecated".  Models that mark their "/foo-state" hierarchy with
-        "status deprecated" will allow NMDA-capable implementations to
-        avoid the cost of duplicating the state nodes, while enabling
-        non-NMDA-capable implementations to utilize them for access to
-        the operational values.<a href="#section-4.23.3-6" class="pilcrow">¶</a></p>
-<p id="section-4.23.3-7">(c)  For models that augment models that have not been structured
-        with the NMDA, the modeler will have to consider the structure
-        of the base model and the guidelines listed above.  Where
-        possible, such models should move to new revisions of the base
-        model that are NMDA compatible.  When that is not possible,
-        augmenting "state" containers <span class="bcp14">SHOULD</span> be avoided, with the
-        expectation that the base model will be re-released with the
-        state containers marked as deprecated.  It is <span class="bcp14">RECOMMENDED</span> to
-        augment only the "/foo" hierarchy of the base model.  Where this
-        recommendation cannot be followed, then any new "state" elements
-        <span class="bcp14">SHOULD</span> be included in their own module.<a href="#section-4.23.3-7" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.23.3-5.1">Modules that require immediate support for the NMDA features
+  <span class="bcp14">SHOULD</span> be structured for NMDA.  A temporary non-NMDA version of
+  this type of module <span class="bcp14">MAY</span> exist, as either an existing model or a
+  model created by hand or with suitable tools that mirror the
+  current modeling strategies.  Both the NMDA and the non-NMDA
+  modules <span class="bcp14">SHOULD</span> be published in the same document, with NMDA
+  modules in the document main body and the non-NMDA modules in a
+  non-normative appendix.  The use of the non-NMDA module will
+  allow temporary bridging of the time period until NMDA
+  implementations are available.<a href="#section-4.23.3-5.1" class="pilcrow">¶</a>
+</li>
+            <li class="normal" id="section-4.23.3-5.2">For published models, the model should be republished with an
+  NMDA-compatible structure, deprecating non-NMDA constructs.  For
+  example, the "ietf-interfaces" model in <span>[<a href="#RFC7223" class="cite xref">RFC7223</a>]</span> has been
+  restructured as an NMDA-compatible model in <span>[<a href="#RFC8343" class="cite xref">RFC8343</a>]</span>.  The
+  "/interfaces-state" hierarchy has been marked "status
+  deprecated".  Models that mark their "/foo-state" hierarchy with
+  "status deprecated" will allow NMDA-capable implementations to
+  avoid the cost of duplicating the state nodes, while enabling
+  non-NMDA-capable implementations to utilize them for access to
+  the operational values.<a href="#section-4.23.3-5.2" class="pilcrow">¶</a>
+</li>
+            <li class="normal" id="section-4.23.3-5.3">For models that augment models that have not been structured
+  with the NMDA, the modeler will have to consider the structure
+  of the base model and the guidelines listed above.  Where
+  possible, such models should move to new revisions of the base
+  model that are NMDA compatible.  When that is not possible,
+  augmenting "state" containers <span class="bcp14">SHOULD</span> be avoided, with the
+  expectation that the base model will be re-released with the
+  state containers marked as deprecated.  It is <span class="bcp14">RECOMMENDED</span> to
+  augment only the "/foo" hierarchy of the base model.  Where this
+  recommendation cannot be followed, then any new "state" elements
+  <span class="bcp14">SHOULD</span> be included in their own module.<a href="#section-4.23.3-5.3" class="pilcrow">¶</a>
+</li>
+          </ul>
 <div id="temporary-non-nmda-modules">
 <section id="section-4.23.3.1">
             <h5 id="name-temporary-non-nmda-modules">
@@ -3885,16 +3898,16 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
    state subtrees, whenever possible.<a href="#section-4.23.3.2-1" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.23.3.2-2">
 <pre>
-     module example-foo {
-       namespace "urn:example.com:params:xml:ns:yang:example-foo";
-       prefix "foo";
+  module example-foo {
+    namespace "urn:example.com:params:xml:ns:yang:example-foo";
+    prefix "foo";
 
-       container foo {
-         // configuration data child nodes
-         // operational value in operational state datastore only
-         // may contain "config false" nodes as needed
-       }
+    container foo {
+      // configuration data child nodes
+      // operational value in operational state datastore only
+      // may contain "config false" nodes as needed
     }
+ }
 </pre><a href="#section-4.23.3.2-2" class="pilcrow">¶</a>
 </div>
 </section>
@@ -3910,19 +3923,19 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
 <p id="section-4.23.3.3-2">Old Module:<a href="#section-4.23.3.3-2" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.23.3.3-3">
 <pre>
-     module example-foo {
-       namespace "urn:example.com:params:xml:ns:yang:example-foo";
-       prefix "foo";
+  module example-foo {
+    namespace "urn:example.com:params:xml:ns:yang:example-foo";
+    prefix "foo";
 
-       container foo {
-         // configuration data child nodes
-       }
-
-       container foo-state {
-         config false;
-         // operational state child nodes
-       }
+    container foo {
+      // configuration data child nodes
     }
+
+    container foo-state {
+      config false;
+      // operational state child nodes
+    }
+ }
 </pre><a href="#section-4.23.3.3-3" class="pilcrow">¶</a>
 </div>
 <div class="alignLeft art-text artwork" id="section-4.23.3.3-4">
@@ -3932,24 +3945,24 @@ Converted NMDA Module:
 </div>
 <div class="lang-yang sourcecode" id="section-4.23.3.3-5">
 <pre>
-     module example-foo {
-       namespace "urn:example.com:params:xml:ns:yang:example-foo";
-       prefix "foo";
+  module example-foo {
+    namespace "urn:example.com:params:xml:ns:yang:example-foo";
+    prefix "foo";
 
-       container foo {
-         // configuration data child nodes
-         // operational value in operational state datastore only
-         // may contain "config false" nodes as needed
-         // will contain any data nodes from old foo-state
-       }
-
-       // keep original foo-state but change status to deprecated
-       container foo-state {
-         config false;
-         status deprecated;
-         // operational state child nodes
-       }
+    container foo {
+      // configuration data child nodes
+      // operational value in operational state datastore only
+      // may contain "config false" nodes as needed
+      // will contain any data nodes from old foo-state
     }
+
+    // keep original foo-state but change status to deprecated
+    container foo-state {
+      config false;
+      status deprecated;
+      // operational state child nodes
+    }
+ }
 </pre><a href="#section-4.23.3.3-5" class="pilcrow">¶</a>
 </div>
 </section>
@@ -3964,19 +3977,19 @@ Converted NMDA Module:
    with configuration data nodes (to be NMDA compliant).<a href="#section-4.23.3.4-1" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.23.3.4-2">
 <pre>
-     module example-foo-state {
-       namespace "urn:example.com:params:xml:ns:yang:example-foo-state";
-       prefix "foo-s";
+  module example-foo-state {
+    namespace "urn:example.com:params:xml:ns:yang:example-foo-state";
+    prefix "foo-s";
 
-       // import new or converted module; not used in this example
-       import example-foo { prefix foo; }
+    // import new or converted module; not used in this example
+    import example-foo { prefix foo; }
 
-       container foo-state {
-         config false;
-         status deprecated;
-         // operational state child nodes
-       }
-    }
+    container foo-state {
+      config false;
+      status deprecated;
+      // operational state child nodes
+     }
+  }
 </pre><a href="#section-4.23.3.4-2" class="pilcrow">¶</a>
 </div>
 </section>
@@ -4093,15 +4106,15 @@ Converted NMDA Module:
    the "interface" parameter, only the "reset" operation itself:<a href="#section-4.26.4-4" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.26.4-5">
 <pre>
-      rpc reset {
-        input {
-          leaf interface {
-            type if:interface-ref;
-            mandatory true;
-            description "The interface to reset.";
-          }
-        }
-      }
+   rpc reset {
+     input {
+       leaf interface {
+         type if:interface-ref;
+         mandatory true;
+         description "The interface to reset.";
+       }
+     }
+   }
 </pre><a href="#section-4.26.4-5" class="pilcrow">¶</a>
 </div>
 <p id="section-4.26.4-6">However, NACM can enforce access control for individual interface
@@ -4110,12 +4123,12 @@ Converted NMDA Module:
    the "reset" action for that interface instance:<a href="#section-4.26.4-6" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.26.4-7">
 <pre>
-      container interfaces {
-        list interface {
-          ...
-          action reset { }
-        }
-      }
+   container interfaces {
+     list interface {
+       ...
+       action reset { }
+     }
+   }
 </pre><a href="#section-4.26.4-7" class="pilcrow">¶</a>
 </div>
 </section>
@@ -4478,7 +4491,7 @@ registry]:
 <dl class="references">
 <dt id="ID-Guidelines">[ID-Guidelines]</dt>
         <dd>
-<span class="refAuthor">Housley, R.</span>, <span class="refTitle">"Guidelines to Authors of Internet-Drafts"</span>, <span>n.d.</span>, <span>&lt;<a href="https://www.ietf.org/standards/ids/guidelines/">https://www.ietf.org/standards/ids/guidelines/</a>&gt;</span>. </dd>
+<span class="refAuthor">IETF</span>, <span class="refTitle">"Guidelines to Authors of Internet-Drafts"</span>, <span>n.d.</span>, <span>&lt;<a href="https://authors.ietf.org/en/content-guidelines-overview">https://authors.ietf.org/en/content-guidelines-overview</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC2119">[RFC2119]</dt>
         <dd>
@@ -4491,6 +4504,10 @@ registry]:
 <dt id="RFC3986">[RFC3986]</dt>
         <dd>
 <span class="refAuthor">Berners-Lee, T.</span>, <span class="refAuthor">Fielding, R.</span>, and <span class="refAuthor">L. Masinter</span>, <span class="refTitle">"Uniform Resource Identifier (URI): Generic Syntax"</span>, <span class="seriesInfo">STD 66</span>, <span class="seriesInfo">RFC 3986</span>, <span class="seriesInfo">DOI 10.17487/RFC3986</span>, <time datetime="2005-01" class="refDate">January 2005</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3986">https://www.rfc-editor.org/rfc/rfc3986</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC5378">[RFC5378]</dt>
+        <dd>
+<span class="refAuthor">Bradner, S., Ed.</span> and <span class="refAuthor">J. Contreras, Ed.</span>, <span class="refTitle">"Rights Contributors Provide to the IETF Trust"</span>, <span class="seriesInfo">BCP 78</span>, <span class="seriesInfo">RFC 5378</span>, <span class="seriesInfo">DOI 10.17487/RFC5378</span>, <time datetime="2008-11" class="refDate">November 2008</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5378">https://www.rfc-editor.org/rfc/rfc5378</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC6020">[RFC6020]</dt>
         <dd>
@@ -4519,10 +4536,6 @@ registry]:
 <dt id="RFC8342">[RFC8342]</dt>
         <dd>
 <span class="refAuthor">Bjorklund, M.</span>, <span class="refAuthor">Schoenwaelder, J.</span>, <span class="refAuthor">Shafer, P.</span>, <span class="refAuthor">Watsen, K.</span>, and <span class="refAuthor">R. Wilton</span>, <span class="refTitle">"Network Management Datastore Architecture (NMDA)"</span>, <span class="seriesInfo">RFC 8342</span>, <span class="seriesInfo">DOI 10.17487/RFC8342</span>, <time datetime="2018-03" class="refDate">March 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8342">https://www.rfc-editor.org/rfc/rfc8342</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC8407">[RFC8407]</dt>
-        <dd>
-<span class="refAuthor">Bierman, A.</span>, <span class="refTitle">"Guidelines for Authors and Reviewers of Documents Containing YANG Data Models"</span>, <span class="seriesInfo">BCP 216</span>, <span class="seriesInfo">RFC 8407</span>, <span class="seriesInfo">DOI 10.17487/RFC8407</span>, <time datetime="2018-10" class="refDate">October 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8407">https://www.rfc-editor.org/rfc/rfc8407</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="W3C.REC-xpath">[W3C.REC-xpath]</dt>
       <dd>
@@ -4579,10 +4592,6 @@ registry]:
         <dd>
 <span class="refAuthor">Heard, C., Ed.</span>, <span class="refTitle">"Guidelines for Authors and Reviewers of MIB Documents"</span>, <span class="seriesInfo">BCP 111</span>, <span class="seriesInfo">RFC 4181</span>, <span class="seriesInfo">DOI 10.17487/RFC4181</span>, <time datetime="2005-09" class="refDate">September 2005</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc4181">https://www.rfc-editor.org/rfc/rfc4181</a>&gt;</span>. </dd>
 <dd class="break"></dd>
-<dt id="RFC5378">[RFC5378]</dt>
-        <dd>
-<span class="refAuthor">Bradner, S., Ed.</span> and <span class="refAuthor">J. Contreras, Ed.</span>, <span class="refTitle">"Rights Contributors Provide to the IETF Trust"</span>, <span class="seriesInfo">BCP 78</span>, <span class="seriesInfo">RFC 5378</span>, <span class="seriesInfo">DOI 10.17487/RFC5378</span>, <time datetime="2008-11" class="refDate">November 2008</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5378">https://www.rfc-editor.org/rfc/rfc5378</a>&gt;</span>. </dd>
-<dd class="break"></dd>
 <dt id="RFC6087">[RFC6087]</dt>
         <dd>
 <span class="refAuthor">Bierman, A.</span>, <span class="refTitle">"Guidelines for Authors and Reviewers of YANG Data Model Documents"</span>, <span class="seriesInfo">RFC 6087</span>, <span class="seriesInfo">DOI 10.17487/RFC6087</span>, <time datetime="2011-01" class="refDate">January 2011</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6087">https://www.rfc-editor.org/rfc/rfc6087</a>&gt;</span>. </dd>
@@ -4622,6 +4631,10 @@ registry]:
 <dt id="RFC8349">[RFC8349]</dt>
         <dd>
 <span class="refAuthor">Lhotka, L.</span>, <span class="refAuthor">Lindem, A.</span>, and <span class="refAuthor">Y. Qu</span>, <span class="refTitle">"A YANG Data Model for Routing Management (NMDA Version)"</span>, <span class="seriesInfo">RFC 8349</span>, <span class="seriesInfo">DOI 10.17487/RFC8349</span>, <time datetime="2018-03" class="refDate">March 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8349">https://www.rfc-editor.org/rfc/rfc8349</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8407">[RFC8407]</dt>
+        <dd>
+<span class="refAuthor">Bierman, A.</span>, <span class="refTitle">"Guidelines for Authors and Reviewers of Documents Containing YANG Data Models"</span>, <span class="seriesInfo">BCP 216</span>, <span class="seriesInfo">RFC 8407</span>, <span class="seriesInfo">DOI 10.17487/RFC8407</span>, <time datetime="2018-10" class="refDate">October 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8407">https://www.rfc-editor.org/rfc/rfc8407</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8675">[RFC8675]</dt>
         <dd>
@@ -4845,7 +4858,7 @@ implementations to be created.<a href="#appendix-A-3.9.3" class="pilcrow">¶</a>
    Randy Presuhn for the comments.  Lou Berger suggested to include more
    details about IANA considerations.<a href="#appendix-C-2" class="pilcrow">¶</a></p>
 <span class="break"></span><dl class="dlParallel" id="appendix-C-3">
-        <dt id="appendix-C-3.1">From RFC8407:</dt>
+        <dt id="appendix-C-3.1">From RFC 8407:</dt>
         <dd style="margin-left: 1.5em" id="appendix-C-3.2">
           <p id="appendix-C-3.2.1">The structure and contents of this document are adapted from
 "Guidelines for Authors and Reviewers of MIB Documents" <span>[<a href="#RFC4181" class="cite xref">RFC4181</a>]</span>, by

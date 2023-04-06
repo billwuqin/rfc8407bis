@@ -212,9 +212,9 @@ Table of Contents
    The following changes have been made to the guidelines published in
    [RFC8407]:
 
-   *  item1
+   *  Implement errata 5693, 5800, and 6899.
 
-   *  item2
+   *  Add guidelines for IANA-maintained modules.
 
 2.  Terminology
 
@@ -348,7 +348,7 @@ Table of Contents
    component.
 
    The "<CODE BEGINS>" tag SHOULD be followed by a string identifying
-   the file name specified in Section 5.2 of {{RFC7950}}.  The name string
+   the file name specified in Section 5.2 of [RFC7950].  The name string
    form that includes the revision date SHOULD be used.  The revision
    date MUST match the date used in the most recent revision of the
    module.
@@ -373,8 +373,8 @@ Table of Contents
 
 3.2.1.  Example Modules
 
-     Example modules are not code components.  The <CODE BEGINS>
-     convention MUST NOT be used for example modules.
+   Example modules are not code components.  The <CODE BEGINS>
+   convention MUST NOT be used for example modules.
 
    An example module SHOULD be named using the term "example", followed
    by a hyphen, followed by a descriptive name, e.g., "example-toaster".
@@ -421,9 +421,9 @@ Table of Contents
 
    Example:
 
-    The YANG data model in this document conforms to the Network
-    Management Datastore Architecture defined in
-    RFC 8342.
+     The YANG data model in this document conforms to the Network
+     Management Datastore Architecture defined in
+     RFC 8342.
 
    Consistent indentation SHOULD be used for all examples, including
    YANG fragments and protocol message instance data.  If line wrapping
@@ -435,7 +435,7 @@ Table of Contents
       <myleaf xmlns="tag:example.com,2017:example-two">\
         this is a long value so the line needs to wrap to stay\
         within 72 characters\
-       </myleaf>
+      </myleaf>
 
 3.6.  Definitions Section
 
@@ -499,59 +499,59 @@ Table of Contents
 3.7.1.  Security Considerations Section Template
 
    <CODE BEGINS>
-      X.  Security Considerations
+   X.  Security Considerations
 
-      The YANG module specified in this document defines a schema for data
-      that is designed to be accessed via network management protocols such
-      as NETCONF [RFC6241] or RESTCONF [RFC8040].  The lowest NETCONF layer
-      is the secure transport layer, and the mandatory-to-implement secure
-      transport is Secure Shell (SSH) [RFC6242].  The lowest RESTCONF layer
-      is HTTPS, and the mandatory-to-implement secure transport is TLS
-      [RFC8446].
+   The YANG module specified in this document defines a schema for data
+   that is designed to be accessed via network management protocols such
+   as NETCONF [RFC6241] or RESTCONF [RFC8040].  The lowest NETCONF layer
+   is the secure transport layer, and the mandatory-to-implement secure
+   transport is Secure Shell (SSH) [RFC6242].  The lowest RESTCONF layer
+   is HTTPS, and the mandatory-to-implement secure transport is TLS
+   [RFC8446].
 
-      The Network Configuration Access Control Model (NACM) [RFC8341]
-      provides the means to restrict access for particular NETCONF or
-      RESTCONF users to a preconfigured subset of all available NETCONF or
-      RESTCONF protocol operations and content.
+   The Network Configuration Access Control Model (NACM) [RFC8341]
+   provides the means to restrict access for particular NETCONF or
+   RESTCONF users to a preconfigured subset of all available NETCONF or
+   RESTCONF protocol operations and content.
 
-       -- if you have any writable data nodes (those are all the
-       -- "config true" nodes, and remember, that is the default)
-       -- describe their specific sensitivity or vulnerability.
+    -- if you have any writable data nodes (those are all the
+    -- "config true" nodes, and remember, that is the default)
+    -- describe their specific sensitivity or vulnerability.
 
-      There are a number of data nodes defined in this YANG module that are
-      writable/creatable/deletable (i.e., config true, which is the
-      default).  These data nodes may be considered sensitive or vulnerable
-      in some network environments.  Write operations (e.g., edit-config)
-      and delete operations to these data nodes without proper protection
-      or authentication can have a negative effect on network operations.
-      These are the subtrees and data nodes and their sensitivity/
-      vulnerability:
-
-      <list subtrees and data nodes and state why they are sensitive>
-
-       -- for all YANG modules you must evaluate whether any readable data
-       -- nodes (those are all the "config false" nodes, but also all other
-       -- nodes, because they can also be read via operations like get or
-       -- get-config) are sensitive or vulnerable (for instance, if they
-       -- might reveal customer information or violate personal privacy
-       -- laws such as those of the European Union if exposed to
-       -- unauthorized parties)
-
-      Some of the readable data nodes in this YANG module may be considered
-      sensitive or vulnerable in some network environments.  It is thus
-      important to control read access (e.g., via get, get-config, or
-      notification) to these data nodes.  These are the subtrees and data
-      nodes and their sensitivity/vulnerability:
+   There are a number of data nodes defined in this YANG module that are
+   writable/creatable/deletable (i.e., config true, which is the
+   default).  These data nodes may be considered sensitive or vulnerable
+   in some network environments.  Write operations (e.g., edit-config)
+   and delete operations to these data nodes without proper protection
+   or authentication can have a negative effect on network operations.
+   These are the subtrees and data nodes and their sensitivity/
+   vulnerability:
 
       <list subtrees and data nodes and state why they are sensitive>
 
-       -- if your YANG module has defined any RPC operations
-       -- describe their specific sensitivity or vulnerability.
+     -- for all YANG modules you must evaluate whether any readable data
+     -- nodes (those are all the "config false" nodes, but also all other
+     -- nodes, because they can also be read via operations like get or
+     -- get-config) are sensitive or vulnerable (for instance, if they
+     -- might reveal customer information or violate personal privacy
+     -- laws such as those of the European Union if exposed to
+     -- unauthorized parties)
 
-      Some of the RPC operations in this YANG module may be considered
-      sensitive or vulnerable in some network environments.  It is thus
-      important to control access to these operations.  These are the
-      operations and their sensitivity/vulnerability:
+    Some of the readable data nodes in this YANG module may be considered
+    sensitive or vulnerable in some network environments.  It is thus
+    important to control read access (e.g., via get, get-config, or
+    notification) to these data nodes.  These are the subtrees and data
+    nodes and their sensitivity/vulnerability:
+
+      <list subtrees and data nodes and state why they are sensitive>
+
+      -- if your YANG module has defined any RPC operations
+      -- describe their specific sensitivity or vulnerability.
+
+   Some of the RPC operations in this YANG module may be considered
+   sensitive or vulnerable in some network environments.  It is thus
+   important to control access to these operations.  These are the
+   operations and their sensitivity/vulnerability:
 
       <list RPC operations and state why they are sensitive>
    <CODE ENDS>
@@ -714,30 +714,30 @@ Table of Contents
    modules to be used, even if the names are not unique.  In the example
    below, the identifier "foo" is used in all three modules:
 
-          module example-foo {
-            namespace "tag:example.com,2017:example-foo";
-            prefix f;
+       module example-foo {
+         namespace "tag:example.com,2017:example-foo";
+         prefix f;
 
-            container foo;
-          }
+         container foo;
+       }
 
-          module example-bar {
-            namespace "tag:example.com,2017:example-bar";
-            prefix b;
+       module example-bar {
+         namespace "tag:example.com,2017:example-bar";
+         prefix b;
 
-            typedef foo { type uint32; }
-          }
+         typedef foo { type uint32; }
+       }
 
-          module example-one {
-            namespace "tag:example.com,2017:example-one";
-            prefix one;
-            import example-foo { prefix f; }
-            import example-bar { prefix b; }
+       module example-one {
+         namespace "tag:example.com,2017:example-one";
+         prefix one;
+         import example-foo { prefix f; }
+         import example-bar { prefix b; }
 
-            augment "/f:foo" {
-               leaf foo { type b:foo; }
-            }
-          }
+         augment "/f:foo" {
+            leaf foo { type b:foo; }
+         }
+       }
 
    YANG defines the following rules for prefix usage:
 
@@ -947,7 +947,7 @@ Table of Contents
    containing the "local-name" function.  Example of a "local-name"
    function that should not be used:
 
-         /*[local-name()='foo']
+      /*[local-name()='foo']
 
    The "derived-from-or-self" function SHOULD be used instead of an
    equality expression for identityref values.  This allows the
@@ -955,11 +955,11 @@ Table of Contents
 
    Example:
 
-         // do not use
-         when "md-name-format = 'name-format-null'";
+      // do not use
+      when "md-name-format = 'name-format-null'";
 
-         // this is preferred
-         when "derived-from-or-self(md-name-format, 'name-format-null')";
+      // this is preferred
+      when "derived-from-or-self(md-name-format, 'name-format-null')";
 
 4.6.3.  Axes
 
@@ -1019,14 +1019,14 @@ Table of Contents
 
    Example:
 
-         augment "/rt:active-route/rt:input/rt:destination-address" {
-            when "rt:address-family='v4ur:ipv4-unicast'" {
-              description
-                "This augment is valid only for IPv4 unicast.";
-            }
-            // nodes defined here within the augment-stmt
-            // cannot be referenced in the when-stmt
+      augment "/rt:active-route/rt:input/rt:destination-address" {
+         when "rt:address-family='v4ur:ipv4-unicast'" {
+           description
+             "This augment is valid only for IPv4 unicast.";
          }
+         // nodes defined here within the augment-stmt
+         // cannot be referenced in the when-stmt
+      }
 
 4.6.5.  Wildcards
 
@@ -1042,11 +1042,11 @@ Table of Contents
    statement SHOULD clarify that augmenting objects are expected to
    match the wildcard expansion.
 
-         when /foo/services/*/active {
-           description
-             "No services directly defined in this module.
-              Matches objects that have augmented the services container.";
-         }
+      when /foo/services/*/active {
+        description
+          "No services directly defined in this module.
+           Matches objects that have augmented the services container.";
+      }
 
 4.6.6.  Boolean Expressions
 
@@ -1059,36 +1059,36 @@ Table of Contents
    For example, the leaf "foo2" must exist if the leaf "foo1" is equal
    to "one" or "three":
 
-           leaf foo1 {
-             type enumeration {
-                enum one;
-                enum two;
-                enum three;
-             }
-           }
+        leaf foo1 {
+          type enumeration {
+             enum one;
+             enum two;
+             enum three;
+          }
+        }
 
-           leaf foo2 {
-             // INCORRECT
-             must "/f:foo1 != 'two'";
-             type string;
-           }
-           leaf foo2 {
-             // CORRECT
-             must "/f:foo1 = 'one' or /f:foo1 = 'three'";
-             type string;
-           }
+        leaf foo2 {
+          // INCORRECT
+          must "/f:foo1 != 'two'";
+          type string;
+        }
+        leaf foo2 {
+          // CORRECT
+          must "/f:foo1 = 'one' or /f:foo1 = 'three'";
+          type string;
+        }
 
    In the next revision of the module, leaf "foo1" is extended with a
    new enum named "four":
 
-           leaf foo1 {
-             type enumeration {
-                enum one;
-                enum two;
-                enum three;
-                enum four;
-             }
-           }
+        leaf foo1 {
+          type enumeration {
+             enum one;
+             enum two;
+             enum three;
+             enum four;
+          }
+        }
 
    Now the first XPath expression will allow the enum "four" to be
    accepted in addition to the "one" and "three" enum values.
@@ -1117,10 +1117,10 @@ Table of Contents
    RFC for an IETF module), then a reference-stmt SHOULD be present
    within an import statement.
 
-           import ietf-yang-types {
-              prefix yang;
-              reference "RFC 6991: Common YANG Data Types";
-           }
+        import ietf-yang-types {
+           prefix yang;
+           reference "RFC 6991: Common YANG Data Types";
+        }
 
    If submodules are used, then the document containing the main module
    MUST be updated so that the main module revision date is equal to or
@@ -1130,14 +1130,14 @@ Table of Contents
    Definitions for future use SHOULD NOT be specified in a module.  Do
    not specify placeholder objects like the "reserved" example below:
 
-          leaf reserved {
-            type string;
-            description
-              "This object has no purpose at this time, but a future
-               revision of this module might define a purpose
-               for this object.";
-            }
-          }
+      leaf reserved {
+        type string;
+         description
+           "This object has no purpose at this time, but a future
+            revision of this module might define a purpose
+            for this object.";
+         }
+       }
 
 4.8.  Module Header, Meta, and Revision Statements
 
@@ -1178,13 +1178,13 @@ Table of Contents
    The following example shows the revision statement for a published
    YANG module:
 
-         revision "2012-02-22" {
-           description
-             "Initial version";
-           reference
-             "RFC 8341: Network Configuration
-                        Access Control Model";
-         }
+      revision "2012-02-22" {
+        description
+          "Initial version";
+        reference
+          "RFC 8341: Network Configuration
+                     Access Control Model";
+      }
 
    For an unpublished module, a complete history of each unpublished
    module revision is not required.  That is, within a sequence of draft
@@ -1198,23 +1198,23 @@ Table of Contents
    The following example shows the two revision statements for an
    unpublished update to a published YANG module:
 
-         revision "2017-12-11" {
-           description
-             "Added support for YANG 1.1 actions and notifications tied to
-              data nodes.  Clarify how NACM extensions can be used by other
-              data models.";
-           reference
-             "RFC 8407: Network Configuration Protocol (NETCONF)
-                        Access Control Model";
-         }
+      revision "2017-12-11" {
+        description
+          "Added support for YANG 1.1 actions and notifications tied to
+           data nodes.  Clarify how NACM extensions can be used by other
+           data models.";
+        reference
+          "RFC 8407: Network Configuration Protocol (NETCONF)
+                     Access Control Model";
+      }
 
-         revision "2012-02-22" {
-           description
-             "Initial version";
-           reference
-             "RFC 8341: Network Configuration
-                        Access Control Model";
-         }
+      revision "2012-02-22" {
+        description
+          "Initial version";
+        reference
+          "RFC 8341: Network Configuration
+                     Access Control Model";
+      }
 
 4.9.  Namespace Assignments
 
@@ -1222,14 +1222,14 @@ Table of Contents
    documents, whether or not the modules are published yet.  This
    allows:
 
-   o the module to compile correctly instead of generating disruptive
-   fatal errors.
+   *  the module to compile correctly instead of generating disruptive
+      fatal errors.
 
-   o early implementors to use the modules without picking a random
-   value for the XML namespace.
+   *  early implementors to use the modules without picking a random
+      value for the XML namespace.
 
-   o early interoperability testing since independent implementations
-   will use the same XML namespace value.
+   *  early interoperability testing since independent implementations
+      will use the same XML namespace value.
 
    Until a URI is assigned by the IANA, a proposed namespace URI MUST be
    provided for the namespace statement in a YANG module.  A value
@@ -1239,21 +1239,21 @@ Table of Contents
 
    A standard namespace statement value SHOULD have the following form:
 
-          <URN prefix string>:<module-name>
+      <URN prefix string>:<module-name>
 
    The following URN prefix string SHOULD be used for published and
    unpublished YANG modules:
 
-          urn:ietf:params:xml:ns:yang:
+       urn:ietf:params:xml:ns:yang:
 
    The following example URNs would be valid namespace statement values
    for Standards Track modules:
 
-          urn:ietf:params:xml:ns:yang:ietf-netconf-partial-lock
+       urn:ietf:params:xml:ns:yang:ietf-netconf-partial-lock
 
-          urn:ietf:params:xml:ns:yang:ietf-netconf-state
+       urn:ietf:params:xml:ns:yang:ietf-netconf-state
 
-          urn:ietf:params:xml:ns:yang:ietf-netconf
+       urn:ietf:params:xml:ns:yang:ietf-netconf
 
    Note that a different URN prefix string SHOULD be used for modules
    that are not Standards Track.  The string SHOULD be selected
@@ -1267,15 +1267,15 @@ Table of Contents
 
    Example URIs using URLs per [RFC3986]:
 
-          https://example.com/ns/example-interfaces
+       https://example.com/ns/example-interfaces
 
-          https://example.com/ns/example-system
+       https://example.com/ns/example-system
 
    Example URIs using tags per [RFC4151]:
 
-          tag:example.com,2017:example-interfaces
+       tag:example.com,2017:example-interfaces
 
-          tag:example.com,2017:example-system
+       tag:example.com,2017:example-system
 
 4.10.  Top-Level Data Definitions
 
@@ -1327,33 +1327,34 @@ Table of Contents
    controlled by a single naming authority, then an enumeration data
    type SHOULD be used.
 
-          leaf foo {
-            type enumeration {
-              enum one;
-              enum two;
-            }
-          }
+       leaf foo {
+         type enumeration {
+           enum one;
+           enum two;
+         }
+       }
 
    If extensibility of enumerated values is required, then the
    "identityref" data type SHOULD be used instead of an enumeration or
    other built-in type.
 
-          identity foo-type {
-            description "Base for the extensible type";
-          }
+       identity foo-type {
+         description "Base for the extensible type";
+       }
 
-          identity one {
-            base f:foo-type;
-          }
-          identity two {
-            base f:foo-type;
-          }
+       identity one {
+         base f:foo-type;
+       }
 
-          leaf foo {
-            type identityref {
-              base f:foo-type;
-            }
-          }
+       identity two {
+         base f:foo-type;
+       }
+
+       leaf foo {
+         type identityref {
+           base f:foo-type;
+         }
+       }
 
    Note that any module can declare an identity with base "foo-type"
    that is valid for the "foo" leaf.  Identityref values are considered
@@ -1372,12 +1373,12 @@ Table of Contents
    The following typedef from [RFC6991] demonstrates the proper use of
    the "pattern" statement:
 
-          typedef ipv4-address-no-zone {
-            type inet:ipv4-address {
-              pattern '[0-9\.]*';
-            }
-            ...
-          }
+       typedef ipv4-address-no-zone {
+         type inet:ipv4-address {
+           pattern '[0-9\.]*';
+         }
+         ...
+       }
 
    For string data types, if the length of the string is required to be
    bounded in all implementations, then a length statement MUST be
@@ -1386,14 +1387,14 @@ Table of Contents
    The following typedef from [RFC6991] demonstrates the proper use of
    the "length" statement:
 
-          typedef yang-identifier {
-            type string {
-              length "1..max";
-              pattern '[a-zA-Z_][a-zA-Z0-9\-_.]*';
-              pattern '.|..|[^xX].*|.[^mM].*|..[^lL].*';
-            }
-            ...
-          }
+       typedef yang-identifier {
+         type string {
+          length "1..max";
+           pattern '[a-zA-Z_][a-zA-Z0-9\-_.]*';
+           pattern '.|..|[^xX].*|.[^mM].*|..[^lL].*';
+         }
+         ...
+      }
 
    For numeric data types, if the values allowed by the intended
    semantics are different than those allowed by the unbounded intrinsic
@@ -1402,12 +1403,12 @@ Table of Contents
    The following typedef from [RFC6991] demonstrates the proper use of
    the "range" statement:
 
-          typedef dscp {
-            type uint8 {
-               range "0..63";
-            }
-            ...
-          }
+       typedef dscp {
+         type uint8 {
+            range "0..63";
+         }
+         ...
+       }
 
 4.11.3.  Enumerations and Bits
 
@@ -1415,30 +1416,30 @@ Table of Contents
    or "bit" SHOULD be documented.  A separate "description" statement
    (within each "enum" or "bit" statement) SHOULD be present.
 
-          leaf foo {
-            // INCORRECT
-            type enumeration {
-              enum one;
-              enum two;
-            }
-            description
-              "The foo enum...
-               one: The first enum
-               two: The second enum";
-          }
-          leaf foo {
-            // CORRECT
-            type enumeration {
-              enum one {
-                description "The first enum";
-              }
-              enum two {
-                description "The second enum";
-              }
-            }
-            description
-              "The foo enum...  ";
-          }
+       leaf foo {
+         // INCORRECT
+         type enumeration {
+           enum one;
+           enum two;
+         }
+         description
+           "The foo enum...
+            one: The first enum
+            two: The second enum";
+       }
+       leaf foo {
+         // CORRECT
+         type enumeration {
+           enum one {
+             description "The first enum";
+           }
+           enum two {
+             description "The second enum";
+           }
+         }
+         description
+           "The foo enum...  ";
+       }
 
 4.11.4.  Union Types
 
@@ -1450,25 +1451,25 @@ Table of Contents
    In the following example, the "enumeration" type will never be
    matched because the preceding "string" type will match everything.
 
-      Incorrect:
+   Incorrect:
 
-         type union {
-           type string;
-           type enumeration {
-             enum up;
-             enum down;
-           }
-         }
+      type union {
+        type string;
+        type enumeration {
+          enum up;
+          enum down;
+        }
+      }
 
-      Correct:
+   Correct:
 
-         type union {
-           type enumeration {
-             enum up;
-             enum down;
-           }
-           type string;
-         }
+      type union {
+        type enumeration {
+          enum up;
+          enum down;
+        }
+        type string;
+      }
 
    It is possible for different member types to match, depending on the
    input encoding format.  In XML, all values are passed as string
@@ -1480,19 +1481,19 @@ Table of Contents
    number will be matched by the "string" type.  The second version will
    match the "int32" member type no matter how the input is encoded.
 
-      Incorrect:
+   Incorrect:
 
-         type union {
-           type string;
-           type int32;
-         }
+      type union {
+        type string;
+        type int32;
+      }
 
-      Correct:
+   Correct:
 
-         type union {
-           type int32;
-           type string;
-         }
+      type union {
+        type int32;
+        type string;
+      }
 
 4.11.5.  Empty and Boolean
 
@@ -1528,16 +1529,16 @@ Table of Contents
 
    Incorrect:
 
-         leaf flag1 {
-           type empty;
-         }
+      leaf flag1 {
+        type empty;
+      }
 
    Correct:
 
-         leaf flag2 {
-           type boolean;
-           default false;
-         }
+      leaf flag2 {
+        type boolean;
+        default false;
+      }
 
 4.12.  Reusable Type Definitions
 
@@ -1676,21 +1677,21 @@ Table of Contents
 
    Example using container wrappers:
 
-          container top {
-             container foos {
-                list foo { ... }
-             }
-             container bars {
-                list bar { ... }
-             }
+       container top {
+          container foos {
+             list foo { ... }
           }
+          container bars {
+             list bar { ... }
+          }
+       }
 
    Example without container wrappers:
 
-          container top {
-             list foo { ... }
-             list bar { ... }
-          }
+       container top {
+          list foo { ... }
+          list bar { ... }
+       }
 
    Use of non-presence containers to organize data is a subjective
    matter similar to use of subdirectories in a file system.  Although
@@ -1743,14 +1744,14 @@ Table of Contents
    usually done by including "leafref" leaf nodes with the key leaf
    values for the resource instance.  For example:
 
-        notification interface-up {
-          description "Sent when an interface is activated.";
-          leaf name {
-            type leafref {
-              path "/if:interfaces/if:interface/if:name";
-            }
-          }
-        }
+       notification interface-up {
+         description "Sent when an interface is activated.";
+         leaf name {
+           type leafref {
+             path "/if:interfaces/if:interface/if:name";
+           }
+         }
+       }
 
    Note that there are no formal YANG statements to identify any data
    node resources associated with a notification.  The "description"
@@ -1795,14 +1796,14 @@ Table of Contents
 
    For example, feature2 requires implementation of feature1:
 
-         feature feature1 {
-           description "Some protocol feature";
-         }
+      feature feature1 {
+        description "Some protocol feature";
+      }
 
-         feature feature2 {
-           if-feature "feature1";
-           description "Another protocol feature";
-         }
+      feature feature2 {
+        if-feature "feature1";
+        description "Another protocol feature";
+      }
 
 4.18.  YANG Data Node Constraints
 
@@ -1857,15 +1858,15 @@ Table of Contents
    container called "ethernet" is added to the "interface" list only for
    entries of the type "ethernetCsmacd".
 
-           augment "/if:interfaces/if:interface" {
-               when "if:type = 'ianaift:ethernetCsmacd'";
+        augment "/if:interfaces/if:interface" {
+            when "if:type = 'ianaift:ethernetCsmacd'";
 
-               container ethernet {
-                   leaf duplex {
-                       ...
-                   }
-               }
-           }
+            container ethernet {
+                leaf duplex {
+                    ...
+                }
+            }
+        }
 
 4.19.2.  Conditionally Mandatory Data Definition Statements
 
@@ -1899,28 +1900,28 @@ Table of Contents
    this type, so it would never select this type; therefore, it would
    not add a mandatory data node.
 
-        module example-module {
+     module example-module {
 
-          yang-version 1.1;
-          namespace "tag:example.com,2017:example-module";
-          prefix mymod;
+       yang-version 1.1;
+       namespace "tag:example.com,2017:example-module";
+       prefix mymod;
 
-          import iana-if-type { prefix iana; }
-          import ietf-interfaces { prefix if; }
+       import iana-if-type { prefix iana; }
+       import ietf-interfaces { prefix if; }
 
-          identity some-new-iftype {
-             base iana:iana-interface-type;
+       identity some-new-iftype {
+          base iana:iana-interface-type;
+       }
+
+       augment "/if:interfaces/if:interface" {
+         when "if:type = 'mymod:some-new-iftype'";
+
+          leaf mandatory-leaf {
+             type string;
+             mandatory true;
           }
-
-          augment "/if:interfaces/if:interface" {
-             when "if:type = 'mymod:some-new-iftype'";
-
-             leaf mandatory-leaf {
-                type string;
-                mandatory true;
-             }
-          }
-        }
+       }
+     }
 
    Note that this practice is safe only for creating data resources.  It
    is not safe for replacing or modifying resources if the client does
@@ -1963,23 +1964,23 @@ Table of Contents
 
    Example documenting platform resource limits:
 
-        Wrong: (max-elements in the list itself)
+    Wrong: (max-elements in the list itself)
 
-           container backups {
-             list backup {
-                ...
-                max-elements  10;
-                ...
-             }
-           }
+        container backups {
+          list backup {
+             ...
+             max-elements  10;
+             ...
+          }
+        }
 
     Correct: (max-elements in a deviation)
 
-           deviation /bk:backups/bk:backup {
-             deviate add {
-                max-elements  10;
-             }
-           }
+        deviation /bk:backups/bk:backup {
+          deviate add {
+             max-elements  10;
+          }
+        }
 
 4.21.  Extension Statements
 
@@ -2051,47 +2052,47 @@ Table of Contents
 
    Not preferred:
 
-         list foo {
-            key name;
-            leaf name {
-              type string;
-            }
-            ...
+      list foo {
+         key name;
+         leaf name {
+           type string;
          }
+         ...
+      }
 
-         list foo-addon {
-            key name;
-            config false;
-            leaf name {
-              type string;
-            }
-            ...
+      list foo-addon {
+         key name;
+         config false;
+         leaf name {
+           type string;
          }
+         ...
+      }
 
    Preferred:
 
-         list foo {
-            key name;
-            leaf name {
-              type string;
-            }
-            ...
+      list foo {
+         key name;
+         leaf name {
+           type string;
          }
+         ...
+      }
 
-         list foo-addon {
-            key name;
-            config false;
-            leaf name {
-              type leafref {
-                path "/foo/name";
-                require-instance false;
-              }
-            }
-            leaf addon {
-              type string;
-              mandatory true;
-            }
+      list foo-addon {
+         key name;
+         config false;
+         leaf name {
+           type leafref {
+             path "/foo/name";
+             require-instance false;
+           }
          }
+         leaf addon {
+           type string;
+           mandatory true;
+         }
+      }
 
 4.23.  Operational State
 
@@ -2120,11 +2121,11 @@ Table of Contents
    dynamic entries and allows configuration and operational state to be
    retrieved together with minimal message overhead.
 
-         container foo {
-           ...
-           // contains "config true" and "config false" nodes that have
-           // no corresponding "config true" object (e.g., counters)
-         }
+      container foo {
+        ...
+        // contains "config true" and "config false" nodes that have
+        // no corresponding "config true" object (e.g., counters)
+      }
 
 4.23.2.  Representing Operational Values of Configuration Data
 
@@ -2183,36 +2184,39 @@ Table of Contents
    The remaining are options that MAY be followed during the time that
    NMDA mechanisms are being defined.
 
-   (a) Modules that require immediate support for the NMDA features
-   SHOULD be structured for NMDA.  A temporary non-NMDA version of this
-   type of module MAY exist, as either an existing model or a model
-   created by hand or with suitable tools that mirror the current
-   modeling strategies.  Both the NMDA and the non-NMDA modules SHOULD
-   be published in the same document, with NMDA modules in the document
-   main body and the non-NMDA modules in a non-normative appendix.  The
-   use of the non-NMDA module will allow temporary bridging of the time
-   period until NMDA implementations are available.
+   *  Modules that require immediate support for the NMDA features
+      SHOULD be structured for NMDA.  A temporary non-NMDA version of
+      this type of module MAY exist, as either an existing model or a
+      model created by hand or with suitable tools that mirror the
+      current modeling strategies.  Both the NMDA and the non-NMDA
+      modules SHOULD be published in the same document, with NMDA
+      modules in the document main body and the non-NMDA modules in a
+      non-normative appendix.  The use of the non-NMDA module will allow
+      temporary bridging of the time period until NMDA implementations
+      are available.
 
-   (b) For published models, the model should be republished with an
-   NMDA-compatible structure, deprecating non-NMDA constructs.  For
-   example, the "ietf-interfaces" model in [RFC7223] has been
-   restructured as an NMDA-compatible model in [RFC8343].  The
-   "/interfaces-state" hierarchy has been marked "status deprecated".
-   Models that mark their "/foo-state" hierarchy with "status
-   deprecated" will allow NMDA-capable implementations to avoid the cost
-   of duplicating the state nodes, while enabling non-NMDA-capable
-   implementations to utilize them for access to the operational values.
+   *  For published models, the model should be republished with an
+      NMDA-compatible structure, deprecating non-NMDA constructs.  For
+      example, the "ietf-interfaces" model in [RFC7223] has been
+      restructured as an NMDA-compatible model in [RFC8343].  The
+      "/interfaces-state" hierarchy has been marked "status deprecated".
+      Models that mark their "/foo-state" hierarchy with "status
+      deprecated" will allow NMDA-capable implementations to avoid the
+      cost of duplicating the state nodes, while enabling non-NMDA-
+      capable implementations to utilize them for access to the
+      operational values.
 
-   (c) For models that augment models that have not been structured with
-   the NMDA, the modeler will have to consider the structure of the base
-   model and the guidelines listed above.  Where possible, such models
-   should move to new revisions of the base model that are NMDA
-   compatible.  When that is not possible, augmenting "state" containers
-   SHOULD be avoided, with the expectation that the base model will be
-   re-released with the state containers marked as deprecated.  It is
-   RECOMMENDED to augment only the "/foo" hierarchy of the base model.
-   Where this recommendation cannot be followed, then any new "state"
-   elements SHOULD be included in their own module.
+   *  For models that augment models that have not been structured with
+      the NMDA, the modeler will have to consider the structure of the
+      base model and the guidelines listed above.  Where possible, such
+      models should move to new revisions of the base model that are
+      NMDA compatible.  When that is not possible, augmenting "state"
+      containers SHOULD be avoided, with the expectation that the base
+      model will be re-released with the state containers marked as
+      deprecated.  It is RECOMMENDED to augment only the "/foo"
+      hierarchy of the base model.  Where this recommendation cannot be
+      followed, then any new "state" elements SHOULD be included in
+      their own module.
 
 4.23.3.1.  Temporary Non-NMDA Modules
 
@@ -2257,16 +2261,16 @@ Table of Contents
    Create an NMDA-compliant module, using combined configuration and
    state subtrees, whenever possible.
 
-        module example-foo {
-          namespace "urn:example.com:params:xml:ns:yang:example-foo";
-          prefix "foo";
+     module example-foo {
+       namespace "urn:example.com:params:xml:ns:yang:example-foo";
+       prefix "foo";
 
-          container foo {
-            // configuration data child nodes
-            // operational value in operational state datastore only
-            // may contain "config false" nodes as needed
-          }
+       container foo {
+         // configuration data child nodes
+         // operational value in operational state datastore only
+         // may contain "config false" nodes as needed
        }
+    }
 
 4.23.3.3.  Example: Convert an Old Non-NMDA Module
 
@@ -2276,40 +2280,40 @@ Table of Contents
 
    Old Module:
 
-        module example-foo {
-          namespace "urn:example.com:params:xml:ns:yang:example-foo";
-          prefix "foo";
+     module example-foo {
+       namespace "urn:example.com:params:xml:ns:yang:example-foo";
+       prefix "foo";
 
-          container foo {
-            // configuration data child nodes
-          }
-
-          container foo-state {
-            config false;
-            // operational state child nodes
-          }
+       container foo {
+         // configuration data child nodes
        }
+
+       container foo-state {
+         config false;
+         // operational state child nodes
+       }
+    }
 
    Converted NMDA Module:
 
-        module example-foo {
-          namespace "urn:example.com:params:xml:ns:yang:example-foo";
-          prefix "foo";
+     module example-foo {
+       namespace "urn:example.com:params:xml:ns:yang:example-foo";
+       prefix "foo";
 
-          container foo {
-            // configuration data child nodes
-            // operational value in operational state datastore only
-            // may contain "config false" nodes as needed
-            // will contain any data nodes from old foo-state
-          }
-
-          // keep original foo-state but change status to deprecated
-          container foo-state {
-            config false;
-            status deprecated;
-            // operational state child nodes
-          }
+       container foo {
+         // configuration data child nodes
+         // operational value in operational state datastore only
+         // may contain "config false" nodes as needed
+         // will contain any data nodes from old foo-state
        }
+
+       // keep original foo-state but change status to deprecated
+       container foo-state {
+         config false;
+         status deprecated;
+         // operational state child nodes
+       }
+    }
 
 4.23.3.4.  Example: Create a Temporary NMDA Module
 
@@ -2317,19 +2321,19 @@ Table of Contents
    data nodes that would have been available before they were combined
    with configuration data nodes (to be NMDA compliant).
 
-        module example-foo-state {
-          namespace "urn:example.com:params:xml:ns:yang:example-foo-state";
-          prefix "foo-s";
+     module example-foo-state {
+       namespace "urn:example.com:params:xml:ns:yang:example-foo-state";
+       prefix "foo-s";
 
-          // import new or converted module; not used in this example
-          import example-foo { prefix foo; }
+       // import new or converted module; not used in this example
+       import example-foo { prefix foo; }
 
-          container foo-state {
-            config false;
-            status deprecated;
-            // operational state child nodes
-          }
-       }
+       container foo-state {
+         config false;
+         status deprecated;
+         // operational state child nodes
+        }
+     }
 
 4.24.  Performance Considerations
 
@@ -2421,27 +2425,27 @@ Table of Contents
    For example, NACM cannot enforce access control based on the value of
    the "interface" parameter, only the "reset" operation itself:
 
-         rpc reset {
-           input {
-             leaf interface {
-               type if:interface-ref;
-               mandatory true;
-               description "The interface to reset.";
-             }
-           }
-         }
+      rpc reset {
+        input {
+          leaf interface {
+            type if:interface-ref;
+            mandatory true;
+            description "The interface to reset.";
+          }
+        }
+      }
 
    However, NACM can enforce access control for individual interface
    instances, using a "reset" action.  If the user does not have read
    access to the specific "interface" instance, then it cannot invoke
    the "reset" action for that interface instance:
 
-         container interfaces {
-           list interface {
-             ...
-             action reset { }
-           }
-         }
+      container interfaces {
+        list interface {
+          ...
+          action reset { }
+        }
+      }
 
 4.27.  Updating YANG Modules (Published versus Unpublished)
 
@@ -2744,8 +2748,8 @@ Table of Contents
 8.1.  Normative References
 
    [ID-Guidelines]
-              Housley, R., "Guidelines to Authors of Internet-Drafts",
-              n.d., <https://www.ietf.org/standards/ids/guidelines/>.
+              IETF, "Guidelines to Authors of Internet-Drafts", n.d.,
+              <https://authors.ietf.org/en/content-guidelines-overview>.
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -2760,6 +2764,11 @@ Table of Contents
               Resource Identifier (URI): Generic Syntax", STD 66,
               RFC 3986, DOI 10.17487/RFC3986, January 2005,
               <https://www.rfc-editor.org/rfc/rfc3986>.
+
+   [RFC5378]  Bradner, S., Ed. and J. Contreras, Ed., "Rights
+              Contributors Provide to the IETF Trust", BCP 78, RFC 5378,
+              DOI 10.17487/RFC5378, November 2008,
+              <https://www.rfc-editor.org/rfc/rfc5378>.
 
    [RFC6020]  Bjorklund, M., Ed., "YANG - A Data Modeling Language for
               the Network Configuration Protocol (NETCONF)", RFC 6020,
@@ -2792,11 +2801,6 @@ Table of Contents
               and R. Wilton, "Network Management Datastore Architecture
               (NMDA)", RFC 8342, DOI 10.17487/RFC8342, March 2018,
               <https://www.rfc-editor.org/rfc/rfc8342>.
-
-   [RFC8407]  Bierman, A., "Guidelines for Authors and Reviewers of
-              Documents Containing YANG Data Models", BCP 216, RFC 8407,
-              DOI 10.17487/RFC8407, October 2018,
-              <https://www.rfc-editor.org/rfc/rfc8407>.
 
    [W3C.REC-xpath]
               DeRose, J. C. S., "XML Path Language (XPath) Version 1.0",
@@ -2850,11 +2854,6 @@ Table of Contents
               MIB Documents", BCP 111, RFC 4181, DOI 10.17487/RFC4181,
               September 2005, <https://www.rfc-editor.org/rfc/rfc4181>.
 
-   [RFC5378]  Bradner, S., Ed. and J. Contreras, Ed., "Rights
-              Contributors Provide to the IETF Trust", BCP 78, RFC 5378,
-              DOI 10.17487/RFC5378, November 2008,
-              <https://www.rfc-editor.org/rfc/rfc5378>.
-
    [RFC6087]  Bierman, A., "Guidelines for Authors and Reviewers of YANG
               Data Model Documents", RFC 6087, DOI 10.17487/RFC6087,
               January 2011, <https://www.rfc-editor.org/rfc/rfc6087>.
@@ -2897,6 +2896,11 @@ Table of Contents
               Routing Management (NMDA Version)", RFC 8349,
               DOI 10.17487/RFC8349, March 2018,
               <https://www.rfc-editor.org/rfc/rfc8349>.
+
+   [RFC8407]  Bierman, A., "Guidelines for Authors and Reviewers of
+              Documents Containing YANG Data Models", BCP 216, RFC 8407,
+              DOI 10.17487/RFC8407, October 2018,
+              <https://www.rfc-editor.org/rfc/rfc8407>.
 
    [RFC8675]  Boucadair, M., Farrer, I., and R. Asati, "A YANG Data
               Model for Tunnel Interface Types", RFC 8675,
@@ -3106,7 +3110,7 @@ Acknowledgments
    Randy Presuhn for the comments.  Lou Berger suggested to include more
    details about IANA considerations.
 
-   From RFC8407:  The structure and contents of this document are
+   From RFC 8407:  The structure and contents of this document are
       adapted from "Guidelines for Authors and Reviewers of MIB
       Documents" [RFC4181], by C.  M.  Heard.
 
