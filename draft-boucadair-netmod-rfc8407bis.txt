@@ -178,7 +178,8 @@ Table of Contents
    This document defines a set of usage guidelines for documents
    containing YANG 1.1 [RFC7950] and YANG 1.0 [RFC6020] data models.
    YANG is used to define the data structures, protocol operations, and
-   notification content used within a NETCONF and/or RESTCONF server.  A
+   notification content used within a NETCONF and/or RESTCONF server.
+   YANG is also used to define abstract data structures [RFC8791].  A
    NETCONF or RESTCONF server that supports a particular YANG module
    will support client NETCONF and/or RESTCONF operation requests, as
    indicated by the specific content defined in the YANG module.
@@ -335,7 +336,8 @@ Table of Contents
    defined in the following: [RFC7322] (and any future RFCs that
    obsolete it), [RFC-STYLE], and [RFC7841].
 
-   The following sections MUST be present in an I-D containing a module:
+   The following sections MUST be present in an I-D containing a YANG
+   module:
 
    *  Narrative sections
 
@@ -501,8 +503,8 @@ Table of Contents
    section that discusses security considerations relevant to those
    modules.
 
-   Unless the modules comply with [RFC8791], this section MUST be
-   patterned after the latest approved template (available at
+   Unless the modules comply with [RFC8791], the security section MUST
+   be patterned after the latest approved template (available at
    <https://trac.ietf.org/trac/ops/wiki/yang-security- guidelines>).
    Section 3.7.1 contains the security considerations template dated
    2013-05-08 and last updated on 2018-10-18.  Authors MUST check the
@@ -1237,7 +1239,7 @@ Table of Contents
         description
           "Initial version";
         reference
-          "RFC 8341: Network Configuration
+          "RFC 6536: Network Configuration Protocol (NETCONF)
                      Access Control Model";
       }
 
@@ -1256,18 +1258,17 @@ Table of Contents
       revision "2017-12-11" {
         description
           "Added support for YANG 1.1 actions and notifications tied to
-           data nodes.  Clarify how NACM extensions can be used by other
+           data nodes. Clarify how NACM extensions can be used by other
            data models.";
         reference
-          "RFC 8407: Network Configuration Protocol (NETCONF)
-                     Access Control Model";
+          "RFC YYYY: Network Configuration Access Control Model";
       }
 
       revision "2012-02-22" {
         description
           "Initial version";
         reference
-          "RFC 8341: Network Configuration
+          "RFC 6536: Network Configuration Protocol (NETCONF)
                      Access Control Model";
       }
 
