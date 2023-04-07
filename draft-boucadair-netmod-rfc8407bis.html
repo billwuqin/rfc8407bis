@@ -2289,23 +2289,48 @@ can be extracted correctly.
    default values <span class="bcp14">SHOULD NOT</span> be present.  The following substatements
    are commonly used with the default value, which would make the module
    difficult to read if used everywhere they are allowed.<a href="#section-4.4-1" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="section-4.4-2">
-<pre>
-                     +--------------+---------------+
-                     | Statement    | Default Value |
-                     +--------------+---------------+
-                     | config       | true          |
-                     | mandatory    | false         |
-                     | max-elements | unbounded     |
-                     | min-elements | 0             |
-                     | ordered-by   | system        |
-                     | status       | current       |
-                     | yin-element  | false         |
-                     +--------------+---------------+
-
-                            Statement Defaults
-</pre><a href="#section-4.4-2" class="pilcrow">¶</a>
-</div>
+<span id="name-statement-defaults"></span><table class="center" id="table-1">
+          <caption>
+<a href="#table-1" class="selfRef">Table 1</a>:
+<a href="#name-statement-defaults" class="selfRef">Statement Defaults</a>
+          </caption>
+<thead>
+            <tr>
+              <th class="text-center" rowspan="1" colspan="1">Statement</th>
+              <th class="text-center" rowspan="1" colspan="1">Default Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-center" rowspan="1" colspan="1">config</td>
+              <td class="text-center" rowspan="1" colspan="1">true</td>
+            </tr>
+            <tr>
+              <td class="text-center" rowspan="1" colspan="1">mandatory</td>
+              <td class="text-center" rowspan="1" colspan="1">false</td>
+            </tr>
+            <tr>
+              <td class="text-center" rowspan="1" colspan="1">max-elements</td>
+              <td class="text-center" rowspan="1" colspan="1">unbounded</td>
+            </tr>
+            <tr>
+              <td class="text-center" rowspan="1" colspan="1">min-elements</td>
+              <td class="text-center" rowspan="1" colspan="1">0</td>
+            </tr>
+            <tr>
+              <td class="text-center" rowspan="1" colspan="1">ordered-by</td>
+              <td class="text-center" rowspan="1" colspan="1">system</td>
+            </tr>
+            <tr>
+              <td class="text-center" rowspan="1" colspan="1">status</td>
+              <td class="text-center" rowspan="1" colspan="1">current</td>
+            </tr>
+            <tr>
+              <td class="text-center" rowspan="1" colspan="1">yin-element</td>
+              <td class="text-center" rowspan="1" colspan="1">false</td>
+            </tr>
+          </tbody>
+        </table>
 </section>
 </div>
 <div id="conditional-statements">
@@ -4237,7 +4262,7 @@ Converted NMDA Module:
    module that uses enumerations for the following reason:<a href="#section-5.2-3" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-5.2-4">
 <pre>
-&gt; "The DOTS telemetry module (Section 10.1) uses "enumerations" rather
+ "The DOTS telemetry module (Section 10.1) uses "enumerations" rather
  than "identities" to define units, samples, and intervals because
  otherwise the namespace identifier "ietf-dots-telemetry" must be
  included when a telemetry attribute is included (e.g., in a
@@ -4454,8 +4479,8 @@ registry]:
 <a href="#section-6" class="section-number selfRef">6. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
       </h2>
 <p id="section-6-1">The following registration in the "ns" subregistry of the "IETF XML
-   Registry" <span>[<a href="#RFC3688" class="cite xref">RFC3688</a>]</span> was detailed in <span>[<a href="#RFC6087" class="cite xref">RFC6087</a>]</span> and has been updated by
-   IANA to reference this document.<a href="#section-6-1" class="pilcrow">¶</a></p>
+Registry" <span>[<a href="#RFC3688" class="cite xref">RFC3688</a>]</span> was detailed in <span>[<a href="#RFC6087" class="cite xref">RFC6087</a>]</span> and has been updated by
+IANA to reference this document.<a href="#section-6-1" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-6-2">
 <pre>
      URI: urn:ietf:params:xml:ns:yang:ietf-template
@@ -4464,24 +4489,40 @@ registry]:
 </pre><a href="#section-6-2" class="pilcrow">¶</a>
 </div>
 <p id="section-6-3">The following assignment was detailed in <span>[<a href="#RFC6087" class="cite xref">RFC6087</a>]</span> and has been
-   updated by IANA in the "YANG Module Names" registry.  This document
-   has also been added as a reference for the "YANG Module Names"
-   registry itself as it contains the template necessary for
-   registration in Appendix B.<a href="#section-6-3" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="section-6-4">
-<pre>
-         +-----------+-------------------------------------------+
-         | Field     | Value                                     |
-         +-----------+-------------------------------------------+
-         | Name      | ietf-template                             |
-         | Namespace | urn:ietf:params:xml:ns:yang:ietf-template |
-         | Prefix    | temp                                      |
-         | Reference | RFC 8407                                  |
-         +-----------+-------------------------------------------+
-
-                         YANG Registry Assignment
-</pre><a href="#section-6-4" class="pilcrow">¶</a>
-</div>
+updated by IANA in the "YANG Module Names" registry to reference <span>[<a href="#RFC8407" class="cite xref">RFC8407</a>]</span>.  This document
+requests IANA to update the reference for the "YANG Module Names"
+registry to point to the RFC number that will be assigned to this document as it contains the template necessary for
+registration in Appendix B.<a href="#section-6-3" class="pilcrow">¶</a></p>
+<span id="name-yang-registry-assignment"></span><table class="center" id="table-2">
+        <caption>
+<a href="#table-2" class="selfRef">Table 2</a>:
+<a href="#name-yang-registry-assignment" class="selfRef">YANG Registry Assignment</a>
+        </caption>
+<thead>
+          <tr>
+            <th class="text-center" rowspan="1" colspan="1">Field</th>
+            <th class="text-center" rowspan="1" colspan="1">Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-center" rowspan="1" colspan="1">Name</td>
+            <td class="text-center" rowspan="1" colspan="1">ietf-template</td>
+          </tr>
+          <tr>
+            <td class="text-center" rowspan="1" colspan="1">Namespace</td>
+            <td class="text-center" rowspan="1" colspan="1">urn:ietf:params:xml:ns:yang:ietf-template</td>
+          </tr>
+          <tr>
+            <td class="text-center" rowspan="1" colspan="1">Prefix</td>
+            <td class="text-center" rowspan="1" colspan="1">temp</td>
+          </tr>
+          <tr>
+            <td class="text-center" rowspan="1" colspan="1">Reference</td>
+            <td class="text-center" rowspan="1" colspan="1">RFC XXXX</td>
+          </tr>
+        </tbody>
+      </table>
 </section>
 </div>
 <div id="security-considerations">
@@ -4490,9 +4531,9 @@ registry]:
 <a href="#section-7" class="section-number selfRef">7. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
       </h2>
 <p id="section-7-1">This document defines documentation guidelines for NETCONF or
-   RESTCONF content defined with the YANG data modeling language;
-   therefore, it does not introduce any new or increased security risks
-   into the management system.<a href="#section-7-1" class="pilcrow">¶</a></p>
+RESTCONF content defined with the YANG data modeling language;
+therefore, it does not introduce any new or increased security risks
+into the management system.<a href="#section-7-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <section id="section-8">
