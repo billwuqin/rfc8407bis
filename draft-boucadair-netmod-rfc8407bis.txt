@@ -217,7 +217,7 @@ Table of Contents
    The following changes have been made to the guidelines published in
    [RFC8407]:
 
-   *  Implemented errata 5693, 5800, and 6899.
+   *  Implemented errata 5693, 5800, 6899, and 7416.
 
    *  Updated the URL of the IETF authors guidelines.
 
@@ -256,7 +256,9 @@ Table of Contents
 
    The following terms are used throughout this document:
 
-   IANA-maintained module:  A YANG module that is maintained by IANA.
+   IANA-maintained module:  A YANG module that is maintained by IANA
+      (e.g., "iana-tunnel-type" [RFC8675] or "iana-pseudowire-types"
+      [RFC9291]).
 
    IETF module:  A YANG module that is published by the IETF and which
       is not maintained by IANA.
@@ -3035,6 +3037,11 @@ Table of Contents
               Signaling (DOTS) Telemetry", RFC 9244,
               DOI 10.17487/RFC9244, June 2022,
               <https://www.rfc-editor.org/rfc/rfc9244>.
+
+   [RFC9291]  Boucadair, M., Ed., Gonzalez de Dios, O., Ed., Barguil,
+              S., and L. Munoz, "A YANG Network Data Model for Layer 2
+              VPNs", RFC 9291, DOI 10.17487/RFC9291, September 2022,
+              <https://www.rfc-editor.org/rfc/rfc9291>.
 
    [Style]    "IANA YANG", n.d., <https://github.com/llhotka/iana-yang>.
 
