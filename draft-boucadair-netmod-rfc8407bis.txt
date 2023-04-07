@@ -221,6 +221,10 @@ Table of Contents
 
    *  Added code markers for the security template.
 
+   *  Added a statement that the RFCs that are listed in the security
+      template are to be listed as normative references in documents
+      that use the template.
+
    *  Added guidelines for IANA-maintained modules.
 
 2.  Terminology
@@ -562,6 +566,10 @@ Table of Contents
 
    <list RPC operations and state why they are sensitive>
    <CODE ENDS>
+
+   Note:  [RFC8446], [RFC6241], [RFC6242], [RFC8341], and [RFC8040] (or
+      future RFCs that replaces any of them) have to be listed as
+      normative references.
 
 3.8.  IANA Considerations Section
 
@@ -2786,6 +2794,10 @@ Table of Contents
               (NETCONF)", RFC 6241, DOI 10.17487/RFC6241, June 2011,
               <https://www.rfc-editor.org/rfc/rfc6241>.
 
+   [RFC6242]  Wasserman, M., "Using the NETCONF Protocol over Secure
+              Shell (SSH)", RFC 6242, DOI 10.17487/RFC6242, June 2011,
+              <https://www.rfc-editor.org/rfc/rfc6242>.
+
    [RFC7950]  Bjorklund, M., Ed., "The YANG 1.1 Data Modeling Language",
               RFC 7950, DOI 10.17487/RFC7950, August 2016,
               <https://www.rfc-editor.org/rfc/rfc7950>.
@@ -2803,14 +2815,24 @@ Table of Contents
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
 
+   [RFC8341]  Bierman, A. and M. Bjorklund, "Network Configuration
+              Access Control Model", STD 91, RFC 8341,
+              DOI 10.17487/RFC8341, March 2018,
+              <https://www.rfc-editor.org/rfc/rfc8341>.
+
    [RFC8342]  Bjorklund, M., Schoenwaelder, J., Shafer, P., Watsen, K.,
               and R. Wilton, "Network Management Datastore Architecture
               (NMDA)", RFC 8342, DOI 10.17487/RFC8342, March 2018,
               <https://www.rfc-editor.org/rfc/rfc8342>.
 
+   [RFC8446]  Rescorla, E., "The Transport Layer Security (TLS) Protocol
+              Version 1.3", RFC 8446, DOI 10.17487/RFC8446, August 2018,
+              <https://www.rfc-editor.org/rfc/rfc8446>.
+
    [W3C.REC-xpath]
-              DeRose, J. C. S., "XML Path Language (XPath) Version 1.0",
-              n.d., <http://www.w3.org/TR/1999/REC-xpath-19991116>.
+              Clark, J. and S. DeRose, "XML Path Language (XPath)
+              Version 1.0", November 1999,
+              <http://www.w3.org/TR/1999/REC-xpath-19991116>.
 
 8.2.  Informative References
 
@@ -2888,11 +2910,6 @@ Table of Contents
    [RFC8340]  Bjorklund, M. and L. Berger, Ed., "YANG Tree Diagrams",
               BCP 215, RFC 8340, DOI 10.17487/RFC8340, March 2018,
               <https://www.rfc-editor.org/rfc/rfc8340>.
-
-   [RFC8341]  Bierman, A. and M. Bjorklund, "Network Configuration
-              Access Control Model", STD 91, RFC 8341,
-              DOI 10.17487/RFC8341, March 2018,
-              <https://www.rfc-editor.org/rfc/rfc8341>.
 
    [RFC8343]  Bjorklund, M., "A YANG Data Model for Interface
               Management", RFC 8343, DOI 10.17487/RFC8343, March 2018,
@@ -3003,9 +3020,8 @@ Appendix A.  Module Review Checklist
       <https://trustee.ietf.org/ license-info/>
 
    *  Other Issues -- check for any issues mentioned in
-      <https://www.ietf.org/
-
-   *  id-info/checklist.html> that are not covered elsewhere.
+      <https://www.ietf.org/ id-info/checklist.html> that are not
+      covered elsewhere.
 
    *  Technical Content -- review the actual technical content for
       compliance with the guidelines in this document.  The use of a
