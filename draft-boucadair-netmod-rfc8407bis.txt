@@ -3060,11 +3060,11 @@ Appendix A.  Module Review Checklist
       IANA Considerations section contains entries for the following
       IANA registries:
 
-      XML Namespace Registry: Register the YANG module namespace.
+      XML Namespace Registry:  Register the YANG module namespace.
 
-      YANG Module Registry: Register the YANG module name, prefix,
-      namespace, and RFC number, according to the rules specified in
-      [RFC6020].
+      YANG Module Registry:  Register the YANG module name, prefix,
+         namespace, and RFC number, according to the rules specified in
+         [RFC6020].
 
    *  References -- verify that the references are properly divided
       between normative and informative references, that RFCs 2119 and
