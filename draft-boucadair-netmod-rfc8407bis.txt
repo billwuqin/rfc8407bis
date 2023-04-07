@@ -245,7 +245,10 @@ Table of Contents
    *  Added new text about checks of JSON encoded examples.
 
    *  Added pointers to the IPv4/IPv6 addresses/prefixes that reserved
-      for documentation
+      for documentation.
+
+   *  Updated the IANA considerations to encourage registration requests
+      to indicate whether a module is maintained by IANA or not.
 
    *  Added guidelines for IANA-maintained modules.
 
@@ -2793,17 +2796,17 @@ Table of Contents
    for registration in Appendix B.
 
     +=====================+===========================================+
-    | Field               | Value                                     |
+    |               Field | Value                                     |
     +=====================+===========================================+
-    | Name                | ietf-template                             |
+    |                Name | ietf-template                             |
     +---------------------+-------------------------------------------+
-    | Namespace           | urn:ietf:params:xml:ns:yang:ietf-template |
+    |           Namespace | urn:ietf:params:xml:ns:yang:ietf-template |
     +---------------------+-------------------------------------------+
-    | Prefix              | temp                                      |
+    |              Prefix | temp                                      |
     +---------------------+-------------------------------------------+
     | Maintained by IANA? | N                                         |
     +---------------------+-------------------------------------------+
-    | Reference           | RFC XXXX                                  |
+    |           Reference | RFC XXXX                                  |
     +---------------------+-------------------------------------------+
 
                      Table 2: YANG Registry Assignment
