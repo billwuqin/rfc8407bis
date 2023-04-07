@@ -176,13 +176,14 @@ Table of Contents
    over time.
 
    This document defines a set of usage guidelines for documents
-   containing YANG 1.1 [RFC7950] and YANG 1.0 [RFC6020] data models.
-   YANG is used to define the data structures, protocol operations, and
-   notification content used within a NETCONF and/or RESTCONF server.
-   YANG is also used to define abstract data structures [RFC8791].  A
-   NETCONF or RESTCONF server that supports a particular YANG module
-   will support client NETCONF and/or RESTCONF operation requests, as
-   indicated by the specific content defined in the YANG module.
+   containing YANG 1.1 [RFC7950] and YANG 1.0 [RFC6020] data models,
+   including IANA-maintained modules.  YANG is used to define the data
+   structures, protocol operations, and notification content used within
+   a NETCONF and/or RESTCONF server.  YANG is also used to define
+   abstract data structures [RFC8791].  A NETCONF or RESTCONF server
+   that supports a particular YANG module will support client NETCONF
+   and/or RESTCONF operation requests, as indicated by the specific
+   content defined in the YANG module.
 
    Many YANG constructs are defined as optional to use, such as the
    "description" statement.  However, in order to make YANG modules more
@@ -203,6 +204,9 @@ Table of Contents
    These guidelines are intended to be used by authors and reviewers to
    improve the readability and interoperability of published YANG data
    models.
+
+   Section 5.3 updates [RFC8126] by providing guidance for writing the
+   IANA considerations for RFCs that specify IANA-maintained modules.
 
    Note that this document is not a YANG tutorial, and the reader is
    expected to know the YANG data modeling language before implementing
@@ -2543,14 +2547,11 @@ Table of Contents
    registry, this document encourages the use of IANA-maintained
    modules.
 
-   This section provides a set of guidelines for YANG module authors
-   related to the design of IANA-maintained modules.  These guidelines
-   are meant to leverage existing IANA registries and use YANG as
-   another format to present the content of these registries when
-   appropriate.
-
-   Section 5.3 updates [RFC8126] by providing guidance for writing the
-   IANA considerations for RFCs that specify IANA-maintained modules.
+   The following section provides a set of guidelines for YANG module
+   authors related to the design of IANA-maintained modules.  These
+   guidelines are meant to leverage existing IANA registries and use
+   YANG as another format to present the content of these registries
+   when appropriate.
 
 5.2.  Guidelines for IANA-Maintained Modules
 
@@ -3048,7 +3049,7 @@ Appendix A.  Module Review Checklist
       Trust copyright notice at the beginning of the document.  The IETF
       Trust Legal Provisions (TLP) can be found at:
 
-      https://trustee.ietf.org/license-info/
+      <https://trustee.ietf.org/license-info/>
 
    *  Security Considerations section -- verify that the document uses
       the latest approved template from the Operations and Management
@@ -3061,13 +3062,11 @@ Appendix A.  Module Review Checklist
       IANA Considerations section contains entries for the following
       IANA registries:
 
-      XML Namespace Registry:
-      : Register the YANG module namespace.
+      XML Namespace Registry:  Register the YANG module namespace.
 
-      YANG Module Registry:
-      : Register the YANG module name, prefix,
-      namespace, and RFC number, according to the rules specified in
-      {{RFC6020}}.
+      YANG Module Registry:  Register the YANG module name, prefix,
+         namespace, and RFC number, according to the rules specified in
+         [RFC6020].
 
    *  References -- verify that the references are properly divided
       between normative and informative references, that RFCs 2119 and

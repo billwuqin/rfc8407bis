@@ -1504,7 +1504,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
    requires a modular set of data models that can be reused and extended
    over time.<a href="#section-1-1" class="pilcrow">¶</a></p>
 <p id="section-1-2">This document defines a set of usage guidelines for documents
-   containing YANG 1.1 <span>[<a href="#RFC7950" class="cite xref">RFC7950</a>]</span> and YANG 1.0 <span>[<a href="#RFC6020" class="cite xref">RFC6020</a>]</span> data models.
+   containing YANG 1.1 <span>[<a href="#RFC7950" class="cite xref">RFC7950</a>]</span> and YANG 1.0 <span>[<a href="#RFC6020" class="cite xref">RFC6020</a>]</span> data models, including IANA-maintained modules.
    YANG is used to define the data structures, protocol operations, and
    notification content used within a NETCONF and/or RESTCONF server.
    YANG is also used to define abstract data structures <span>[<a href="#RFC8791" class="cite xref">RFC8791</a>]</span>.
@@ -1527,9 +1527,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <p id="section-1-6">These guidelines are intended to be used by authors and reviewers to
    improve the readability and interoperability of published YANG data
    models.<a href="#section-1-6" class="pilcrow">¶</a></p>
-<p id="section-1-7">Note that this document is not a YANG tutorial, and the reader is
+<p id="section-1-7"><a href="#sec-iana-mm" class="auto internal xref">Section 5.3</a> updates <span>[<a href="#RFC8126" class="cite xref">RFC8126</a>]</span> by providing guidance for writing the
+   IANA considerations for RFCs that specify IANA-maintained modules.<a href="#section-1-7" class="pilcrow">¶</a></p>
+<p id="section-1-8">Note that this document is not a YANG tutorial, and the reader is
    expected to know the YANG data modeling language before implementing
-   the guidance in this document.<a href="#section-1-7" class="pilcrow">¶</a></p>
+   the guidance in this document.<a href="#section-1-8" class="pilcrow">¶</a></p>
 <div id="changes-since-rfc-8407">
 <section id="section-1.1">
         <h3 id="name-changes-since-rfc-8407">
@@ -4218,13 +4220,11 @@ Converted NMDA Module:
    source of information, when such an information is maintained in a
    registry, this document encourages the use of IANA-maintained
    modules.<a href="#section-5.1-3" class="pilcrow">¶</a></p>
-<p id="section-5.1-4">This section provides a set of guidelines for YANG module authors
+<p id="section-5.1-4">The following section provides a set of guidelines for YANG module authors
    related to the design of IANA-maintained modules.  These guidelines
    are meant to leverage existing IANA registries and use YANG as
    another format to present the content of these registries when
    appropriate.<a href="#section-5.1-4" class="pilcrow">¶</a></p>
-<p id="section-5.1-5"><a href="#sec-iana-mm" class="auto internal xref">Section 5.3</a> updates <span>[<a href="#RFC8126" class="cite xref">RFC8126</a>]</span> by providing guidance for writing the
-   IANA considerations for RFCs that specify IANA-maintained modules.<a href="#section-5.1-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="guidelines-for-iana-maintained-modules">
@@ -4243,7 +4243,7 @@ Converted NMDA Module:
    one single IANA-maintained module that covers all sub-registries if
    maintaining that single module is manageable (e.g., very few values
    are present or expected to be present for each sub-registry).  An
-   example of such a module is documented in Section 5.2 of <span>[<a href="#RFC9132" class="cite xref">RFC9132</a>]</span>.<a href="#section-5.2-2" class="pilcrow">¶</a></p>
+   example of such a module is documented in <span><a href="https://rfc-editor.org/rfc/rfc9132#section-5.2" class="relref">Section 5.2</a> of [<a href="#RFC9132" class="cite xref">RFC9132</a>]</span>.<a href="#section-5.2-2" class="pilcrow">¶</a></p>
 <p id="section-5.2-3">An IANA-maintained module may use identities (e.g., <span>[<a href="#RFC8675" class="cite xref">RFC8675</a>]</span>) or
    enumerations (e.g., <span>[<a href="#RFC9108" class="cite xref">RFC9108</a>]</span>).  The decision about which type to use
    is left to the module designers and should be made based upon
@@ -4272,7 +4272,7 @@ Converted NMDA Module:
    For both cases, the document that defines an IANA-maintained module
    <span class="bcp14">MUST</span> include a note indicating that the document is only documenting
    the initial version of the module and that the authoritative version
-   is to be retrieved from the IANA registry.  It is <span class="bcp14">RECOMMENDED</span> to
+   is to be retrieved from the IANA registry. It is <span class="bcp14">RECOMMENDED</span> to
    include the URL from where to retrieve the recent version of the
    module.  When a script is used, the Internet-Draft that defines an
    IANA-maintained module <span class="bcp14">SHOULD</span> include an appendix with the initial
@@ -4767,7 +4767,7 @@ text regarding the rights that document contributors provide to
 the IETF Trust <span>[<a href="#RFC5378" class="cite xref">RFC5378</a>]</span>.  Verify that it contains the full IETF
 Trust copyright notice at the beginning of the document.  The IETF
 Trust Legal Provisions (TLP) can be found at:<a href="#appendix-A-3.3.1" class="pilcrow">¶</a></p>
-<p id="appendix-A-3.3.2"><code>https://trustee.ietf.org/license-info/</code><a href="#appendix-A-3.3.2" class="pilcrow">¶</a></p>
+<p id="appendix-A-3.3.2"><code>&lt;https://trustee.ietf.org/license-info/&gt;</code><a href="#appendix-A-3.3.2" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-3.4">Security Considerations section -- verify that the document uses
 the latest approved template from the Operations and Management
@@ -4779,17 +4779,19 @@ been followed.<a href="#appendix-A-3.4" class="pilcrow">¶</a>
 present.  For each module within the document, ensure that the
 IANA Considerations section contains entries for the following
 IANA registries:<a href="#appendix-A-3.5.1" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="appendix-A-3.5.2">
-<pre>
-XML Namespace Registry:
-: Register the YANG module namespace.
-
-YANG Module Registry:
-: Register the YANG module name, prefix,
-namespace, and RFC number, according to the rules specified in
-{{RFC6020}}.
-</pre><a href="#appendix-A-3.5.2" class="pilcrow">¶</a>
-</div>
+<span class="break"></span><dl class="dlParallel" id="appendix-A-3.5.2">
+            <dt id="appendix-A-3.5.2.1">XML Namespace Registry:</dt>
+            <dd style="margin-left: 1.5em" id="appendix-A-3.5.2.2">
+              <p id="appendix-A-3.5.2.2.1">Register the YANG module namespace.<a href="#appendix-A-3.5.2.2.1" class="pilcrow">¶</a></p>
+</dd>
+            <dd class="break"></dd>
+<dt id="appendix-A-3.5.2.3">YANG Module Registry:</dt>
+            <dd style="margin-left: 1.5em" id="appendix-A-3.5.2.4">
+              <p id="appendix-A-3.5.2.4.1">Register the YANG module name, prefix, namespace, and RFC
+number, according to the rules specified in <span>[<a href="#RFC6020" class="cite xref">RFC6020</a>]</span>.<a href="#appendix-A-3.5.2.4.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+</dl>
 </li>
         <li class="normal" id="appendix-A-3.6">References -- verify that the references are properly divided
 between normative and informative references, that RFCs 2119 and
