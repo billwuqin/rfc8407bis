@@ -237,7 +237,8 @@ Table of Contents
       [RFC8792] conventions.
 
    *  Added a note that RFC8792-folding of YANG modules can be used if
-      and only if native YANG features (e.g., break line, "+").
+      and only if native YANG features (e.g., break line, "+") are not
+      sufficient.
 
    *  Added a mention about checks to ensure that YANG modules fit into
       the line limits of an I-D.
