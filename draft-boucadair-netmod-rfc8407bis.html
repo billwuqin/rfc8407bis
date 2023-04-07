@@ -1744,23 +1744,18 @@ appear in all capitals, as shown here.<a href="#section-2.4-1" class="pilcrow">�
         <h3 id="name-code-components">
 <a href="#section-3.2" class="section-number selfRef">3.2. </a><a href="#name-code-components" class="section-name selfRef">Code Components</a>
         </h3>
-<div class="alignLeft art-text artwork" id="section-3.2-1">
-<pre>
-   Each normative YANG module or submodule contained within an I-D or
-   RFC is considered to be a code component.  The strings "&lt;CODE
-   BEGINS&gt;" and "&lt;CODE ENDS&gt;" MUST be used to identify each code
-   component.
-
-   The "&lt;CODE BEGINS&gt;" tag SHOULD be followed by a string identifying
-   the file name specified in Section 5.2 of [RFC7950].  The name string
-   form that includes the revision date SHOULD be used.  The revision
-   date MUST match the date used in the most recent revision of the
-   module.
-</pre><a href="#section-3.2-1" class="pilcrow">¶</a>
-</div>
-<p id="section-3.2-2">The following example is for the "2016-03-20" revision of the
-   "ietf-foo" module:<a href="#section-3.2-2" class="pilcrow">¶</a></p>
-<div class="sourcecode" id="section-3.2-3">
+<p id="section-3.2-1">Each normative YANG module or submodule contained within an I-D or
+   RFC is considered to be a code component.  The strings <code>"&lt;CODE
+   BEGINS&gt;" and "&lt;CODE ENDS&gt;"</code> <span class="bcp14">MUST</span> be used to identify each code
+   component.<a href="#section-3.2-1" class="pilcrow">¶</a></p>
+<p id="section-3.2-2">The <code>"&lt;CODE BEGINS&gt;"</code> tag <span class="bcp14">SHOULD</span> be followed by a string identifying
+   the file name specified in Section 5.2 of <span>[<a href="#RFC7950" class="cite xref">RFC7950</a>]</span>.  The name string
+   form that includes the revision date <span class="bcp14">SHOULD</span> be used.  The revision
+   date <span class="bcp14">MUST</span> match the date used in the most recent revision of the
+   module.<a href="#section-3.2-2" class="pilcrow">¶</a></p>
+<p id="section-3.2-3">The following example is for the "2016-03-20" revision of the
+   "ietf-foo" module:<a href="#section-3.2-3" class="pilcrow">¶</a></p>
+<div class="sourcecode" id="section-3.2-4">
 <pre>&lt;CODE BEGINS&gt; file "ietf-foo@2016-03-20.yang"
 
 
@@ -1778,7 +1773,7 @@ appear in all capitals, as shown here.<a href="#section-2.4-1" class="pilcrow">�
     }
 
 
-&lt;CODE ENDS&gt;</pre><a href="#section-3.2-3" class="pilcrow">¶</a>
+&lt;CODE ENDS&gt;</pre><a href="#section-3.2-4" class="pilcrow">¶</a>
 </div>
 <div id="example-modules">
 <section id="section-3.2.1">
@@ -2318,38 +2313,38 @@ previously published.<a href="#section-4.2-7" class="pilcrow">¶</a></p>
           </caption>
 <thead>
             <tr>
-              <th class="text-right" rowspan="1" colspan="1">Statement</th>
-              <th class="text-right" rowspan="1" colspan="1">Default Value</th>
+              <th class="text-left" rowspan="1" colspan="1">Statement</th>
+              <th class="text-left" rowspan="1" colspan="1">Default Value</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td class="text-right" rowspan="1" colspan="1">config</td>
-              <td class="text-right" rowspan="1" colspan="1">true</td>
+              <td class="text-left" rowspan="1" colspan="1">config</td>
+              <td class="text-left" rowspan="1" colspan="1">true</td>
             </tr>
             <tr>
-              <td class="text-right" rowspan="1" colspan="1">mandatory</td>
-              <td class="text-right" rowspan="1" colspan="1">false</td>
+              <td class="text-left" rowspan="1" colspan="1">mandatory</td>
+              <td class="text-left" rowspan="1" colspan="1">false</td>
             </tr>
             <tr>
-              <td class="text-right" rowspan="1" colspan="1">max-elements</td>
-              <td class="text-right" rowspan="1" colspan="1">unbounded</td>
+              <td class="text-left" rowspan="1" colspan="1">max-elements</td>
+              <td class="text-left" rowspan="1" colspan="1">unbounded</td>
             </tr>
             <tr>
-              <td class="text-right" rowspan="1" colspan="1">min-elements</td>
-              <td class="text-right" rowspan="1" colspan="1">0</td>
+              <td class="text-left" rowspan="1" colspan="1">min-elements</td>
+              <td class="text-left" rowspan="1" colspan="1">0</td>
             </tr>
             <tr>
-              <td class="text-right" rowspan="1" colspan="1">ordered-by</td>
-              <td class="text-right" rowspan="1" colspan="1">system</td>
+              <td class="text-left" rowspan="1" colspan="1">ordered-by</td>
+              <td class="text-left" rowspan="1" colspan="1">system</td>
             </tr>
             <tr>
-              <td class="text-right" rowspan="1" colspan="1">status</td>
-              <td class="text-right" rowspan="1" colspan="1">current</td>
+              <td class="text-left" rowspan="1" colspan="1">status</td>
+              <td class="text-left" rowspan="1" colspan="1">current</td>
             </tr>
             <tr>
-              <td class="text-right" rowspan="1" colspan="1">yin-element</td>
-              <td class="text-right" rowspan="1" colspan="1">false</td>
+              <td class="text-left" rowspan="1" colspan="1">yin-element</td>
+              <td class="text-left" rowspan="1" colspan="1">false</td>
             </tr>
           </tbody>
         </table>
@@ -4515,26 +4510,26 @@ registration in Appendix B.<a href="#section-6-3" class="pilcrow">¶</a></p>
         </caption>
 <thead>
           <tr>
-            <th class="text-right" rowspan="1" colspan="1">Field</th>
-            <th class="text-right" rowspan="1" colspan="1">Value</th>
+            <th class="text-left" rowspan="1" colspan="1">Field</th>
+            <th class="text-left" rowspan="1" colspan="1">Value</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class="text-right" rowspan="1" colspan="1">Name</td>
-            <td class="text-right" rowspan="1" colspan="1">ietf-template</td>
+            <td class="text-left" rowspan="1" colspan="1">Name</td>
+            <td class="text-left" rowspan="1" colspan="1">ietf-template</td>
           </tr>
           <tr>
-            <td class="text-right" rowspan="1" colspan="1">Namespace</td>
-            <td class="text-right" rowspan="1" colspan="1">urn:ietf:params:xml:ns:yang:ietf-template</td>
+            <td class="text-left" rowspan="1" colspan="1">Namespace</td>
+            <td class="text-left" rowspan="1" colspan="1">urn:ietf:params:xml:ns:yang:ietf-template</td>
           </tr>
           <tr>
-            <td class="text-right" rowspan="1" colspan="1">Prefix</td>
-            <td class="text-right" rowspan="1" colspan="1">temp</td>
+            <td class="text-left" rowspan="1" colspan="1">Prefix</td>
+            <td class="text-left" rowspan="1" colspan="1">temp</td>
           </tr>
           <tr>
-            <td class="text-right" rowspan="1" colspan="1">Reference</td>
-            <td class="text-right" rowspan="1" colspan="1">RFC XXXX</td>
+            <td class="text-left" rowspan="1" colspan="1">Reference</td>
+            <td class="text-left" rowspan="1" colspan="1">RFC XXXX</td>
           </tr>
         </tbody>
       </table>

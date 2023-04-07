@@ -863,21 +863,21 @@ Table of Contents
    difficult to read if used everywhere they are allowed.
 
                      +==============+===============+
-                     |    Statement | Default Value |
+                     | Statement    | Default Value |
                      +==============+===============+
-                     |       config |          true |
+                     | config       | true          |
                      +--------------+---------------+
-                     |    mandatory |         false |
+                     | mandatory    | false         |
                      +--------------+---------------+
-                     | max-elements |     unbounded |
+                     | max-elements | unbounded     |
                      +--------------+---------------+
-                     | min-elements |             0 |
+                     | min-elements | 0             |
                      +--------------+---------------+
-                     |   ordered-by |        system |
+                     | ordered-by   | system        |
                      +--------------+---------------+
-                     |       status |       current |
+                     | status       | current       |
                      +--------------+---------------+
-                     |  yin-element |         false |
+                     | yin-element  | false         |
                      +--------------+---------------+
 
                        Table 1: Statement Defaults
@@ -2783,15 +2783,15 @@ Table of Contents
    for registration in Appendix B.
 
          +===========+===========================================+
-         |     Field |                                     Value |
+         | Field     | Value                                     |
          +===========+===========================================+
-         |      Name |                             ietf-template |
+         | Name      | ietf-template                             |
          +-----------+-------------------------------------------+
          | Namespace | urn:ietf:params:xml:ns:yang:ietf-template |
          +-----------+-------------------------------------------+
-         |    Prefix |                                      temp |
+         | Prefix    | temp                                      |
          +-----------+-------------------------------------------+
-         | Reference |                                  RFC XXXX |
+         | Reference | RFC XXXX                                  |
          +-----------+-------------------------------------------+
 
                      Table 2: YANG Registry Assignment
