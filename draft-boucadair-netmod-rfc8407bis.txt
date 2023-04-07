@@ -239,6 +239,9 @@ Table of Contents
 
    *  Added new text about checks of JSON encoded examples.
 
+   *  Added pointers to the IPv4/IPv6 addresses/prefixes that reserved
+      for documentation
+
    *  Added guidelines for IANA-maintained modules.
 
 2.  Terminology
@@ -700,9 +703,11 @@ Table of Contents
    This includes example instance document snippets in an appropriate
    encoding (e.g., XML and/or JSON) to demonstrate the intended usage of
    the YANG module(s).  Example modules MUST be validated.  Refer to
-   Section 3.10 for tools that validate YANG modules.  If IP addresses
-   are used, then a mix of either IPv4 and IPv6 addresses or IPv6
-   addresses exclusively SHOULD be used in the examples.
+   Section 3.10 for tools that validate YANG modules and examples.  If
+   IP addresses are used, then a mix of either IPv4 and IPv6 addresses
+   or IPv6 addresses exclusively SHOULD be used in the examples.  IPv4
+   and IPv6 addresses/prefixes reserved for documentation are defined
+   [RFC5737] and [RFC3849].
 
 4.  YANG Usage Guidelines
 
@@ -2923,6 +2928,11 @@ Table of Contents
               MIB", RFC 2863, DOI 10.17487/RFC2863, June 2000,
               <https://www.rfc-editor.org/rfc/rfc2863>.
 
+   [RFC3849]  Huston, G., Lord, A., and P. Smith, "IPv6 Address Prefix
+              Reserved for Documentation", RFC 3849,
+              DOI 10.17487/RFC3849, July 2004,
+              <https://www.rfc-editor.org/rfc/rfc3849>.
+
    [RFC4151]  Kindberg, T. and S. Hawke, "The 'tag' URI Scheme",
               RFC 4151, DOI 10.17487/RFC4151, October 2005,
               <https://www.rfc-editor.org/rfc/rfc4151>.
@@ -2930,6 +2940,11 @@ Table of Contents
    [RFC4181]  Heard, C., Ed., "Guidelines for Authors and Reviewers of
               MIB Documents", BCP 111, RFC 4181, DOI 10.17487/RFC4181,
               September 2005, <https://www.rfc-editor.org/rfc/rfc4181>.
+
+   [RFC5737]  Arkko, J., Cotton, M., and L. Vegoda, "IPv4 Address Blocks
+              Reserved for Documentation", RFC 5737,
+              DOI 10.17487/RFC5737, January 2010,
+              <https://www.rfc-editor.org/rfc/rfc5737>.
 
    [RFC6087]  Bierman, A., "Guidelines for Authors and Reviewers of YANG
               Data Model Documents", RFC 6087, DOI 10.17487/RFC6087,
