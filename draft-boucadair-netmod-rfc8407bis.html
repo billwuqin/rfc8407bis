@@ -1780,16 +1780,12 @@ appear in all capitals, as shown here.<a href="#section-2.4-1" class="pilcrow">�
           <h4 id="name-example-modules">
 <a href="#section-3.2.1" class="section-number selfRef">3.2.1. </a><a href="#name-example-modules" class="section-name selfRef">Example Modules</a>
           </h4>
-<div class="alignLeft art-text artwork" id="section-3.2.1-1">
-<pre>
-Example modules are not code components.  The &lt;CODE BEGINS&gt;
-convention MUST NOT be used for example modules.
-</pre><a href="#section-3.2.1-1" class="pilcrow">¶</a>
-</div>
+<p id="section-3.2.1-1">Example modules are not code components.  The <code>&lt;CODE BEGINS&gt;</code>
+convention <span class="bcp14">MUST NOT</span> be used for example modules.<a href="#section-3.2.1-1" class="pilcrow">¶</a></p>
 <p id="section-3.2.1-2">An example module <span class="bcp14">SHOULD</span> be named using the term "example", followed
-   by a hyphen, followed by a descriptive name, e.g., "example-toaster".<a href="#section-3.2.1-2" class="pilcrow">¶</a></p>
+by a hyphen, followed by a descriptive name, e.g., "example-toaster".<a href="#section-3.2.1-2" class="pilcrow">¶</a></p>
 <p id="section-3.2.1-3">See <a href="#sec-namespace-assignments" class="auto internal xref">Section 4.9</a> regarding the namespace guidelines for example
-   modules.<a href="#section-3.2.1-3" class="pilcrow">¶</a></p>
+modules.<a href="#section-3.2.1-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -2005,7 +2001,7 @@ operations and their sensitivity/vulnerability:
         <h3 id="name-iana-considerations-section">
 <a href="#section-3.8" class="section-number selfRef">3.8. </a><a href="#name-iana-considerations-section" class="section-name selfRef">IANA Considerations Section</a>
         </h3>
-<p id="section-3.8-1">In order to comply with IESG policy as set forth in <a href="https://www.ietf.org/id-info/checklist.html">https://www.ietf.org/id-info/checklist.html</a>, every I-D that is
+<p id="section-3.8-1">In order to comply with IESG policy as set forth in <code>&lt;https://www.ietf.org/id-info/checklist.html&gt;</code>, every I-D that is
 submitted to the IESG for publication <span class="bcp14">MUST</span> contain an IANA
 Considerations section.  The requirements for this section vary
 depending on what actions are required of the IANA.  If there are no
@@ -2115,13 +2111,9 @@ extraction is freely available at:<a href="#section-3.11-1" class="pilcrow">¶</
   &lt;https://github.com/mbj4668/rfcstrip&gt;
 </pre><a href="#section-3.11-2" class="pilcrow">¶</a>
 </div>
-<div class="alignLeft art-text artwork" id="section-3.11-3">
-<pre>
-This tool can be used to verify that the "&lt;CODE BEGINS&gt;" and "&lt;CODE
-ENDS&gt;" tags are used correctly and that the normative YANG modules
-can be extracted correctly.
-</pre><a href="#section-3.11-3" class="pilcrow">¶</a>
-</div>
+<p id="section-3.11-3">This tool can be used to verify that the <code>"&lt;CODE BEGINS&gt;"</code> and <code>"&lt;CODE
+ENDS&gt;"</code> tags are used correctly and that the normative YANG modules
+can be extracted correctly.<a href="#section-3.11-3" class="pilcrow">¶</a></p>
 <p id="section-3.11-4">The "xym" tool is freely available on GitHub and can be used to
 extract YANG modules from a document.<a href="#section-3.11-4" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-3.11-5">
@@ -2452,7 +2444,7 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
           </h4>
 <p id="section-4.6.2-1">The "position" and "last" functions <span class="bcp14">SHOULD NOT</span> be used.  This applies
    to implicit use of the "position" function as well (e.g.,
-   '//chapter[42]').  A server is only required to maintain the relative
+   <code>'//chapter[42]'</code>).  A server is only required to maintain the relative
    XML document order of all instances of a particular user-ordered list
    or leaf-list.  The "position" and "last" functions <span class="bcp14">MAY</span> be used if
    they are evaluated in a context where the context node is a user-
@@ -2577,7 +2569,7 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
    This is due to augmenting nodes from other modules.<a href="#section-4.6.5-1" class="pilcrow">¶</a></p>
 <p id="section-4.6.5-2">Wildcard expansion is done within a server against all the nodes from
    all namespaces, so it is possible for a "must" or "when" expression
-   that uses the '*' operator to always evaluate to false if processed
+   that uses the <code>'*'</code> operator to always evaluate to false if processed
    within a single YANG module.  In such cases, the "description"
    statement <span class="bcp14">SHOULD</span> clarify that augmenting objects are expected to
    match the wildcard expansion.<a href="#section-4.6.5-2" class="pilcrow">¶</a></p>
@@ -3236,15 +3228,11 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
 <p id="section-4.14-3">If the data definition semantics are defined in an external document,
    (other than another YANG module indicated by an import statement),
    then a reference statement <span class="bcp14">MUST</span> be present.<a href="#section-4.14-3" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="section-4.14-4">
-<pre>
-   The "anyxml" construct may be useful to represent an HTML banner
-   containing markup elements, such as "&lt;b&gt;" and "&lt;/b&gt;", and MAY be used
-   in such cases.  However, this construct SHOULD NOT be used if other
+<p id="section-4.14-4">The "anyxml" construct may be useful to represent an HTML banner
+   containing markup elements, such as <code>"&lt;b&gt;" and "&lt;/b&gt;"</code>, and <span class="bcp14">MAY</span> be used
+   in such cases.  However, this construct <span class="bcp14">SHOULD NOT</span> be used if other
    YANG data node types can be used instead to represent the desired
-   syntax and semantics.
-</pre><a href="#section-4.14-4" class="pilcrow">¶</a>
-</div>
+   syntax and semantics.<a href="#section-4.14-4" class="pilcrow">¶</a></p>
 <p id="section-4.14-5">It has been found that the "anyxml" statement is not implemented
    consistently across all servers.  It is possible that mixed-mode XML
    will not be supported or that configuration anyxml nodes will not
@@ -3905,17 +3893,13 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
    operational state from an NMDA-compliant server.  It contains the
    top-level "config false" data nodes that would have been defined in a
    legacy YANG module (before NMDA).<a href="#section-4.23.3.1-1" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="section-4.23.3.1-2">
-<pre>
-   A server that needs to support both NMDA and non-NMDA clients can
+<p id="section-4.23.3.1-2">A server that needs to support both NMDA and non-NMDA clients can
    advertise both the new NMDA module and the temporary non-NMDA module.
    A non-NMDA client can use separate "foo" and "foo-state" subtrees,
    except the "foo-state" subtree is located in a different (temporary)
    module.  The NMDA module can be used by a non-NMDA client to access
-   the conventional configuration datastores and the deprecated &lt;get&gt;
-   operation to access nested "config false" data nodes.
-</pre><a href="#section-4.23.3.1-2" class="pilcrow">¶</a>
-</div>
+   the conventional configuration datastores and the deprecated <code>&lt;get&gt;</code>
+   operation to access nested "config false" data nodes.<a href="#section-4.23.3.1-2" class="pilcrow">¶</a></p>
 <p id="section-4.23.3.1-3">To create the temporary non-NMDA model from an NMDA model, the
    following steps can be taken:<a href="#section-4.23.3.1-3" class="pilcrow">¶</a></p>
 <ul class="normal">
@@ -4769,27 +4753,23 @@ into the management system.<a href="#section-7-1" class="pilcrow">¶</a></p>
    an I-D:<a href="#appendix-A-2" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="appendix-A-3.1">I-D Boilerplate -- verify that the document contains the required
-I-D boilerplate (see &lt;https://www.ietf.org/id-info/
-guidelines.html&gt;), including the appropriate statement to permit
+I-D boilerplate (see <code>&lt;https://www.ietf.org/id-info/guidelines.html&gt;</code>), including the appropriate statement to permit
 publication as an RFC, and that the I-D boilerplate does not
 contain references or section numbers.<a href="#appendix-A-3.1" class="pilcrow">¶</a>
 </li>
         <li class="normal" id="appendix-A-3.2">Abstract -- verify that the abstract does not contain references,
 that it does not have a section number, and that its content
-follows the guidelines in &lt;https://www.ietf.org/id-info/
-guidelines.html&gt;.<a href="#appendix-A-3.2" class="pilcrow">¶</a>
+follows the guidelines in <code>&lt;https://www.ietf.org/id-info/guidelines.html&gt;</code>.<a href="#appendix-A-3.2" class="pilcrow">¶</a>
 </li>
         <li class="normal" id="appendix-A-3.3">Copyright Notice -- verify that the document has the appropriate
 text regarding the rights that document contributors provide to
 the IETF Trust <span>[<a href="#RFC5378" class="cite xref">RFC5378</a>]</span>.  Verify that it contains the full IETF
 Trust copyright notice at the beginning of the document.  The IETF
-Trust Legal Provisions (TLP) can be found at: https://trustee.ietf.org/
-license-info/<a href="#appendix-A-3.3" class="pilcrow">¶</a>
+Trust Legal Provisions (TLP) can be found at: <code>https://trustee.ietf.org/license-info/</code><a href="#appendix-A-3.3" class="pilcrow">¶</a>
 </li>
         <li class="normal" id="appendix-A-3.4">Security Considerations section -- verify that the document uses
 the latest approved template from the Operations and Management
-(OPS) area website (see &lt;https://trac.ietf.org/area/ops/trac/wiki/
-yang-security-guidelines&gt;) and that the guidelines therein have
+(OPS) area website (see <code>&lt;https://trac.ietf.org/area/ops/trac/wiki/yang-security-guidelines&gt;</code>) and that the guidelines therein have
 been followed.<a href="#appendix-A-3.4" class="pilcrow">¶</a>
 </li>
         <li class="normal" id="appendix-A-3.5">
@@ -4831,20 +4811,16 @@ I-D, then the I-D is included as an informative reference.<a href="#appendix-A-3
 License in each YANG module or submodule.  Some guidelines related
 to this requirement are described in Section 3.1.  Make sure that
 the correct year is used in all copyright dates.  Use the approved
-text from the latest TLP document, which can be found at: &lt;https://trustee.ietf.org/
-license-info/&gt;<a href="#appendix-A-3.7" class="pilcrow">¶</a>
+text from the latest TLP document, which can be found at: <code>&lt;https://trustee.ietf.org/license-info/&gt;</code><a href="#appendix-A-3.7" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="appendix-A-3.8">Other Issues -- check for any issues mentioned in &lt;https://www.ietf.org/
-id-info/checklist.html&gt; that are not covered elsewhere.<a href="#appendix-A-3.8" class="pilcrow">¶</a>
+        <li class="normal" id="appendix-A-3.8">Other Issues -- check for any issues mentioned in <code>&lt;https://www.ietf.org/id-info/checklist.html&gt;</code> that are not covered elsewhere.<a href="#appendix-A-3.8" class="pilcrow">¶</a>
 </li>
         <li class="normal" id="appendix-A-3.9">
           <p id="appendix-A-3.9.1">Technical Content -- review the actual technical content for
 compliance with the guidelines in this document.  The use of a
 YANG module compiler is recommended when checking for syntax
 errors.  A list of freely available tools and other information,
-including formatting advice, can be found at: &lt;https://trac.ietf.org/trac/
-netconf/wiki&gt; and &lt;https://trac.ietf.org/
-trac/netmod/wiki&gt;<a href="#appendix-A-3.9.1" class="pilcrow">¶</a></p>
+including formatting advice, can be found at: <code>&lt;https://trac.ietf.org/trac/netconf/wiki&gt;</code> and <code>&lt;https://trac.ietf.org/trac/netmod/wiki&gt;</code><a href="#appendix-A-3.9.1" class="pilcrow">¶</a></p>
 <p id="appendix-A-3.9.2">
 Checking for correct syntax, however, is only part of the job.
 It is just as important to actually read the YANG module document

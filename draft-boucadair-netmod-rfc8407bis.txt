@@ -598,14 +598,13 @@ Table of Contents
 3.8.  IANA Considerations Section
 
    In order to comply with IESG policy as set forth in
-   https://www.ietf.org/id-info/checklist.html (https://www.ietf.org/id-
-   info/checklist.html), every I-D that is submitted to the IESG for
-   publication MUST contain an IANA Considerations section.  The
-   requirements for this section vary depending on what actions are
-   required of the IANA.  If there are no IANA considerations applicable
-   to the document, then the IANA Considerations section will state that
-   "This document has no IANA actions".  Refer to the guidelines in
-   [RFC8126] for more details.
+   <https://www.ietf.org/id-info/checklist.html>, every I-D that is
+   submitted to the IESG for publication MUST contain an IANA
+   Considerations section.  The requirements for this section vary
+   depending on what actions are required of the IANA.  If there are no
+   IANA considerations applicable to the document, then the IANA
+   Considerations section will state that "This document has no IANA
+   actions".  Refer to the guidelines in [RFC8126] for more details.
 
    Each normative YANG module MUST be registered in both the "IETF XML
    Registry" [RFC3688] [IANA-XML] and the "YANG Module Names" registry
@@ -3047,7 +3046,7 @@ Appendix A.  Module Review Checklist
       the IETF Trust [RFC5378].  Verify that it contains the full IETF
       Trust copyright notice at the beginning of the document.  The IETF
       Trust Legal Provisions (TLP) can be found at:
-      https://trustee.ietf.org/ license-info/
+      https://trustee.ietf.org/license-info/
 
    *  Security Considerations section -- verify that the document uses
       the latest approved template from the Operations and Management
@@ -3086,19 +3085,19 @@ Appendix A.  Module Review Checklist
       to this requirement are described in Section 3.1.  Make sure that
       the correct year is used in all copyright dates.  Use the approved
       text from the latest TLP document, which can be found at:
-      <https://trustee.ietf.org/ license-info/>
+      <https://trustee.ietf.org/license-info/>
 
    *  Other Issues -- check for any issues mentioned in
-      <https://www.ietf.org/ id-info/checklist.html> that are not
-      covered elsewhere.
+      <https://www.ietf.org/id-info/checklist.html> that are not covered
+      elsewhere.
 
    *  Technical Content -- review the actual technical content for
       compliance with the guidelines in this document.  The use of a
       YANG module compiler is recommended when checking for syntax
       errors.  A list of freely available tools and other information,
       including formatting advice, can be found at:
-      <https://trac.ietf.org/trac/ netconf/wiki> and
-      <https://trac.ietf.org/ trac/netmod/wiki>
+      <https://trac.ietf.org/trac/netconf/wiki> and
+      <https://trac.ietf.org/trac/netmod/wiki>
 
       Checking for correct syntax, however, is only part of the job.  It
       is just as important to actually read the YANG module document
