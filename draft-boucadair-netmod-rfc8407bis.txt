@@ -12,7 +12,7 @@ Expires: 9 October 2023
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
                                  Models
-            draft-boucadair-netmod-rfc8407bis-latest-latest
+                draft-boucadair-netmod-rfc8407bis-latest
 
 Abstract
 
