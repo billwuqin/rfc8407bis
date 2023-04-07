@@ -150,7 +150,7 @@ Table of Contents
        4.26.3.  "anyxml" versus "anydata"
        4.26.4.  "action" versus "rpc"
      4.27. Updating YANG Modules (Published versus Unpublished)
-   5.  Guidelines for IANA-Maintained Modules
+   5.  IANA-Maintained Modules
      5.1.  Context
      5.2.  Guidelines for IANA-Maintained Modules
      5.3.  Guidance for Writing the IANA Considerations for RFCs
@@ -1148,14 +1148,14 @@ Table of Contents
    Definitions for future use SHOULD NOT be specified in a module.  Do
    not specify placeholder objects like the "reserved" example below:
 
-        leaf reserved {
-          type string;
-          description
-            "This object has no purpose at this time, but a future
-             revision of this module might define a purpose
-             for this object.";
-          }
-        }
+       leaf reserved {
+         type string;
+         description
+           "This object has no purpose at this time, but a future
+            revision of this module might define a purpose
+            for this object.";
+         }
+       }
 
 4.8.  Module Header, Meta, and Revision Statements
 
@@ -1920,19 +1920,19 @@ Table of Contents
 
      module example-module {
 
-      yang-version 1.1;
-      namespace "tag:example.com,2017:example-module";
-      prefix mymod;
+       yang-version 1.1;
+       namespace "tag:example.com,2017:example-module";
+       prefix mymod;
 
-      import iana-if-type { prefix iana; }
-      import ietf-interfaces { prefix if; }
+       import iana-if-type { prefix iana; }
+       import ietf-interfaces { prefix if; }
 
-      identity some-new-iftype {
-         base iana:iana-interface-type;
-      }
+       identity some-new-iftype {
+          base iana:iana-interface-type;
+       }
 
-      augment "/if:interfaces/if:interface" {
-        when "if:type = 'mymod:some-new-iftype'";
+       augment "/if:interfaces/if:interface" {
+         when "if:type = 'mymod:some-new-iftype'";
 
          leaf mandatory-leaf {
             type string;
@@ -2478,7 +2478,7 @@ Table of Contents
    be unstable.  For example, in the IETF, the RFC document is used for
    published work, and the I-D is used for unpublished work.
 
-5.  Guidelines for IANA-Maintained Modules
+5.  IANA-Maintained Modules
 
 5.1.  Context
 
