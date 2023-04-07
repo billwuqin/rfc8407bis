@@ -217,25 +217,46 @@ Table of Contents
    The following changes have been made to the guidelines published in
    [RFC8407]:
 
-   o Implemented errata 5693, 5800, and 6899.  o Updated the URL of the
-   IETF authors guidelines.  o Updated the YANG security considerations
-   template to reflect the latest version maintained in the Wiki.  o
-   Added statements that the security template is not required for
-   modules that follow [RFC8791].  o Added code markers for the security
-   template.  o Added a statement that the RFCs that are listed in the
-   security template are to be listed as normative references in
-   documents that use the template.  o Added a note that folding of the
-   examples should be done as per [RFC8792] conventions.  o Added a note
-   that RFC8792-folding of YANG modules can be used if and only if
-   native YANG features (e.g., break line, "+").  o Added a mention
-   about checks to ensure that YANG modules fit into the line limits of
-   an I-D.  o Added new text about checks of JSON encoded examples.  o
-   Added pointers to the IPv4/IPv6 addresses/prefixes that reserved for
-   documentation o Added guidelines for IANA-maintained modules.
+   *  Implemented errata 5693, 5800, and 6899.
+
+   *  Updated the URL of the IETF authors guidelines.
+
+   *  Updated the YANG security considerations template to reflect the
+      latest version maintained in the Wiki.
+
+   *  Added statements that the security template is not required for
+      modules that follow [RFC8791].
+
+   *  Added code markers for the security template.
+
+   *  Added a statement that the RFCs that are listed in the security
+      template are to be listed as normative references in documents
+      that use the template.
+
+   *  Added a note that folding of the examples should be done as per
+      [RFC8792] conventions.
+
+   *  Added a note that RFC8792-folding of YANG modules can be used if
+      and only if native YANG features (e.g., break line, "+").
+
+   *  Added a mention about checks to ensure that YANG modules fit into
+      the line limits of an I-D.
+
+   *  Added new text about checks of JSON encoded examples.
+
+   *  Added pointers to the IPv4/IPv6 addresses/prefixes that reserved
+      for documentation
+
+   *  Added guidelines for IANA-maintained modules.
 
 2.  Terminology
 
    The following terms are used throughout this document:
+
+   IANA-maintained module:  A YANG module that is maintained by IANA.
+
+   IETF module:  A YANG module that is published by the IETF and which
+      is not maintained by IANA.
 
    published:  A stable release of a module or submodule.  For example,
       the "Request for Comments" described in Section 2.1 of [RFC2026]
@@ -596,9 +617,14 @@ Table of Contents
 
    Each normative YANG module MUST be registered in both the "IETF XML
    Registry" [RFC3688] [IANA-XML] and the "YANG Module Names" registry
-   [RFC6020] [IANA-MOD-NAMES].  This applies to new modules and updated
-   modules.  An example of an update registration for the "ietf-
-   template" module can be found in Section 6.
+   [RFC6020] [IANA-MOD-NAMES].  The registration request in the "YANG
+   Module Names" registry should indicate whether the module is IANA-
+   maintained or not.  This applies to new modules and updated modules.
+   An example of an update registration for the "ietf-template" module
+   can be found in Section 6.
+
+   Additional IANA considerations applicable to IANA-maintained modules
+   are provided in Section 5.3.
 
 3.8.1.  Documents That Create a New Namespace
 
@@ -2766,17 +2792,19 @@ Table of Contents
    be assigned to this document as it contains the template necessary
    for registration in Appendix B.
 
-         +===========+===========================================+
-         | Field     | Value                                     |
-         +===========+===========================================+
-         | Name      | ietf-template                             |
-         +-----------+-------------------------------------------+
-         | Namespace | urn:ietf:params:xml:ns:yang:ietf-template |
-         +-----------+-------------------------------------------+
-         | Prefix    | temp                                      |
-         +-----------+-------------------------------------------+
-         | Reference | RFC XXXX                                  |
-         +-----------+-------------------------------------------+
+    +=====================+===========================================+
+    | Field               | Value                                     |
+    +=====================+===========================================+
+    | Name                | ietf-template                             |
+    +---------------------+-------------------------------------------+
+    | Namespace           | urn:ietf:params:xml:ns:yang:ietf-template |
+    +---------------------+-------------------------------------------+
+    | Prefix              | temp                                      |
+    +---------------------+-------------------------------------------+
+    | Maintained by IANA? | N                                         |
+    +---------------------+-------------------------------------------+
+    | Reference           | RFC XXXX                                  |
+    +---------------------+-------------------------------------------+
 
                      Table 2: YANG Registry Assignment
 

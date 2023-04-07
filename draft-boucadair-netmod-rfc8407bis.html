@@ -1539,18 +1539,32 @@ svg :is([fill="white"], [fill^="#fff"]) {
         </h3>
 <p id="section-1.1-1">The following changes have been made to the guidelines published in
    <span>[<a href="#RFC8407" class="cite xref">RFC8407</a>]</span>:<a href="#section-1.1-1" class="pilcrow">¶</a></p>
-<p id="section-1.1-2">o Implemented errata 5693, 5800, and 6899.
-   o Updated the URL of the IETF authors guidelines.
-   o Updated the YANG security considerations template to reflect the latest version maintained in the Wiki.
-   o Added statements that the security template is not required for modules that follow <span>[<a href="#RFC8791" class="cite xref">RFC8791</a>]</span>.
-   o Added code markers for the security template.
-   o Added a statement that the RFCs that are listed in the security template are to be listed as normative references in documents that use the template.
-   o Added a note that folding of the examples should be done as per <span>[<a href="#RFC8792" class="cite xref">RFC8792</a>]</span> conventions.
-   o Added a note that RFC8792-folding of YANG modules can be used if and only if native YANG features (e.g., break line, "+").
-   o Added a mention about checks to ensure that YANG modules fit into the line limits of an I-D.
-   o Added new text about checks of JSON encoded examples.
-   o Added pointers to the IPv4/IPv6 addresses/prefixes that reserved for documentation
-   o Added guidelines for IANA-maintained modules.<a href="#section-1.1-2" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-1.1-2.1">Implemented errata 5693, 5800, and 6899.<a href="#section-1.1-2.1" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.1-2.2">Updated the URL of the IETF authors guidelines.<a href="#section-1.1-2.2" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.1-2.3">Updated the YANG security considerations template to reflect the latest version maintained in the Wiki.<a href="#section-1.1-2.3" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.1-2.4">Added statements that the security template is not required for modules that follow <span>[<a href="#RFC8791" class="cite xref">RFC8791</a>]</span>.<a href="#section-1.1-2.4" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.1-2.5">Added code markers for the security template.<a href="#section-1.1-2.5" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.1-2.6">Added a statement that the RFCs that are listed in the security template are to be listed as normative references in documents that use the template.<a href="#section-1.1-2.6" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.1-2.7">Added a note that folding of the examples should be done as per <span>[<a href="#RFC8792" class="cite xref">RFC8792</a>]</span> conventions.<a href="#section-1.1-2.7" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.1-2.8">Added a note that RFC8792-folding of YANG modules can be used if and only if native YANG features (e.g., break line, "+").<a href="#section-1.1-2.8" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.1-2.9">Added a mention about checks to ensure that YANG modules fit into the line limits of an I-D.<a href="#section-1.1-2.9" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.1-2.10">Added new text about checks of JSON encoded examples.<a href="#section-1.1-2.10" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.1-2.11">Added pointers to the IPv4/IPv6 addresses/prefixes that reserved for documentation<a href="#section-1.1-2.11" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.1-2.12">Added guidelines for IANA-maintained modules.<a href="#section-1.1-2.12" class="pilcrow">¶</a>
+</li>
+        </ul>
 </section>
 </div>
 </section>
@@ -1562,36 +1576,46 @@ svg :is([fill="white"], [fill^="#fff"]) {
       </h2>
 <p id="section-2-1">The following terms are used throughout this document:<a href="#section-2-1" class="pilcrow">¶</a></p>
 <span class="break"></span><dl class="dlParallel" id="section-2-2">
-        <dt id="section-2-2.1">published:</dt>
+        <dt id="section-2-2.1">IANA-maintained module:</dt>
         <dd style="margin-left: 1.5em" id="section-2-2.2">
-          <p id="section-2-2.2.1">A stable release of a module or submodule.  For
- example, the "Request for Comments" described in
- <span><a href="https://rfc-editor.org/rfc/rfc2026#section-2.1" class="relref">Section 2.1</a> of [<a href="#RFC2026" class="cite xref">RFC2026</a>]</span> is considered a stable publication.<a href="#section-2-2.2.1" class="pilcrow">¶</a></p>
+          <p id="section-2-2.2.1">A YANG module that is maintained by IANA.<a href="#section-2-2.2.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="section-2-2.3">unpublished:</dt>
+<dt id="section-2-2.3">IETF module:</dt>
         <dd style="margin-left: 1.5em" id="section-2-2.4">
-          <p id="section-2-2.4.1">An unstable release of a module or submodule.  For
+          <p id="section-2-2.4.1">A YANG module that is published by the IETF and which is not maintained by IANA.<a href="#section-2-2.4.1" class="pilcrow">¶</a></p>
+</dd>
+        <dd class="break"></dd>
+<dt id="section-2-2.5">published:</dt>
+        <dd style="margin-left: 1.5em" id="section-2-2.6">
+          <p id="section-2-2.6.1">A stable release of a module or submodule.  For
+ example, the "Request for Comments" described in
+ <span><a href="https://rfc-editor.org/rfc/rfc2026#section-2.1" class="relref">Section 2.1</a> of [<a href="#RFC2026" class="cite xref">RFC2026</a>]</span> is considered a stable publication.<a href="#section-2-2.6.1" class="pilcrow">¶</a></p>
+</dd>
+        <dd class="break"></dd>
+<dt id="section-2-2.7">unpublished:</dt>
+        <dd style="margin-left: 1.5em" id="section-2-2.8">
+          <p id="section-2-2.8.1">An unstable release of a module or submodule.  For
  example the "Internet-Draft" described in <span><a href="https://rfc-editor.org/rfc/rfc2026#section-2.2" class="relref">Section 2.2</a> of [<a href="#RFC2026" class="cite xref">RFC2026</a>]</span>
  is considered an unstable publication that is a work in progress,
- subject to change at any time.<a href="#section-2-2.4.1" class="pilcrow">¶</a></p>
+ subject to change at any time.<a href="#section-2-2.8.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="section-2-2.5">YANG fragment:</dt>
-        <dd style="margin-left: 1.5em" id="section-2-2.6">
-          <p id="section-2-2.6.1">A set of YANG statements that are not intended to
+<dt id="section-2-2.9">YANG fragment:</dt>
+        <dd style="margin-left: 1.5em" id="section-2-2.10">
+          <p id="section-2-2.10.1">A set of YANG statements that are not intended to
  represent a complete YANG module or submodule.  These statements
  are not intended for actual use, except to provide an example of
  YANG statement usage.  The invalid syntax "..." is sometimes used
  to indicate that additional YANG statements would be present in a
- real YANG module.<a href="#section-2-2.6.1" class="pilcrow">¶</a></p>
+ real YANG module.<a href="#section-2-2.10.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
-<dt id="section-2-2.7">YANG tree diagram:</dt>
-        <dd style="margin-left: 1.5em" id="section-2-2.8">
-          <p id="section-2-2.8.1">A diagram representing the contents of a YANG
+<dt id="section-2-2.11">YANG tree diagram:</dt>
+        <dd style="margin-left: 1.5em" id="section-2-2.12">
+          <p id="section-2-2.12.1">A diagram representing the contents of a YANG
  module, as defined in <span>[<a href="#RFC8340" class="cite xref">RFC8340</a>]</span>.  It is also called a "tree
- diagram".<a href="#section-2-2.8.1" class="pilcrow">¶</a></p>
+ diagram".<a href="#section-2-2.12.1" class="pilcrow">¶</a></p>
 </dd>
       <dd class="break"></dd>
 </dl>
@@ -1737,7 +1761,7 @@ appear in all capitals, as shown here.<a href="#section-2.4-1" class="pilcrow">�
    BEGINS&gt;" and "&lt;CODE ENDS&gt;"</code> <span class="bcp14">MUST</span> be used to identify each code
    component.<a href="#section-3.2-1" class="pilcrow">¶</a></p>
 <p id="section-3.2-2">The <code>"&lt;CODE BEGINS&gt;"</code> tag <span class="bcp14">SHOULD</span> be followed by a string identifying
-   the file name specified in Section 5.2 of <span>[<a href="#RFC7950" class="cite xref">RFC7950</a>]</span>.  The name string
+   the file name specified in <span><a href="https://rfc-editor.org/rfc/rfc7950#section-5.2" class="relref">Section 5.2</a> of [<a href="#RFC7950" class="cite xref">RFC7950</a>]</span>.  The name string
    form that includes the revision date <span class="bcp14">SHOULD</span> be used.  The revision
    date <span class="bcp14">MUST</span> match the date used in the most recent revision of the
    module.<a href="#section-3.2-2" class="pilcrow">¶</a></p>
@@ -1797,7 +1821,7 @@ and <span class="bcp14">SHOULD</span> be included to help readers understand YAN
 structure.  Guidelines on tree diagrams can be found in <span><a href="https://rfc-editor.org/rfc/rfc8340#section-3" class="relref">Section 3</a> of [<a href="#RFC8340" class="cite xref">RFC8340</a>]</span>.<a href="#section-3.4-1" class="pilcrow">¶</a></p>
 <p id="section-3.4-2">If YANG tree diagrams are used, then an informative reference to the
 YANG tree diagrams specification <span class="bcp14">MUST</span> be included in the document.
-Refer to Section 2.2 of <span>[<a href="#RFC8349" class="cite xref">RFC8349</a>]</span> for an example of such a reference.<a href="#section-3.4-2" class="pilcrow">¶</a></p>
+Refer to <span><a href="https://rfc-editor.org/rfc/rfc8349#section-2.2" class="relref">Section 2.2</a> of [<a href="#RFC8349" class="cite xref">RFC8349</a>]</span> for an example of such a reference.<a href="#section-3.4-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="narrative-sections">
@@ -1992,15 +2016,17 @@ operations and their sensitivity/vulnerability:
 <p id="section-3.8-1">In order to comply with IESG policy as set forth in <code>&lt;https://www.ietf.org/id-info/checklist.html&gt;</code>, every I-D that is
 submitted to the IESG for publication <span class="bcp14">MUST</span> contain an IANA
 Considerations section.  The requirements for this section vary
-depending on what actions are required of the IANA.  If there are no
+depending on what actions are required of the IANA. If there are no
 IANA considerations applicable to the document, then the IANA
 Considerations section will state that "This document has no IANA
 actions".  Refer to the guidelines in <span>[<a href="#RFC8126" class="cite xref">RFC8126</a>]</span> for more details.<a href="#section-3.8-1" class="pilcrow">¶</a></p>
 <p id="section-3.8-2">Each normative YANG module <span class="bcp14">MUST</span> be registered in both the "IETF XML
 Registry" <span>[<a href="#RFC3688" class="cite xref">RFC3688</a>]</span> <span>[<a href="#IANA-XML" class="cite xref">IANA-XML</a>]</span> and the "YANG Module Names" registry
-<span>[<a href="#RFC6020" class="cite xref">RFC6020</a>]</span> <span>[<a href="#IANA-MOD-NAMES" class="cite xref">IANA-MOD-NAMES</a>]</span>.  This applies to new modules and updated
-modules.  An example of an update registration for the
+<span>[<a href="#RFC6020" class="cite xref">RFC6020</a>]</span> <span>[<a href="#IANA-MOD-NAMES" class="cite xref">IANA-MOD-NAMES</a>]</span>. The registration request in the "YANG Module Names" registry
+should indicate whether the module is IANA-maintained or not. This applies to new modules and updated
+modules. An example of an update registration for the
 "ietf-template" module can be found in <a href="#sec-iana" class="auto internal xref">Section 6</a>.<a href="#section-3.8-2" class="pilcrow">¶</a></p>
+<p id="section-3.8-3">Additional IANA considerations applicable to IANA-maintained modules are provided in <a href="#sec-iana-mm" class="auto internal xref">Section 5.3</a>.<a href="#section-3.8-3" class="pilcrow">¶</a></p>
 <div id="documents-that-create-a-new-namespace">
 <section id="section-3.8.1">
           <h4 id="name-documents-that-create-a-new">
@@ -2245,8 +2271,7 @@ previously published.<a href="#section-4.2-7" class="pilcrow">¶</a></p>
         </h3>
 <p id="section-4.3-1">Identifiers for all YANG identifiers in published modules <span class="bcp14">MUST</span> be
    between 1 and 64 characters in length.  These include any construct
-   specified as an "identifier-arg-str" token in the ABNF in Section 14
-   of <span>[<a href="#RFC7950" class="cite xref">RFC7950</a>]</span>.<a href="#section-4.3-1" class="pilcrow">¶</a></p>
+   specified as an "identifier-arg-str" token in the ABNF in <span><a href="https://rfc-editor.org/rfc/rfc7950#section-14" class="relref">Section 14</a> of [<a href="#RFC7950" class="cite xref">RFC7950</a>]</span>.<a href="#section-4.3-1" class="pilcrow">¶</a></p>
 <div id="identifier-naming-conventions">
 <section id="section-4.3.1">
           <h4 id="name-identifier-naming-conventio">
@@ -2283,9 +2308,9 @@ previously published.<a href="#section-4.2-7" class="pilcrow">¶</a></p>
 <a href="#section-4.4" class="section-number selfRef">4.4. </a><a href="#name-defaults" class="section-name selfRef">Defaults</a>
         </h3>
 <p id="section-4.4-1">In general, it is suggested that substatements containing very common
-   default values <span class="bcp14">SHOULD NOT</span> be present.  The following substatements
-   are commonly used with the default value, which would make the module
-   difficult to read if used everywhere they are allowed.<a href="#section-4.4-1" class="pilcrow">¶</a></p>
+default values <span class="bcp14">SHOULD NOT</span> be present.  The following substatements
+are commonly used with the default value, which would make the module
+difficult to read if used everywhere they are allowed.<a href="#section-4.4-1" class="pilcrow">¶</a></p>
 <span id="name-statement-defaults"></span><table class="center" id="table-1">
           <caption>
 <a href="#table-1" class="selfRef">Table 1</a>:
@@ -2336,32 +2361,32 @@ previously published.<a href="#section-4.2-7" class="pilcrow">¶</a></p>
 <a href="#section-4.5" class="section-number selfRef">4.5. </a><a href="#name-conditional-statements" class="section-name selfRef">Conditional Statements</a>
         </h3>
 <p id="section-4.5-1">A module may be conceptually partitioned in several ways, using the
-   "if-feature" and/or "when" statements.<a href="#section-4.5-1" class="pilcrow">¶</a></p>
+"if-feature" and/or "when" statements.<a href="#section-4.5-1" class="pilcrow">¶</a></p>
 <p id="section-4.5-2">Data model designers need to carefully consider all modularity
-   aspects, including the use of YANG conditional statements.<a href="#section-4.5-2" class="pilcrow">¶</a></p>
+aspects, including the use of YANG conditional statements.<a href="#section-4.5-2" class="pilcrow">¶</a></p>
 <p id="section-4.5-3">If a data definition is optional, depending on server support for a
-   NETCONF or RESTCONF protocol capability, then a YANG "feature"
-   statement <span class="bcp14">SHOULD</span> be defined.  The defined "feature" statement <span class="bcp14">SHOULD</span>
-   then be used in the conditional "if-feature" statement referencing
-   the optional data definition.<a href="#section-4.5-3" class="pilcrow">¶</a></p>
+NETCONF or RESTCONF protocol capability, then a YANG "feature"
+statement <span class="bcp14">SHOULD</span> be defined.  The defined "feature" statement <span class="bcp14">SHOULD</span>
+then be used in the conditional "if-feature" statement referencing
+the optional data definition.<a href="#section-4.5-3" class="pilcrow">¶</a></p>
 <p id="section-4.5-4">If any notification data, or any data definition, for a non-
-   configuration data node is not mandatory, then the server may or may
-   not be required to return an instance of this data node.  If any
-   conditional requirements exist for returning the data node in a
-   notification payload or retrieval request, they <span class="bcp14">MUST</span> be documented
-   somewhere.  For example, a "when" or "if-feature" statement could
-   apply to the data node, or the conditional requirements could be
-   explained in a "description" statement within the data node or one of
-   its ancestors (if any).<a href="#section-4.5-4" class="pilcrow">¶</a></p>
+configuration data node is not mandatory, then the server may or may
+not be required to return an instance of this data node.  If any
+conditional requirements exist for returning the data node in a
+notification payload or retrieval request, they <span class="bcp14">MUST</span> be documented
+somewhere.  For example, a "when" or "if-feature" statement could
+apply to the data node, or the conditional requirements could be
+explained in a "description" statement within the data node or one of
+its ancestors (if any).<a href="#section-4.5-4" class="pilcrow">¶</a></p>
 <p id="section-4.5-5">If any "if-feature" statements apply to a list node, then the same
-   "if-feature" statements <span class="bcp14">MUST</span> apply to any key leaf nodes for the
-   list.  There <span class="bcp14">MUST NOT</span> be any "if-feature" statements applied to any
-   key leafs that do not also apply to the parent list node.<a href="#section-4.5-5" class="pilcrow">¶</a></p>
+"if-feature" statements <span class="bcp14">MUST</span> apply to any key leaf nodes for the
+list.  There <span class="bcp14">MUST NOT</span> be any "if-feature" statements applied to any
+key leafs that do not also apply to the parent list node.<a href="#section-4.5-5" class="pilcrow">¶</a></p>
 <p id="section-4.5-6">There <span class="bcp14">SHOULD NOT</span> be any "when" statements applied to a key leaf node.
-   It is possible that a "when" statement for an ancestor node of a key
-   leaf will have the exact node-set result as the key leaf.  In such a
-   case, the "when" statement for the key leaf is redundant and <span class="bcp14">SHOULD</span>
-   be avoided.<a href="#section-4.5-6" class="pilcrow">¶</a></p>
+It is possible that a "when" statement for an ancestor node of a key
+leaf will have the exact node-set result as the key leaf.  In such a
+case, the "when" statement for the key leaf is redundant and <span class="bcp14">SHOULD</span>
+be avoided.<a href="#section-4.5-6" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="xpath-usage">
@@ -2370,14 +2395,14 @@ previously published.<a href="#section-4.2-7" class="pilcrow">¶</a></p>
 <a href="#section-4.6" class="section-number selfRef">4.6. </a><a href="#name-xpath-usage" class="section-name selfRef">XPath Usage</a>
         </h3>
 <p id="section-4.6-1">This section describes guidelines for using the XML Path Language
-   (XPath) <span>[<a href="#W3C.REC-xpath" class="cite xref">W3C.REC-xpath</a>]</span> within YANG modules.<a href="#section-4.6-1" class="pilcrow">¶</a></p>
+(XPath) <span>[<a href="#W3C.REC-xpath" class="cite xref">W3C.REC-xpath</a>]</span> within YANG modules.<a href="#section-4.6-1" class="pilcrow">¶</a></p>
 <div id="xpath-evaluation-contexts">
 <section id="section-4.6.1">
           <h4 id="name-xpath-evaluation-contexts">
 <a href="#section-4.6.1" class="section-number selfRef">4.6.1. </a><a href="#name-xpath-evaluation-contexts" class="section-name selfRef">XPath Evaluation Contexts</a>
           </h4>
 <p id="section-4.6.1-1">YANG defines five separate contexts for evaluation of XPath
-   statements:<a href="#section-4.6.1-1" class="pilcrow">¶</a></p>
+statements:<a href="#section-4.6.1-1" class="pilcrow">¶</a></p>
 <ol start="1" type="1" class="normal type-1" id="section-4.6.1-2">
 <li id="section-4.6.1-2.1">The "running" datastore: collection of all YANG configuration
 data nodes.  The document root is the conceptual container (e.g.,
@@ -2400,8 +2425,8 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
 </li>
           </ol>
 <p id="section-4.6.1-3">Note that these XPath contexts cannot be mixed.  For example, a
-   "when" statement in a notification context cannot reference
-   configuration data.<a href="#section-4.6.1-3" class="pilcrow">¶</a></p>
+"when" statement in a notification context cannot reference
+configuration data.<a href="#section-4.6.1-3" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.6.1-4">
 <pre>
     notification foo {
@@ -2417,12 +2442,12 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
 </pre><a href="#section-4.6.1-4" class="pilcrow">¶</a>
 </div>
 <p id="section-4.6.1-5">It is especially important to consider the XPath evaluation context
-   for XPath expressions defined in groupings.  An XPath expression
-   defined in a grouping may not be portable, meaning it cannot be used
-   in multiple contexts and produce proper results.<a href="#section-4.6.1-5" class="pilcrow">¶</a></p>
+for XPath expressions defined in groupings.  An XPath expression
+defined in a grouping may not be portable, meaning it cannot be used
+in multiple contexts and produce proper results.<a href="#section-4.6.1-5" class="pilcrow">¶</a></p>
 <p id="section-4.6.1-6">If the XPath expressions defined in a grouping are intended for a
-   particular context, then this context <span class="bcp14">SHOULD</span> be identified in the
-   "description" statement for the grouping.<a href="#section-4.6.1-6" class="pilcrow">¶</a></p>
+particular context, then this context <span class="bcp14">SHOULD</span> be identified in the
+"description" statement for the grouping.<a href="#section-4.6.1-6" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="function-library">
@@ -2431,39 +2456,39 @@ which is the parent of all RPC output parameter definitions.<a href="#section-4.
 <a href="#section-4.6.2" class="section-number selfRef">4.6.2. </a><a href="#name-function-library" class="section-name selfRef">Function Library</a>
           </h4>
 <p id="section-4.6.2-1">The "position" and "last" functions <span class="bcp14">SHOULD NOT</span> be used.  This applies
-   to implicit use of the "position" function as well (e.g.,
-   <code>'//chapter[42]'</code>).  A server is only required to maintain the relative
-   XML document order of all instances of a particular user-ordered list
-   or leaf-list.  The "position" and "last" functions <span class="bcp14">MAY</span> be used if
-   they are evaluated in a context where the context node is a user-
-   ordered "list" or "leaf-list".<a href="#section-4.6.2-1" class="pilcrow">¶</a></p>
+to implicit use of the "position" function as well (e.g.,
+<code>'//chapter[42]'</code>).  A server is only required to maintain the relative
+XML document order of all instances of a particular user-ordered list
+or leaf-list.  The "position" and "last" functions <span class="bcp14">MAY</span> be used if
+they are evaluated in a context where the context node is a user-
+ordered "list" or "leaf-list".<a href="#section-4.6.2-1" class="pilcrow">¶</a></p>
 <p id="section-4.6.2-2">The "id" function <span class="bcp14">SHOULD NOT</span> be used.  The "ID" attribute is not
-   present in YANG documents, so this function has no meaning.  The YANG
-   compiler <span class="bcp14">SHOULD</span> return an empty string for this function.<a href="#section-4.6.2-2" class="pilcrow">¶</a></p>
+present in YANG documents, so this function has no meaning.  The YANG
+compiler <span class="bcp14">SHOULD</span> return an empty string for this function.<a href="#section-4.6.2-2" class="pilcrow">¶</a></p>
 <p id="section-4.6.2-3">The "namespace-uri" and "name" functions <span class="bcp14">SHOULD NOT</span> be used.
-   Expanded names in XPath are different than YANG.  A specific
-   canonical representation of a YANG-expanded name does not exist.<a href="#section-4.6.2-3" class="pilcrow">¶</a></p>
+Expanded names in XPath are different than YANG.  A specific
+canonical representation of a YANG-expanded name does not exist.<a href="#section-4.6.2-3" class="pilcrow">¶</a></p>
 <p id="section-4.6.2-4">The "lang" function <span class="bcp14">SHOULD NOT</span> be used.  This function does not apply
-   to YANG because there is no "lang" attribute set with the document.
-   The YANG compiler <span class="bcp14">SHOULD</span> return 'false' for this function.<a href="#section-4.6.2-4" class="pilcrow">¶</a></p>
+to YANG because there is no "lang" attribute set with the document.
+The YANG compiler <span class="bcp14">SHOULD</span> return 'false' for this function.<a href="#section-4.6.2-4" class="pilcrow">¶</a></p>
 <p id="section-4.6.2-5">The "local-name", "namespace-uri", "name", "string", and "number"
-   functions <span class="bcp14">SHOULD NOT</span> be used if the argument is a node-set.  If so,
-   the function result will be determined by the document order of the
-   node-set.  Since this order can be different on each server, the
-   function results can also be different.  Any function call that
-   implicitly converts a node-set to a string will also have this issue.<a href="#section-4.6.2-5" class="pilcrow">¶</a></p>
+functions <span class="bcp14">SHOULD NOT</span> be used if the argument is a node-set.  If so,
+the function result will be determined by the document order of the
+node-set.  Since this order can be different on each server, the
+function results can also be different.  Any function call that
+implicitly converts a node-set to a string will also have this issue.<a href="#section-4.6.2-5" class="pilcrow">¶</a></p>
 <p id="section-4.6.2-6">The "local-name" function <span class="bcp14">SHOULD NOT</span> be used to reference local names
-   outside of the YANG module that defines the must or when expression
-   containing the "local-name" function.  Example of a "local-name"
-   function that should not be used:<a href="#section-4.6.2-6" class="pilcrow">¶</a></p>
+outside of the YANG module that defines the must or when expression
+containing the "local-name" function.  Example of a "local-name"
+function that should not be used:<a href="#section-4.6.2-6" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.6.2-7">
 <pre>
    /*[local-name()='foo']
 </pre><a href="#section-4.6.2-7" class="pilcrow">¶</a>
 </div>
 <p id="section-4.6.2-8">The "derived-from-or-self" function <span class="bcp14">SHOULD</span> be used instead of an
-   equality expression for identityref values.  This allows the
-   identities to be conceptually augmented.<a href="#section-4.6.2-8" class="pilcrow">¶</a></p>
+equality expression for identityref values.  This allows the
+identities to be conceptually augmented.<a href="#section-4.6.2-8" class="pilcrow">¶</a></p>
 <p id="section-4.6.2-9">Example:<a href="#section-4.6.2-9" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.6.2-10">
 <pre>
@@ -4496,6 +4521,10 @@ registration in Appendix B.<a href="#section-6-3" class="pilcrow">¶</a></p>
           <tr>
             <td class="text-left" rowspan="1" colspan="1">Prefix</td>
             <td class="text-left" rowspan="1" colspan="1">temp</td>
+          </tr>
+          <tr>
+            <td class="text-left" rowspan="1" colspan="1">Maintained by IANA?</td>
+            <td class="text-left" rowspan="1" colspan="1">N</td>
           </tr>
           <tr>
             <td class="text-left" rowspan="1" colspan="1">Reference</td>
