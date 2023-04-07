@@ -1543,13 +1543,21 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </li>
           <li class="normal" id="section-1.1-2.3">Updated the YANG security considerations template to reflect the latest version maintained in the Wiki.<a href="#section-1.1-2.3" class="pilcrow">¶</a>
 </li>
-          <li class="normal" id="section-1.1-2.4">Added code markers for the security template.<a href="#section-1.1-2.4" class="pilcrow">¶</a>
+          <li class="normal" id="section-1.1-2.4">Added statements that the security template is not required for modules that follow <span>[<a href="#RFC8791" class="cite xref">RFC8791</a>]</span>.<a href="#section-1.1-2.4" class="pilcrow">¶</a>
 </li>
-          <li class="normal" id="section-1.1-2.5">Added a statement that the RFCs that are listed in the security template are to be listed as normative references in documents that use the template.<a href="#section-1.1-2.5" class="pilcrow">¶</a>
+          <li class="normal" id="section-1.1-2.5">Added code markers for the security template.<a href="#section-1.1-2.5" class="pilcrow">¶</a>
 </li>
-          <li class="normal" id="section-1.1-2.6">Added a note that folding should be done as per <span>[<a href="#RFC8792" class="cite xref">RFC8792</a>]</span>.<a href="#section-1.1-2.6" class="pilcrow">¶</a>
+          <li class="normal" id="section-1.1-2.6">Added a statement that the RFCs that are listed in the security template are to be listed as normative references in documents that use the template.<a href="#section-1.1-2.6" class="pilcrow">¶</a>
 </li>
-          <li class="normal" id="section-1.1-2.7">Added guidelines for IANA-maintained modules.<a href="#section-1.1-2.7" class="pilcrow">¶</a>
+          <li class="normal" id="section-1.1-2.7">Added a note that folding of the examples should be done as per <span>[<a href="#RFC8792" class="cite xref">RFC8792</a>]</span> conventions.<a href="#section-1.1-2.7" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.1-2.8">Added a note that RFC8792-folding of YANG modules can be used if and only if native YANG features (e.g., break line, "+").<a href="#section-1.1-2.8" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.1-2.9">Added a mention about checks to ensure that YANG modules fit into the line limits of an I-D.<a href="#section-1.1-2.9" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.1-2.10">Added new text about checks of JSON encoded examples.<a href="#section-1.1-2.10" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.1-2.11">Added guidelines for IANA-maintained modules.<a href="#section-1.1-2.11" class="pilcrow">¶</a>
 </li>
         </ul>
 </section>
@@ -1803,12 +1811,11 @@ convention MUST NOT be used for example modules.
 <a href="#section-3.4" class="section-number selfRef">3.4. </a><a href="#name-tree-diagrams" class="section-name selfRef">Tree Diagrams</a>
         </h3>
 <p id="section-3.4-1">YANG tree diagrams provide a concise representation of a YANG module
-   and <span class="bcp14">SHOULD</span> be included to help readers understand YANG module
-   structure.  Guidelines on tree diagrams can be found in Section 3 of
-   <span>[<a href="#RFC8340" class="cite xref">RFC8340</a>]</span>.<a href="#section-3.4-1" class="pilcrow">¶</a></p>
+and <span class="bcp14">SHOULD</span> be included to help readers understand YANG module
+structure.  Guidelines on tree diagrams can be found in <span><a href="https://rfc-editor.org/rfc/rfc8340#section-3" class="relref">Section 3</a> of [<a href="#RFC8340" class="cite xref">RFC8340</a>]</span>.<a href="#section-3.4-1" class="pilcrow">¶</a></p>
 <p id="section-3.4-2">If YANG tree diagrams are used, then an informative reference to the
-   YANG tree diagrams specification <span class="bcp14">MUST</span> be included in the document.
-   Refer to Section 2.2 of <span>[<a href="#RFC8349" class="cite xref">RFC8349</a>]</span> for an example of such a reference.<a href="#section-3.4-2" class="pilcrow">¶</a></p>
+YANG tree diagrams specification <span class="bcp14">MUST</span> be included in the document.
+Refer to Section 2.2 of <span>[<a href="#RFC8349" class="cite xref">RFC8349</a>]</span> for an example of such a reference.<a href="#section-3.4-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="narrative-sections">
@@ -1852,6 +1859,7 @@ in the following example:<a href="#section-3.5-5" class="pilcrow">¶</a></p>
 value so the line needs to wrap to stay within 72 characters&lt;/myleaf&gt;
 </pre><a href="#section-3.5-6" class="pilcrow">¶</a>
 </div>
+<p id="section-3.5-7">Native YANG features (e.g., breaking line, "+") <span class="bcp14">SHOULD</span> be used to fit a module into the line limits. Exceptionally, RFC8792-folding of YANG modules <span class="bcp14">MAY</span> be used if and only if native YANG features are not sufficient.<a href="#section-3.5-7" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="definitions-section">
@@ -1891,7 +1899,7 @@ statements within a module.<a href="#section-3.6-5" class="pilcrow">¶</a></p>
 <p id="section-3.7-1">Each specification that defines one or more modules <span class="bcp14">MUST</span> contain a
    section that discusses security considerations relevant to those
    modules.<a href="#section-3.7-1" class="pilcrow">¶</a></p>
-<p id="section-3.7-2">This section <span class="bcp14">MUST</span> be patterned after the latest approved template
+<p id="section-3.7-2">Unless the modules comply with <span>[<a href="#RFC8791" class="cite xref">RFC8791</a>]</span>, this section <span class="bcp14">MUST</span> be patterned after the latest approved template
    (available at &lt;https://trac.ietf.org/trac/ops/wiki/yang-security-
    guidelines&gt;).  <a href="#sec-security-template" class="auto internal xref">Section 3.7.1</a> contains the security considerations
    template dated 2013-05-08 and last updated on 2018-10-18.  Authors
@@ -1914,6 +1922,7 @@ statements within a module.<a href="#section-3.6-5" class="pilcrow">¶</a></p>
  the sensitivity/privacy concerns <span class="bcp14">MUST</span> be explained.<a href="#section-3.7-4.3" class="pilcrow">¶</a>
 </li>
         </ul>
+<p id="section-3.7-5">Documents that define exclusively modules following the extension in <span>[<a href="#RFC8791" class="cite xref">RFC8791</a>]</span> are not required to include the security template in <a href="#sec-security-template" class="auto internal xref">Section 3.7.1</a>.<a href="#section-3.7-5" class="pilcrow">¶</a></p>
 <div id="sec-security-template">
 <section id="section-3.7.1">
           <h4 id="name-security-considerations-sect">
@@ -2075,14 +2084,22 @@ guideline issues.<a href="#section-3.10-3" class="pilcrow">¶</a></p>
 <p id="section-3.10-4">If the 'pyang' compiler is used to validate an example module, then
 the "--ietf" command-line option <span class="bcp14">MAY</span> be used to identify any IETF
 guideline issues.<a href="#section-3.10-4" class="pilcrow">¶</a></p>
-<p id="section-3.10-5">The "yanglint" program is also freely available from GitHub.<a href="#section-3.10-5" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="section-3.10-6">
+<p id="section-3.10-5">To ensure that a module fits into the line limits of an I-D, the command
+"pyang -f yang --keep-comments --yang-line-length 69" should be used.<a href="#section-3.10-5" class="pilcrow">¶</a></p>
+<p id="section-3.10-6">The "yanglint" program is also freely available from GitHub.<a href="#section-3.10-6" class="pilcrow">¶</a></p>
+<div class="alignLeft art-text artwork" id="section-3.10-7">
 <pre>
   &lt;https://github.com/CESNET/libyang&gt;
-</pre><a href="#section-3.10-6" class="pilcrow">¶</a>
+</pre><a href="#section-3.10-7" class="pilcrow">¶</a>
 </div>
-<p id="section-3.10-7">This tool can be used to validate XPath statements within YANG
-modules.<a href="#section-3.10-7" class="pilcrow">¶</a></p>
+<p id="section-3.10-8">This tool can be used to validate XPath statements within YANG
+modules.<a href="#section-3.10-8" class="pilcrow">¶</a></p>
+<p id="section-3.10-9">To check that JSON-encoded examples <span>[<a href="#RFC7951" class="cite xref">RFC7951</a>]</span> comply with the target data models, "yangson" program should be used. The "yangson" program is freely available from GitHub.<a href="#section-3.10-9" class="pilcrow">¶</a></p>
+<div class="alignLeft art-text artwork" id="section-3.10-10">
+<pre>
+  &lt;https://github.com/CZ-NIC/yangson&gt;
+</pre><a href="#section-3.10-10" class="pilcrow">¶</a>
+</div>
 </section>
 </div>
 <div id="module-extraction-tools">
@@ -4598,6 +4615,10 @@ into the management system.<a href="#section-7-1" class="pilcrow">¶</a></p>
         <dd>
 <span class="refAuthor">Rescorla, E.</span>, <span class="refTitle">"The Transport Layer Security (TLS) Protocol Version 1.3"</span>, <span class="seriesInfo">RFC 8446</span>, <span class="seriesInfo">DOI 10.17487/RFC8446</span>, <time datetime="2018-08" class="refDate">August 2018</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8446">https://www.rfc-editor.org/rfc/rfc8446</a>&gt;</span>. </dd>
 <dd class="break"></dd>
+<dt id="RFC8791">[RFC8791]</dt>
+        <dd>
+<span class="refAuthor">Bierman, A.</span>, <span class="refAuthor">Björklund, M.</span>, and <span class="refAuthor">K. Watsen</span>, <span class="refTitle">"YANG Data Structure Extensions"</span>, <span class="seriesInfo">RFC 8791</span>, <span class="seriesInfo">DOI 10.17487/RFC8791</span>, <time datetime="2020-06" class="refDate">June 2020</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8791">https://www.rfc-editor.org/rfc/rfc8791</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="RFC8792">[RFC8792]</dt>
         <dd>
 <span class="refAuthor">Watsen, K.</span>, <span class="refAuthor">Auerswald, E.</span>, <span class="refAuthor">Farrel, A.</span>, and <span class="refAuthor">Q. Wu</span>, <span class="refTitle">"Handling Long Lines in Content of Internet-Drafts and RFCs"</span>, <span class="seriesInfo">RFC 8792</span>, <span class="seriesInfo">DOI 10.17487/RFC8792</span>, <time datetime="2020-06" class="refDate">June 2020</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8792">https://www.rfc-editor.org/rfc/rfc8792</a>&gt;</span>. </dd>
@@ -4680,6 +4701,10 @@ into the management system.<a href="#section-7-1" class="pilcrow">¶</a></p>
 <dt id="RFC7841">[RFC7841]</dt>
         <dd>
 <span class="refAuthor">Halpern, J., Ed.</span>, <span class="refAuthor">Daigle, L., Ed.</span>, and <span class="refAuthor">O. Kolkman, Ed.</span>, <span class="refTitle">"RFC Streams, Headers, and Boilerplates"</span>, <span class="seriesInfo">RFC 7841</span>, <span class="seriesInfo">DOI 10.17487/RFC7841</span>, <time datetime="2016-05" class="refDate">May 2016</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7841">https://www.rfc-editor.org/rfc/rfc7841</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC7951">[RFC7951]</dt>
+        <dd>
+<span class="refAuthor">Lhotka, L.</span>, <span class="refTitle">"JSON Encoding of Data Modeled with YANG"</span>, <span class="seriesInfo">RFC 7951</span>, <span class="seriesInfo">DOI 10.17487/RFC7951</span>, <time datetime="2016-08" class="refDate">August 2016</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7951">https://www.rfc-editor.org/rfc/rfc7951</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8340">[RFC8340]</dt>
         <dd>

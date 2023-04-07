@@ -219,13 +219,25 @@ Table of Contents
    *  Updated the YANG security considerations template to reflect the
       latest version maintained in the Wiki.
 
+   *  Added statements that the security template is not required for
+      modules that follow [RFC8791].
+
    *  Added code markers for the security template.
 
    *  Added a statement that the RFCs that are listed in the security
       template are to be listed as normative references in documents
       that use the template.
 
-   *  Added a note that folding should be done as per [RFC8792].
+   *  Added a note that folding of the examples should be done as per
+      [RFC8792] conventions.
+
+   *  Added a note that RFC8792-folding of YANG modules can be used if
+      and only if native YANG features (e.g., break line, "+").
+
+   *  Added a mention about checks to ensure that YANG modules fit into
+      the line limits of an I-D.
+
+   *  Added new text about checks of JSON encoded examples.
 
    *  Added guidelines for IANA-maintained modules.
 
@@ -445,6 +457,11 @@ Table of Contents
    <myleaf xmlns="tag:example.com,2017:example-two">this is a long \
    value so the line needs to wrap to stay within 72 characters</myleaf>
 
+   Native YANG features (e.g., breaking line, "+") SHOULD be used to fit
+   a module into the line limits.  Exceptionally, RFC8792-folding of
+   YANG modules MAY be used if and only if native YANG features are not
+   sufficient.
+
 3.6.  Definitions Section
 
    This section contains the module(s) defined by the specification.
@@ -481,12 +498,13 @@ Table of Contents
    section that discusses security considerations relevant to those
    modules.
 
-   This section MUST be patterned after the latest approved template
-   (available at <https://trac.ietf.org/trac/ops/wiki/yang-security-
-   guidelines>).  Section 3.7.1 contains the security considerations
-   template dated 2013-05-08 and last updated on 2018-10-18.  Authors
-   MUST check the web page at the URL listed above in case there is a
-   more recent version available.
+   Unless the modules comply with [RFC8791], this section MUST be
+   patterned after the latest approved template (available at
+   <https://trac.ietf.org/trac/ops/wiki/yang-security- guidelines>).
+   Section 3.7.1 contains the security considerations template dated
+   2013-05-08 and last updated on 2018-10-18.  Authors MUST check the
+   web page at the URL listed above in case there is a more recent
+   version available.
 
    In particular:
 
@@ -503,6 +521,10 @@ Table of Contents
       harmful to system behavior or that raise significant privacy
       concerns MUST be explicitly listed by name, and the reasons for
       the sensitivity/privacy concerns MUST be explained.
+
+   Documents that define exclusively modules following the extension in
+   [RFC8791] are not required to include the security template in
+   Section 3.7.1.
 
 3.7.1.  Security Considerations Section Template
 
@@ -637,12 +659,22 @@ Table of Contents
    the "--ietf" command-line option MAY be used to identify any IETF
    guideline issues.
 
+   To ensure that a module fits into the line limits of an I-D, the
+   command "pyang -f yang --keep-comments --yang-line-length 69" should
+   be used.
+
    The "yanglint" program is also freely available from GitHub.
 
      <https://github.com/CESNET/libyang>
 
    This tool can be used to validate XPath statements within YANG
    modules.
+
+   To check that JSON-encoded examples [RFC7951] comply with the target
+   data models, "yangson" program should be used.  The "yangson" program
+   is freely available from GitHub.
+
+     <https://github.com/CZ-NIC/yangson>
 
 3.11.  Module Extraction Tools
 
@@ -2837,6 +2869,10 @@ Table of Contents
               Version 1.3", RFC 8446, DOI 10.17487/RFC8446, August 2018,
               <https://www.rfc-editor.org/rfc/rfc8446>.
 
+   [RFC8791]  Bierman, A., Björklund, M., and K. Watsen, "YANG Data
+              Structure Extensions", RFC 8791, DOI 10.17487/RFC8791,
+              June 2020, <https://www.rfc-editor.org/rfc/rfc8791>.
+
    [RFC8792]  Watsen, K., Auerswald, E., Farrel, A., and Q. Wu,
               "Handling Long Lines in Content of Internet-Drafts and
               RFCs", RFC 8792, DOI 10.17487/RFC8792, June 2020,
@@ -2919,6 +2955,10 @@ Table of Contents
               "RFC Streams, Headers, and Boilerplates", RFC 7841,
               DOI 10.17487/RFC7841, May 2016,
               <https://www.rfc-editor.org/rfc/rfc7841>.
+
+   [RFC7951]  Lhotka, L., "JSON Encoding of Data Modeled with YANG",
+              RFC 7951, DOI 10.17487/RFC7951, August 2016,
+              <https://www.rfc-editor.org/rfc/rfc7951>.
 
    [RFC8340]  Bjorklund, M. and L. Berger, Ed., "YANG Tree Diagrams",
               BCP 215, RFC 8340, DOI 10.17487/RFC8340, March 2018,
