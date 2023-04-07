@@ -4609,7 +4609,7 @@ into the management system.<a href="#section-7-1" class="pilcrow">¶</a></p>
 <dd class="break"></dd>
 <dt id="W3C.REC-xpath">[W3C.REC-xpath]</dt>
       <dd>
-<span class="refAuthor">Clark, J.</span> and <span class="refAuthor">S. DeRose</span>, <span class="refTitle">"XML Path Language (XPath) Version 1.0"</span>, <time datetime="1999-11" class="refDate">November 1999</time>, <span>&lt;<a href="http://www.w3.org/TR/1999/REC-xpath-19991116">http://www.w3.org/TR/1999/REC-xpath-19991116</a>&gt;</span>. </dd>
+<span class="refAuthor">Clark, J.</span> and <span class="refAuthor">S. DeRose</span>, <span class="refTitle">"XML Path Language (XPath) Version 1.0"</span>, <span class="seriesInfo">W3C Recommendation REC-xpath-19991116</span>, <time datetime="1999-11" class="refDate">November 1999</time>, <span>&lt;<a href="http://www.w3.org/TR/1999/REC-xpath-19991116">http://www.w3.org/TR/1999/REC-xpath-19991116</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
 </section>
@@ -4761,11 +4761,13 @@ contain references or section numbers.<a href="#appendix-A-3.1" class="pilcrow">
 that it does not have a section number, and that its content
 follows the guidelines in <code>&lt;https://www.ietf.org/id-info/guidelines.html&gt;</code>.<a href="#appendix-A-3.2" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="appendix-A-3.3">Copyright Notice -- verify that the document has the appropriate
+        <li class="normal" id="appendix-A-3.3">
+          <p id="appendix-A-3.3.1">Copyright Notice -- verify that the document has the appropriate
 text regarding the rights that document contributors provide to
 the IETF Trust <span>[<a href="#RFC5378" class="cite xref">RFC5378</a>]</span>.  Verify that it contains the full IETF
 Trust copyright notice at the beginning of the document.  The IETF
-Trust Legal Provisions (TLP) can be found at: <code>https://trustee.ietf.org/license-info/</code><a href="#appendix-A-3.3" class="pilcrow">¶</a>
+Trust Legal Provisions (TLP) can be found at:<a href="#appendix-A-3.3.1" class="pilcrow">¶</a></p>
+<p id="appendix-A-3.3.2"><code>https://trustee.ietf.org/license-info/</code><a href="#appendix-A-3.3.2" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-3.4">Security Considerations section -- verify that the document uses
 the latest approved template from the Operations and Management
@@ -4777,20 +4779,17 @@ been followed.<a href="#appendix-A-3.4" class="pilcrow">¶</a>
 present.  For each module within the document, ensure that the
 IANA Considerations section contains entries for the following
 IANA registries:<a href="#appendix-A-3.5.1" class="pilcrow">¶</a></p>
-<span class="break"></span><dl class="dlParallel" id="appendix-A-3.5.2">
-            <dt id="appendix-A-3.5.2.1">XML Namespace Registry:</dt>
-            <dd style="margin-left: 1.5em" id="appendix-A-3.5.2.2">
-              <p id="appendix-A-3.5.2.2.1">Register the YANG module namespace.<a href="#appendix-A-3.5.2.2.1" class="pilcrow">¶</a></p>
-</dd>
-            <dd class="break"></dd>
-<dt id="appendix-A-3.5.2.3">YANG Module Registry:</dt>
-            <dd style="margin-left: 1.5em" id="appendix-A-3.5.2.4">
-              <p id="appendix-A-3.5.2.4.1">Register the YANG module name, prefix,
-   namespace, and RFC number, according to the rules specified in
-   <span>[<a href="#RFC6020" class="cite xref">RFC6020</a>]</span>.<a href="#appendix-A-3.5.2.4.1" class="pilcrow">¶</a></p>
-</dd>
-          <dd class="break"></dd>
-</dl>
+<div class="alignLeft art-text artwork" id="appendix-A-3.5.2">
+<pre>
+XML Namespace Registry:
+: Register the YANG module namespace.
+
+YANG Module Registry:
+: Register the YANG module name, prefix,
+namespace, and RFC number, according to the rules specified in
+{{RFC6020}}.
+</pre><a href="#appendix-A-3.5.2" class="pilcrow">¶</a>
+</div>
 </li>
         <li class="normal" id="appendix-A-3.6">References -- verify that the references are properly divided
 between normative and informative references, that RFCs 2119 and
@@ -4807,11 +4806,13 @@ in the document text (outside the YANG module).  If a YANG module
 contains reference or "description" statements that refer to an
 I-D, then the I-D is included as an informative reference.<a href="#appendix-A-3.6" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="appendix-A-3.7">License -- verify that the document contains the Revised BSD
+        <li class="normal" id="appendix-A-3.7">
+          <p id="appendix-A-3.7.1">License -- verify that the document contains the Revised BSD
 License in each YANG module or submodule.  Some guidelines related
 to this requirement are described in Section 3.1.  Make sure that
 the correct year is used in all copyright dates.  Use the approved
-text from the latest TLP document, which can be found at: <code>&lt;https://trustee.ietf.org/license-info/&gt;</code><a href="#appendix-A-3.7" class="pilcrow">¶</a>
+text from the latest TLP document, which can be found at:<a href="#appendix-A-3.7.1" class="pilcrow">¶</a></p>
+<p id="appendix-A-3.7.2"><code>&lt;https://trustee.ietf.org/license-info/&gt;</code><a href="#appendix-A-3.7.2" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-A-3.8">Other Issues -- check for any issues mentioned in <code>&lt;https://www.ietf.org/id-info/checklist.html&gt;</code> that are not covered elsewhere.<a href="#appendix-A-3.8" class="pilcrow">¶</a>
 </li>
@@ -4820,14 +4821,18 @@ text from the latest TLP document, which can be found at: <code>&lt;https://trus
 compliance with the guidelines in this document.  The use of a
 YANG module compiler is recommended when checking for syntax
 errors.  A list of freely available tools and other information,
-including formatting advice, can be found at: <code>&lt;https://trac.ietf.org/trac/netconf/wiki&gt;</code> and <code>&lt;https://trac.ietf.org/trac/netmod/wiki&gt;</code><a href="#appendix-A-3.9.1" class="pilcrow">¶</a></p>
-<p id="appendix-A-3.9.2">
+including formatting advice, can be found at:<a href="#appendix-A-3.9.1" class="pilcrow">¶</a></p>
+<p id="appendix-A-3.9.2"><code>&lt;https://trac.ietf.org/trac/netconf/wiki&gt;</code><a href="#appendix-A-3.9.2" class="pilcrow">¶</a></p>
+<p id="appendix-A-3.9.3">
+and<a href="#appendix-A-3.9.3" class="pilcrow">¶</a></p>
+<p id="appendix-A-3.9.4"><code>&lt;https://trac.ietf.org/trac/netmod/wiki&gt;</code><a href="#appendix-A-3.9.4" class="pilcrow">¶</a></p>
+<p id="appendix-A-3.9.5">
 Checking for correct syntax, however, is only part of the job.
 It is just as important to actually read the YANG module document
 from the point of view of a potential implementor.  It is
 particularly important to check that "description" statements are
 sufficiently clear and unambiguous to allow interoperable
-implementations to be created.<a href="#appendix-A-3.9.2" class="pilcrow">¶</a></p>
+implementations to be created.<a href="#appendix-A-3.9.5" class="pilcrow">¶</a></p>
 </li>
       </ul>
 </section>
