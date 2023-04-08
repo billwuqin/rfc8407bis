@@ -6,8 +6,8 @@ Network Modeling                                              A. Bierman
 Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                               M. Boucadair
 Updates: 8126 (if approved)                                       Orange
-Intended status: Best Current Practice                      7 April 2023
-Expires: 9 October 2023
+Intended status: Best Current Practice                      8 April 2023
+Expires: 10 October 2023
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 9 October 2023.
+   This Internet-Draft will expire on 10 October 2023.
 
 Copyright Notice
 
@@ -607,7 +607,7 @@ Table of Contents
    <CODE ENDS>
 
    Note:  [RFC8446], [RFC6241], [RFC6242], [RFC8341], and [RFC8040] (or
-      future RFCs that replaces any of them) have to be listed as
+      future RFCs that replace any of them) have to be listed as
       normative references.
 
 3.8.  IANA Considerations Section
