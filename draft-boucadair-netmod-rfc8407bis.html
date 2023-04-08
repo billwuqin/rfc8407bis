@@ -1562,9 +1562,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </li>
           <li class="normal" id="section-1.1-2.11">Added pointers to the IPv4/IPv6 addresses/prefixes that reserved for documentation.<a href="#section-1.1-2.11" class="pilcrow">¶</a>
 </li>
-          <li class="normal" id="section-1.1-2.12">Updated the IANA considerations to encourage registration requests to indicate whether a module is maintained by IANA or not.<a href="#section-1.1-2.12" class="pilcrow">¶</a>
+          <li class="normal" id="section-1.1-2.12">Updated many examples to be aligned woth the consistent indentation recommendation.<a href="#section-1.1-2.12" class="pilcrow">¶</a>
 </li>
-          <li class="normal" id="section-1.1-2.13">Added guidelines for IANA-maintained modules.<a href="#section-1.1-2.13" class="pilcrow">¶</a>
+          <li class="normal" id="section-1.1-2.13">Updated the IANA considerations to encourage registration requests to indicate whether a module is maintained by IANA or not.<a href="#section-1.1-2.13" class="pilcrow">¶</a>
+</li>
+          <li class="normal" id="section-1.1-2.14">Added guidelines for IANA-maintained modules.<a href="#section-1.1-2.14" class="pilcrow">¶</a>
 </li>
         </ul>
 </section>
@@ -2234,7 +2236,7 @@ below, the identifier "foo" is used in all three modules:<a href="#section-4.2-1
       import example-bar { prefix b; }
 
       augment "/f:foo" {
-         leaf foo { type b:foo; }
+        leaf foo { type b:foo; }
       }
     }
 </pre><a href="#section-4.2-2" class="pilcrow">¶</a>
@@ -2561,12 +2563,12 @@ identities to be conceptually augmented.<a href="#section-4.6.2-8" class="pilcro
 <div class="lang-yang sourcecode" id="section-4.6.4-7">
 <pre>
    augment "/rt:active-route/rt:input/rt:destination-address" {
-      when "rt:address-family='v4ur:ipv4-unicast'" {
-        description
-          "This augment is valid only for IPv4 unicast.";
-      }
-      // nodes defined here within the augment-stmt
-      // cannot be referenced in the when-stmt
+     when "rt:address-family='v4ur:ipv4-unicast'" {
+       description
+         "This augment is valid only for IPv4 unicast.";
+     }
+     // nodes defined here within the augment-stmt
+     // cannot be referenced in the when-stmt
    }
 </pre><a href="#section-4.6.4-7" class="pilcrow">¶</a>
 </div>
@@ -2614,9 +2616,9 @@ identities to be conceptually augmented.<a href="#section-4.6.2-8" class="pilcro
 <pre>
      leaf foo1 {
        type enumeration {
-          enum one;
-          enum two;
-          enum three;
+         enum one;
+         enum two;
+         enum three;
        }
      }
 
@@ -2638,10 +2640,10 @@ identities to be conceptually augmented.<a href="#section-4.6.2-8" class="pilcro
 <pre>
      leaf foo1 {
        type enumeration {
-          enum one;
-          enum two;
-          enum three;
-          enum four;
+         enum one;
+         enum two;
+         enum three;
+         enum four;
        }
      }
 </pre><a href="#section-4.6.6-5" class="pilcrow">¶</a>
@@ -2990,7 +2992,7 @@ identities to be conceptually augmented.<a href="#section-4.6.2-8" class="pilcro
 <pre>
     typedef dscp {
       type uint8 {
-         range "0..63";
+        range "0..63";
       }
       ...
     }
@@ -3550,15 +3552,15 @@ identities to be conceptually augmented.<a href="#section-4.6.2-8" class="pilcro
     import ietf-interfaces { prefix if; }
 
     identity some-new-iftype {
-       base iana:iana-interface-type;
+      base iana:iana-interface-type;
     }
 
     augment "/if:interfaces/if:interface" {
       when "if:type = 'mymod:some-new-iftype'";
 
       leaf mandatory-leaf {
-         type string;
-         mandatory true;
+        type string;
+        mandatory true;
       }
     }
   }
@@ -3610,9 +3612,9 @@ identities to be conceptually augmented.<a href="#section-4.6.2-8" class="pilcro
 
      container backups {
        list backup {
-          ...
-          max-elements  10;
-          ...
+         ...
+         max-elements  10;
+         ...
        }
      }
 </pre><a href="#section-4.20-7" class="pilcrow">¶</a>
@@ -3623,7 +3625,7 @@ identities to be conceptually augmented.<a href="#section-4.6.2-8" class="pilcro
 
      deviation /bk:backups/bk:backup {
        deviate add {
-          max-elements  10;
+         max-elements  10;
        }
      }
 </pre><a href="#section-4.20-8" class="pilcrow">¶</a>
@@ -3721,7 +3723,7 @@ identities to be conceptually augmented.<a href="#section-4.6.2-8" class="pilcro
    list foo {
       key name;
       leaf name {
-        type string;
+         type string;
       }
       ...
    }
@@ -3730,7 +3732,7 @@ identities to be conceptually augmented.<a href="#section-4.6.2-8" class="pilcro
       key name;
       config false;
       leaf name {
-        type string;
+         type string;
       }
       ...
    }
@@ -3742,7 +3744,7 @@ identities to be conceptually augmented.<a href="#section-4.6.2-8" class="pilcro
    list foo {
       key name;
       leaf name {
-        type string;
+         type string;
       }
       ...
    }
@@ -3751,14 +3753,14 @@ identities to be conceptually augmented.<a href="#section-4.6.2-8" class="pilcro
       key name;
       config false;
       leaf name {
-        type leafref {
-          path "/foo/name";
-          require-instance false;
-        }
+         type leafref {
+            path "/foo/name";
+            require-instance false;
+         }
       }
       leaf addon {
-        type string;
-        mandatory true;
+         type string;
+         mandatory true;
       }
    }
 </pre><a href="#section-4.22.1-6" class="pilcrow">¶</a>
