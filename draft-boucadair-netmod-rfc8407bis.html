@@ -3886,25 +3886,21 @@ implementations are available.<a href="#section-4.23.3-5.1" class="pilcrow">¶</
  "status deprecated" will allow NMDA-capable implementations to
  avoid the cost of duplicating the state nodes, while enabling
  non-NMDA-capable implementations to utilize them for access to
- the operational values.<a href="#section-4.23.3-5.2" class="pilcrow">¶</a>
+ the operational values.
+    *   For models that augment models that have not been structured
+ with the NMDA, the modeler will have to consider the structure
+ of the base model and the guidelines listed above.  Where
+ possible, such models should move to new revisions of the base
+ model that are NMDA compatible.  When that is not possible,
+ augmenting "state" containers <span class="bcp14">SHOULD</span> be avoided, with the
+ expectation that the base model will be re-released with the
+ state containers marked as deprecated.  It is <span class="bcp14">RECOMMENDED</span> to
+ augment only the "/foo" hierarchy of the base model.  Where this
+ recommendation cannot be followed, then any new "state" elements
+ <span class="bcp14">SHOULD</span> be included in their own module.<a href="#section-4.23.3-5.2" class="pilcrow">¶</a>
 </dd>
           <dd class="break"></dd>
 </dl>
-<div class="alignLeft art-text artwork" id="section-4.23.3-6">
-<pre>
-*   For models that augment models that have not been structured
-    with the NMDA, the modeler will have to consider the structure
-    of the base model and the guidelines listed above.  Where
-    possible, such models should move to new revisions of the base
-    model that are NMDA compatible.  When that is not possible,
-    augmenting "state" containers SHOULD be avoided, with the
-    expectation that the base model will be re-released with the
-    state containers marked as deprecated.  It is RECOMMENDED to
-    augment only the "/foo" hierarchy of the base model.  Where this
-    recommendation cannot be followed, then any new "state" elements
-    SHOULD be included in their own module.
-</pre><a href="#section-4.23.3-6" class="pilcrow">¶</a>
-</div>
 <div id="temporary-non-nmda-modules">
 <section id="section-4.23.3.1">
             <h5 id="name-temporary-non-nmda-modules">
