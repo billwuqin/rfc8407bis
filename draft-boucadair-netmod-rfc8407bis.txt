@@ -520,7 +520,7 @@ Table of Contents
 
    Unless the modules comply with [RFC8791], the security section MUST
    be patterned after the latest approved template (available at
-   <https://trac.ietf.org/trac/ops/wiki/yang-security- guidelines>).
+   <https://trac.ietf.org/trac/ops/wiki/yang-security-guidelines>).
    Section 3.7.1 contains the security considerations template dated
    2013-05-08 and last updated on 2018-10-18.  Authors MUST check the
    web page at the URL listed above in case there is a more recent
@@ -2259,39 +2259,36 @@ Table of Contents
    The remaining are options that MAY be followed during the time that
    NMDA mechanisms are being defined.
 
-   *  Modules that require immediate support for the NMDA features
-      SHOULD be structured for NMDA.  A temporary non-NMDA version of
-      this type of module MAY exist, as either an existing model or a
-      model created by hand or with suitable tools that mirror the
-      current modeling strategies.  Both the NMDA and the non-NMDA
-      modules SHOULD be published in the same document, with NMDA
-      modules in the document main body and the non-NMDA modules in a
-      non-normative appendix.  The use of the non-NMDA module will allow
-      temporary bridging of the time period until NMDA implementations
-      are available.
+   a.  Modules that require immediate support for the NMDA features
+   SHOULD be structured for NMDA.  A temporary non-NMDA version of this
+   type of module MAY exist, as either an existing model or a model
+   created by hand or with suitable tools that mirror the current
+   modeling strategies.  Both the NMDA and the non-NMDA modules SHOULD
+   be published in the same document, with NMDA modules in the document
+   main body and the non-NMDA modules in a non-normative appendix.  The
+   use of the non-NMDA module will allow temporary bridging of the time
+   period until NMDA implementations are available.
 
-   *  For published models, the model should be republished with an
-      NMDA-compatible structure, deprecating non-NMDA constructs.  For
-      example, the "ietf-interfaces" model in [RFC7223] has been
-      restructured as an NMDA-compatible model in [RFC8343].  The
-      "/interfaces-state" hierarchy has been marked "status deprecated".
-      Models that mark their "/foo-state" hierarchy with "status
-      deprecated" will allow NMDA-capable implementations to avoid the
-      cost of duplicating the state nodes, while enabling non-NMDA-
-      capable implementations to utilize them for access to the
-      operational values.
+   b.  For published models, the model should be republished with an
+   NMDA-compatible structure, deprecating non-NMDA constructs.  For
+   example, the "ietf-interfaces" model in [RFC7223] has been
+   restructured as an NMDA-compatible model in [RFC8343].  The
+   "/interfaces-state" hierarchy has been marked "status deprecated".
+   Models that mark their "/foo-state" hierarchy with "status
+   deprecated" will allow NMDA-capable implementations to avoid the cost
+   of duplicating the state nodes, while enabling non-NMDA-capable
+   implementations to utilize them for access to the operational values.
 
-   *  For models that augment models that have not been structured with
-      the NMDA, the modeler will have to consider the structure of the
-      base model and the guidelines listed above.  Where possible, such
-      models should move to new revisions of the base model that are
-      NMDA compatible.  When that is not possible, augmenting "state"
-      containers SHOULD be avoided, with the expectation that the base
-      model will be re-released with the state containers marked as
-      deprecated.  It is RECOMMENDED to augment only the "/foo"
-      hierarchy of the base model.  Where this recommendation cannot be
-      followed, then any new "state" elements SHOULD be included in
-      their own module.
+   c.  For models that augment models that have not been structured with
+   the NMDA, the modeler will have to consider the structure of the base
+   model and the guidelines listed above.  Where possible, such models
+   should move to new revisions of the base model that are NMDA
+   compatible.  When that is not possible, augmenting "state" containers
+   SHOULD be avoided, with the expectation that the base model will be
+   re-released with the state containers marked as deprecated.  It is
+   RECOMMENDED to augment only the "/foo" hierarchy of the base model.
+   Where this recommendation cannot be followed, then any new "state"
+   elements SHOULD be included in their own module.
 
 4.23.3.1.  Temporary Non-NMDA Modules
 
