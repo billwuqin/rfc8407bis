@@ -3865,39 +3865,42 @@ identities to be conceptually augmented.<a href="#section-4.6.2-8" class="pilcro
 <span class="break"></span><dl class="olPercent" id="section-4.23.3-5">
 <dt>(a)</dt>
 <dd id="section-4.23.3-5.1">Modules that require immediate support for the NMDA features
-<span class="bcp14">SHOULD</span> be structured for NMDA.  A temporary non-NMDA version of
-this type of module <span class="bcp14">MAY</span> exist, as either an existing model or a
-model created by hand or with suitable tools that mirror the
-current modeling strategies.  Both the NMDA and the non-NMDA
-modules <span class="bcp14">SHOULD</span> be published in the same document, with NMDA
-modules in the document main body and the non-NMDA modules in a
-non-normative appendix.  The use of the non-NMDA module will
-allow temporary bridging of the time period until NMDA
-implementations are available.<a href="#section-4.23.3-5.1" class="pilcrow">¶</a>
+   <span class="bcp14">SHOULD</span> be structured for NMDA.  A temporary non-NMDA version of
+   this type of module <span class="bcp14">MAY</span> exist, as either an existing model or a
+   model created by hand or with suitable tools that mirror the
+   current modeling strategies.  Both the NMDA and the non-NMDA
+   modules <span class="bcp14">SHOULD</span> be published in the same document, with NMDA
+   modules in the document main body and the non-NMDA modules in a
+   non-normative appendix.  The use of the non-NMDA module will
+   allow temporary bridging of the time period until NMDA
+   implementations are available.<a href="#section-4.23.3-5.1" class="pilcrow">¶</a>
 </dd>
             <dd class="break"></dd>
 <dt>(b)</dt>
 <dd id="section-4.23.3-5.2">For published models, the model should be republished with an
- NMDA-compatible structure, deprecating non-NMDA constructs.  For
- example, the "ietf-interfaces" model in <span>[<a href="#RFC7223" class="cite xref">RFC7223</a>]</span> has been
- restructured as an NMDA-compatible model in <span>[<a href="#RFC8343" class="cite xref">RFC8343</a>]</span>.  The
- "/interfaces-state" hierarchy has been marked "status
- deprecated".  Models that mark their "/foo-state" hierarchy with
- "status deprecated" will allow NMDA-capable implementations to
- avoid the cost of duplicating the state nodes, while enabling
- non-NMDA-capable implementations to utilize them for access to
- the operational values.
-    *   For models that augment models that have not been structured
- with the NMDA, the modeler will have to consider the structure
- of the base model and the guidelines listed above.  Where
- possible, such models should move to new revisions of the base
- model that are NMDA compatible.  When that is not possible,
- augmenting "state" containers <span class="bcp14">SHOULD</span> be avoided, with the
- expectation that the base model will be re-released with the
- state containers marked as deprecated.  It is <span class="bcp14">RECOMMENDED</span> to
- augment only the "/foo" hierarchy of the base model.  Where this
- recommendation cannot be followed, then any new "state" elements
- <span class="bcp14">SHOULD</span> be included in their own module.<a href="#section-4.23.3-5.2" class="pilcrow">¶</a>
+   NMDA-compatible structure, deprecating non-NMDA constructs.  For
+   example, the "ietf-interfaces" model in <span>[<a href="#RFC7223" class="cite xref">RFC7223</a>]</span> has been
+   restructured as an NMDA-compatible model in <span>[<a href="#RFC8343" class="cite xref">RFC8343</a>]</span>.  The
+   "/interfaces-state" hierarchy has been marked "status
+   deprecated".  Models that mark their "/foo-state" hierarchy with
+   "status deprecated" will allow NMDA-capable implementations to
+   avoid the cost of duplicating the state nodes, while enabling
+   non-NMDA-capable implementations to utilize them for access to
+   the operational values.<a href="#section-4.23.3-5.2" class="pilcrow">¶</a>
+</dd>
+            <dd class="break"></dd>
+<dt>(c)</dt>
+<dd id="section-4.23.3-5.3">For models that augment models that have not been structured
+   with the NMDA, the modeler will have to consider the structure
+   of the base model and the guidelines listed above.  Where
+   possible, such models should move to new revisions of the base
+   model that are NMDA compatible.  When that is not possible,
+   augmenting "state" containers <span class="bcp14">SHOULD</span> be avoided, with the
+   expectation that the base model will be re-released with the
+   state containers marked as deprecated.  It is <span class="bcp14">RECOMMENDED</span> to
+   augment only the "/foo" hierarchy of the base model.  Where this
+   recommendation cannot be followed, then any new "state" elements
+   <span class="bcp14">SHOULD</span> be included in their own module.<a href="#section-4.23.3-5.3" class="pilcrow">¶</a>
 </dd>
           <dd class="break"></dd>
 </dl>
