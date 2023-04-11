@@ -6,8 +6,8 @@ Network Modeling                                              A. Bierman
 Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                               M. Boucadair
 Updates: 8126 (if approved)                                       Orange
-Intended status: Best Current Practice                      8 April 2023
-Expires: 10 October 2023
+Intended status: Best Current Practice                     11 April 2023
+Expires: 13 October 2023
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 10 October 2023.
+   This Internet-Draft will expire on 13 October 2023.
 
 Copyright Notice
 
@@ -219,6 +219,8 @@ Table of Contents
 
    *  Implemented errata 5693, 5800, 6899, and 7416.
 
+   *  Updated the terminology.
+
    *  Updated the URL of the IETF authors guidelines.
 
    *  Updated the YANG security considerations template to reflect the
@@ -248,7 +250,7 @@ Table of Contents
    *  Added pointers to the IPv4/IPv6 addresses/prefixes that reserved
       for documentation.
 
-   *  Updated many examples to be aligned woth the consistent
+   *  Updated many examples to be aligned with the consistent
       indentation recommendation.
 
    *  Updated the IANA considerations to encourage registration requests
